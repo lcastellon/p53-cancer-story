@@ -100,7 +100,7 @@ function Deck() {
   return (
     <div className={`flex h-screen flex-col bg-[var(--deck-stage)] ${hide ? "cursor-none" : ""}`}>
       <div
-        className="relative flex-1"
+        className="relative min-h-0 flex-1"
         onClick={(e) => {
           const r = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
           go(e.clientX - r.left < r.width / 3 ? index - 1 : index + 1);
@@ -113,7 +113,7 @@ function Deck() {
           touchX.current = null;
         }}
       >
-        <ScaledSlide className="absolute inset-0">
+        <ScaledSlide className="h-full w-full">
           <div key={index} className="animate-in fade-in duration-500">
             <SlideView s={s} />
           </div>
