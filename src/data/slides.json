@@ -78,13 +78,13 @@
     "title": "El denominador común de los tumores",
     "subtitle": "",
     "points": [
-      "Alrededor de **la mitad de los tumores humanos** presenta alteraciones de **TP53**.",
-      "En otros tumores, la actividad de la **vía p53** se reduce por mecanismos distintos de una mutación directa.",
-      "La distribución **50% / 45% / 5%** de la gráfica es una **ilustración conceptual**, no una medición general de todos los cánceres."
+      "**≈50%** de los tumores humanos presentan mutaciones en **TP53**.",
+      "En muchos de los restantes, la **vía p53** está inhibida o presenta actividad reducida por otros mecanismos.",
+      "El esquema **50 / 45 / 5** ilustra ambas formas de alteración; los porcentajes no provienen de una clasificación epidemiológica única."
     ],
-    "visual": "Gráfico de dona ilustrativo con tres segmentos: 50% TP53 mutado, 45% vía p53 desactivada, 5% otros casos. Advertencia de que no es una prevalencia epidemiológica validada.",
+    "visual": "Gráfico de dona conceptual: 50% TP53 mutado, 45% p53 desactivada por otros mecanismos y 5% otros casos. Leyenda que identifica los porcentajes como aproximación para divulgación.",
     "notes": [
-      "La gráfica 50/45/5 es un recurso conceptual y no debe describirse como porcentaje global observado. Las alteraciones de TP53 se encuentran en aproximadamente la mitad de los tumores humanos, pero el porcentaje adicional de inactivación por mecanismos alternativos varía según el tipo de cáncer y la metodología. Un análisis de unos 7,000 tumores (2023; PMID: 37095494) estimó que alrededor del 12% fenocopiaban pérdida de TP53 sin mutación inactivante evidente. Fuente general: revisión de TP53, Journal of Internal Medicine (2025), DOI: 10.1111/joim.20106."
+      "Aproximadamente la mitad de los tumores humanos presenta mutaciones en TP53. Muchos tumores sin mutación detectable en TP53 tienen actividad de p53 reducida o bloqueada por reguladores negativos como MDM2 o MDMX, o por alteraciones de la vía. Para divulgar la diferencia entre inactivación directa e indirecta usamos la proporción redondeada 50/45/5. Es un esquema conceptual, no una distribución epidemiológica medida de forma conjunta: la prevalencia de cada mecanismo depende del tipo de tumor, el criterio de inactivación y el método de análisis. Evitar afirmar que se ha demostrado que exactamente el 95% de todos los tumores tiene p53 inactiva."
     ],
     "act": 1,
     "actName": "Apertura",
