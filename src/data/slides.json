@@ -54,29 +54,6 @@
   },
   {
     "n": 4,
-    "label": "¿Por qué algunos tejidos desarrollan más cáncer?",
-    "title": "¿Por qué predominan los carcinomas?",
-    "subtitle": "El origen celular explica gran parte de las diferencias de frecuencia.",
-    "points": [
-      "**Carcinomas (~90%)**: proceden de células epiteliales que recubren superficies y forman glándulas.",
-      "**Leucemias y linfomas (~8%)**: se originan en células hematopoyéticas o inmunitarias.",
-      "**Sarcomas (~1%)**: surgen en hueso, músculo y otros tejidos conectivos.",
-      "**Otros (~1%)**: distintas neoplasias no incluidas en las categorías anteriores."
-    ],
-    "visual": "Barras comparativas de frecuencia histórica aproximada: 90% carcinomas, 8% leucemias y linfomas, 1% sarcomas y 1% otros; explicación de renovación celular, exposición y contexto tisular.",
-    "notes": [
-      "¿Por qué los carcinomas son tan frecuentes? Suelen representar una gran mayoría de los cánceres en adultos. Una clasificación didáctica de Cooper, The Cell: A Molecular Approach, 2.ª edición (2000), redondea a ~90% carcinomas, ~8% leucemias y linfomas, ~1% sarcomas y ~1% otras neoplasias. Son proporciones históricas y orientativas: cambian con edad, región, exposición y los criterios de registro; no deben confundirse con cifras actuales de incidencia mundial.",
-      "Los carcinomas nacen del epitelio: piel, revestimientos del tubo digestivo, aparato respiratorio y glándulas. Muchos epitelios se renuevan constantemente; una mayor acumulación de divisiones incrementa las oportunidades de errores durante la replicación del ADN. Además, algunas superficies contactan con radiación UV, humo, agentes químicos o inflamación. No es que cada célula epitelial sea siempre más vulnerable: importan la exposición, la biología tisular, la edad y la vigilancia celular.",
-      "Las leucemias y los linfomas afectan células de la sangre o del sistema inmunitario; los sarcomas derivan del tejido conectivo, músculo y hueso. Aquí no estamos comparando la gravedad, sino el origen celular y la frecuencia. Referencias: Cooper GM. The Cell: A Molecular Approach, 2nd ed., NCBI Bookshelf, https://www.ncbi.nlm.nih.gov/books/NBK9963/ ; Frank SA. Dynamics of Cancer, capítulo 12, https://www.ncbi.nlm.nih.gov/books/NBK1566/ ; Tomasetti C & Vogelstein B (2015), Science, doi:10.1126/science.1260825. Transición: cada división requiere copiar el ADN; pasemos al monje copista."
-    ],
-    "act": 1,
-    "actName": "Apertura",
-    "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2.3,
-    "layout": "types"
-  },
-  {
-    "n": 5,
     "label": "La ruleta rusa de la división celular",
     "title": "Copiar una enciclopedia 2 metros de largo sin equivocarse",
     "subtitle": "",
@@ -97,7 +74,7 @@
     "layout": "scribe"
   },
   {
-    "n": 6,
+    "n": 5,
     "label": "La estadística demoledora",
     "title": "El denominador común de los tumores",
     "subtitle": "",
@@ -115,6 +92,29 @@
     "actTitle": "El dilema de la multicelularidad",
     "minutes": 2,
     "layout": "stat"
+  },
+  {
+    "n": 6,
+    "label": "¿Por qué algunos tejidos desarrollan más cáncer?",
+    "title": "¿Por qué predominan los carcinomas?",
+    "subtitle": "El origen celular explica gran parte de las diferencias de frecuencia.",
+    "points": [
+      "**Carcinomas (~90%)**: proceden de células epiteliales que recubren superficies y forman glándulas.",
+      "**Leucemias y linfomas (~8%)**: se originan en células hematopoyéticas o inmunitarias.",
+      "**Sarcomas (~1%)**: surgen en hueso, músculo y otros tejidos conectivos.",
+      "**Otros (~1%)**: distintas neoplasias no incluidas en las categorías anteriores."
+    ],
+    "visual": "Barras comparativas de frecuencia histórica aproximada: 90% carcinomas, 8% leucemias y linfomas, 1% sarcomas y 1% otros; explicación de renovación celular, exposición y contexto tisular.",
+    "notes": [
+      "¿Por qué los carcinomas son tan frecuentes? Suelen representar una gran mayoría de los cánceres en adultos. Una clasificación didáctica de Cooper, The Cell: A Molecular Approach, 2.ª edición (2000), redondea a ~90% carcinomas, ~8% leucemias y linfomas, ~1% sarcomas y ~1% otras neoplasias. Son proporciones históricas y orientativas: cambian con edad, región, exposición y los criterios de registro; no deben confundirse con cifras actuales de incidencia mundial.",
+      "Los carcinomas nacen del epitelio: piel, revestimientos del tubo digestivo, aparato respiratorio y glándulas. Muchos epitelios se renuevan constantemente; una mayor acumulación de divisiones incrementa las oportunidades de errores durante la replicación del ADN. Además, algunas superficies contactan con radiación UV, humo, agentes químicos o inflamación. No es que cada célula epitelial sea siempre más vulnerable: importan la exposición, la biología tisular, la edad y la vigilancia celular.",
+      "Las leucemias y los linfomas afectan células de la sangre o del sistema inmunitario; los sarcomas derivan del tejido conectivo, músculo y hueso. Aquí no estamos comparando la gravedad, sino el origen celular y la frecuencia. Referencias: Cooper GM. The Cell: A Molecular Approach, 2nd ed., NCBI Bookshelf, https://www.ncbi.nlm.nih.gov/books/NBK9963/ ; Frank SA. Dynamics of Cancer, capítulo 12, https://www.ncbi.nlm.nih.gov/books/NBK1566/ ; Tomasetti C & Vogelstein B (2015), Science, doi:10.1126/science.1260825. Transición: cada división requiere copiar el ADN; pasemos al monje copista."
+    ],
+    "act": 1,
+    "actName": "Apertura",
+    "actTitle": "El dilema de la multicelularidad",
+    "minutes": 2.3,
+    "layout": "types"
   },
   {
     "n": 7,
