@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 720" role="img" aria-labelledby="title desc">
+<title id="title">Monje copista escribiendo frenéticamente bajo la lluvia</title>
+<desc id="desc">Una escena animada de un monje medieval que escribe deprisa rodeado de enormes pilas de libros mientras la lluvia cae.</desc>
+<defs>
+ <linearGradient id="night" x2="0" y2="1"><stop stop-color="#14212c"/><stop offset="1" stop-color="#3a3432"/></linearGradient>
+ <linearGradient id="robe" x2="0" y2="1"><stop stop-color="#76533f"/><stop offset="1" stop-color="#322a2c"/></linearGradient>
+ <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f8e4ae"/><stop offset="1" stop-color="#c9a777"/></linearGradient>
+ <clipPath id="arch"><path d="M230 335V157Q410 -45 590 157V335Z"/></clipPath>
+ <pattern id="rain" width="72" height="100" patternUnits="userSpaceOnUse"><path d="M10 0l-15 44M51 25L36 68M76 71L60 113" stroke="#b2c6d4" stroke-width="4" opacity=".65"/></pattern>
+</defs>
+<rect width="820" height="720" rx="28" fill="#171d26"/>
+<path d="M206 358V143Q410 -53 614 143V358Z" fill="#5f4b41"/>
+<path d="M230 335V157Q410 -45 590 157V335Z" fill="url(#night)"/>
+<g clip-path="url(#arch)"><rect x="220" y="-120" width="460" height="700" fill="url(#rain)"><animateTransform attributeName="transform" type="translate" from="0 -90" to="0 10" dur=".55s" repeatCount="indefinite"/></rect></g>
+<path d="M214 360h392" stroke="#937259" stroke-width="25"/>
+<g stroke="#a8865b" stroke-width="3">
+<rect x="47" y="240" width="144" height="37" rx="6" fill="#654e42"/><rect x="61" y="277" width="145" height="31" rx="5" fill="#9d6950"/><rect x="37" y="309" width="158" height="40" rx="6" fill="#59453b"/><rect x="54" y="351" width="147" height="34" rx="5" fill="#785344"/>
+<rect x="641" y="236" width="124" height="41" rx="5" fill="#694d3e"/><rect x="623" y="280" width="161" height="34" rx="5" fill="#9a7054"/><rect x="641" y="318" width="145" height="43" rx="5" fill="#5b433d"/><rect x="622" y="365" width="159" height="36" rx="5" fill="#a06c4c"/>
+</g>
+<g fill="#d3b88f" opacity=".7"><path d="M68 252h108M73 290h117M50 324h126M67 362h118M655 251h99M642 292h128M658 332h111M638 378h125" stroke="#d3b88f" stroke-width="4"/></g>
+<ellipse cx="418" cy="470" rx="195" ry="210" fill="url(#robe)"/>
+<path d="M283 338Q260 235 340 200Q426 144 496 201Q565 250 535 339L490 408H326Z" fill="#332b2d" stroke="#8b6449" stroke-width="21"/>
+<ellipse cx="410" cy="302" rx="78" ry="98" fill="#b58764"/>
+<path d="M344 275Q392 245 420 267M430 267Q453 254 474 273" fill="none" stroke="#392b29" stroke-width="13" stroke-linecap="round"/>
+<circle cx="379" cy="300" r="6" fill="#211a1b"/><circle cx="451" cy="300" r="6" fill="#211a1b"/>
+<path d="M390 351Q413 370 441 346" fill="none" stroke="#563b2d" stroke-width="8" stroke-linecap="round"/>
+<path d="M330 398Q411 443 502 394L525 510H301Z" fill="#48332f"/>
+<path d="M0 525H820V720H0Z" fill="#3d2b26"/><path d="M0 531H820" stroke="#ac754c" stroke-width="18"/>
+<path d="M205 566Q300 520 413 565Q530 521 651 566L642 662Q525 625 417 660Q311 624 216 659Z" fill="url(#paper)" stroke="#8f6b46" stroke-width="8"/>
+<path d="M414 564V653" stroke="#8f6b46" stroke-width="4"/>
+<g stroke="#806c52" stroke-width="3" opacity=".6"><path d="M246 584h132M244 598h137M244 613h135M460 581h154M460 597h153M461 615h155"/></g>
+<g transform="translate(385 499)">
+ <g><animateTransform attributeName="transform" type="rotate" values="-12 0 0;14 0 0;-12 0 0" dur=".43s" repeatCount="indefinite"/>
+ <path d="M-11 1Q25 -47 74 -75" fill="none" stroke="#f6efe0" stroke-width="13" stroke-linecap="round"/>
+ <path d="M17 -25Q56 -90 89 -101Q77 -59 31 -13" fill="#e9dcc6"/>
+ <path d="M-24 17Q-16 -8 3 -13Q21 -5 7 22" fill="#b58764" stroke="#6b4534" stroke-width="5"/>
+ </g>
+</g>
+<g fill="#cdb492" opacity=".8"><circle cx="683" cy="477" r="4"><animate attributeName="cy" values="445;485;445" dur=".55s" repeatCount="indefinite"/></circle><circle cx="149" cy="469" r="5"><animate attributeName="cy" values="447;489;447" dur=".7s" repeatCount="indefinite"/></circle></g>
+</svg>
