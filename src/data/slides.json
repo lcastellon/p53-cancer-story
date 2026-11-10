@@ -12,7 +12,7 @@
     "act": 1,
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2.0
+    "minutes": 2
   },
   {
     "n": 2,
@@ -31,7 +31,7 @@
     "act": 1,
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2.0
+    "minutes": 2
   },
   {
     "n": 3,
@@ -51,7 +51,7 @@
     "act": 1,
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2.0
+    "minutes": 2
   },
   {
     "n": 4,
@@ -70,7 +70,7 @@
     "act": 1,
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2.0
+    "minutes": 2
   },
   {
     "n": 5,
@@ -375,7 +375,7 @@
   {
     "n": 20,
     "label": "El dilema del tamaño y el tiempo",
-    "title": "La Paradoja de Peto: El misterio de los gigantes",
+    "title": "La paradoja de Peto",
     "subtitle": "",
     "points": [
       "Planteada por el epidemiólogo Richard Peto en los años 70:",
