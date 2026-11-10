@@ -34,9 +34,11 @@ function Chrome({ s }: { s: Slide }) {
           {String(s.n).padStart(2, "0")} / {TOTAL}
         </span>
       </div>
-      <div className="slide-footer absolute bottom-[56px] left-[120px] text-[var(--slide-muted)]">
-        p53 · El guardián del genoma — basado en Sue Armstrong
-      </div>
+      {s.n !== 3 && s.n !== 4 && (
+        <div className="slide-footer absolute bottom-[56px] left-[120px] text-[var(--slide-muted)]">
+          p53 · El guardián del genoma — basado en Sue Armstrong
+        </div>
+      )}
     </>
   );
 }
