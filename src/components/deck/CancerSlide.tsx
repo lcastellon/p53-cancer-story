@@ -56,7 +56,7 @@ export function CancerSlide({ s, step }: { s: Slide; step: number }) {
     <div className="absolute left-[120px] top-[325px] grid w-[1680px] grid-cols-2 gap-[120px]">
       {[false, true].map((cancer) => <section key={String(cancer)} className={cancer ? "house-cancer" : "house-healthy"} aria-label={cancer ? "Cáncer" : "Tejido sano / Homeostasis"}>
         <h3 className="slide-body-lg font-display">{cancer ? "Cáncer" : "Tejido sano / Homeostasis"}</h3>
-        <svg key={step} viewBox="0 0 760 720" className="house-scene h-[570px] w-full" role="img" aria-label={cancer ? stage.cancerCaption : stage.healthyCaption}>
+        <svg key={step} viewBox="0 0 760 720" className="house-scene h-[510px] w-full" role="img" aria-label={cancer ? stage.cancerCaption : stage.healthyCaption}>
           {step === 2 ? <Neighborhood cancer={cancer} /> : <>
             <House x={cancer && step === 1 ? 260 : 380} y={360} children={cancer ? stage.cancerChildren : stage.healthyChildren} parents={cancer ? stage.cancerParents : stage.healthyParents} age={cancer && step === 1 ? "teen" : stage.healthyAge} />
             {cancer && step === 1 && <>
