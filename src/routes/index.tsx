@@ -51,7 +51,7 @@ function Deck() {
   indexRef.current = index;
 
   useEffect(() => {
-    document.title = `${index + 1}/${TOTAL} — ${slides[index].label}`;
+    document.title = `${index + 1}/${TOTAL} — ${slides[index]!.label}`;
   }, [index]);
 
   useEffect(() => {
@@ -94,7 +94,7 @@ function Deck() {
     window.open(`/presenter?slide=${indexRef.current + 1}`, "p53-presenter", "width=1400,height=850");
   }
 
-  const s = slides[index];
+  const s = slides[index]!;
   const hide = idle && fs;
 
   return (

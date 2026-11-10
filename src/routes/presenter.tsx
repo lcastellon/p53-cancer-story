@@ -62,7 +62,7 @@ function Presenter() {
     return () => window.removeEventListener("keydown", onKey);
   });
 
-  const s = slides[index];
+  const s = slides[index]!;
   const next = slides[index + 1];
   const target = startMinute[index] * 60;
   const diff = elapsed - target; // + = behind schedule
