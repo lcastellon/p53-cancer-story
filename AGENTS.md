@@ -28,3 +28,4 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+- Deck content lives in src/data/slides.json (parsed from the user's script); slide layouts in src/components/deck render it at 1920x1080 — keeps text editable in one place.

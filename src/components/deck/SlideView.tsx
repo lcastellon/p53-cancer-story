@@ -46,7 +46,7 @@ function Cover({ s }: { s: Slide }) {
       <div className="absolute left-[140px] top-[220px] w-[1150px]">
         <div className="slide-kicker mb-10 text-[var(--slide-accent)]">Divulgación científica · Sue Armstrong</div>
         <div className="font-display text-[260px] leading-[0.85] tracking-[-0.06em] text-[var(--slide-warm)]">p53</div>
-        <h1 className="slide-title mt-8 font-display">El Guardián del Genoma y el Código del Cáncer</h1>
+        <h1 className="slide-title mt-16 font-display">El Guardián del Genoma y el Código del Cáncer</h1>
         <p className="slide-body-lg mt-10 max-w-[1000px] text-[var(--slide-muted)]">{s.subtitle}</p>
       </div>
     </div>
