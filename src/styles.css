@@ -150,3 +150,10 @@
 .font-display { font-family: var(--font-display); font-weight: 500; }
 @keyframes deck-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .deck-fade { animation: deck-fade 0.45s ease-out both; }
+.house-healthy { color: var(--slide-accent); }
+.house-cancer { color: var(--slide-warm); }
+.house-slide .slide-title { letter-spacing: 0; }
+.house-scene { animation: deck-fade 0.45s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .house-scene, .deck-fade { animation: none; }
+}

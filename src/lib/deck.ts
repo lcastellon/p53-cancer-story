@@ -13,6 +13,7 @@ export type Slide = {
   actTitle: string;
   minutes: number;
   steps?: number;
+  layout?: "houses" | "peto" | "stat";
 };
 
 export const slides = raw as Slide[];
@@ -38,5 +39,13 @@ export function fmtTime(sec: number) {
 }
 
 export const stepsOf = (i: number) => slides[i]?.steps ?? 1;
+
+export function advancePosition(index: number, step: number) {
+  return step < stepsOf(index) - 1 ? { index, step: step + 1 } : { index: clampIndex(index + 1), step: 0 };
+}
+
+export function retreatPosition(index: number, step: number) {
+  return step > 0 ? { index, step: step - 1 } : { index: clampIndex(index - 1), step: stepsOf(clampIndex(index - 1)) - 1 };
+}
 
 export const CHANNEL = "p53-deck";

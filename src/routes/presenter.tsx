@@ -1,12 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play, RotateCcw } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ScaledSlide";
 import { SlideView } from "@/components/deck/SlideView";
-import { slides, TOTAL, clampIndex, CHANNEL, startMinute, fmtTime, stepsOf } from "@/lib/deck";
+import { slides, TOTAL, clampIndex, CHANNEL, startMinute, fmtTime, stepsOf, advancePosition, retreatPosition } from "@/lib/deck";
 
 export const Route = createFileRoute("/presenter")({
-  validateSearch: (s: Record<string, unknown>): { slide?: number } => (Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
+  validateSearch: (s: Record<string, unknown>): { slide?: number; step?: number } => ({
+    ...(Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
+    ...(Number(s["step"]) > 1 ? { step: Number(s["step"]) } : {}),
+  }),
   head: () => ({
     meta: [
       { title: "Vista del orador — p53" },
@@ -21,9 +24,11 @@ export const Route = createFileRoute("/presenter")({
 });
 
 function Presenter() {
-  const initial = (Route.useSearch().slide ?? 1) - 1;
+  const search = Route.useSearch();
+  const navigate = useNavigate({ from: "/presenter" });
+  const initial = (search.slide ?? 1) - 1;
   const [index, setIndex] = useState(clampIndex(initial));
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(Math.min(search.step ?? 1, stepsOf(clampIndex(initial))) - 1);
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(true);
   const [slideStart, setSlideStart] = useState(0);
@@ -57,8 +62,13 @@ function Presenter() {
     setStep(st);
     chan.current?.postMessage({ type: "goto", index: n, step: st });
   };
-  const nextStep = () => (step < stepsOf(index) - 1 ? go(index, step + 1) : go(index + 1));
-  const prevStep = () => (step > 0 ? go(index, step - 1) : go(index - 1, stepsOf(index - 1) - 1));
+  const nextStep = () => { const pos = advancePosition(index, step); go(pos.index, pos.step); };
+  const prevStep = () => { const pos = retreatPosition(index, step); go(pos.index, pos.step); };
+
+  useEffect(() => {
+    navigate({ search: { slide: index + 1, ...(step > 0 ? { step: step + 1 } : {}) }, replace: true });
+    document.title = `${index + 1}/${TOTAL} — ${slides[index]?.label ?? "p53"} · Orador`;
+  }, [index, step, navigate]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -69,7 +79,8 @@ function Presenter() {
     return () => window.removeEventListener("keydown", onKey);
   });
 
-  const s = slides[index]!;
+  const s = slides[index];
+  if (!s) return null;
   const next = slides[index + 1];
   const target = (startMinute[index] ?? 0) * 60;
   const diff = elapsed - target; // + = behind schedule
