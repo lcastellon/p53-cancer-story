@@ -6,7 +6,7 @@ import { SlideView } from "@/components/deck/SlideView";
 import { slides, TOTAL, acts, clampIndex, CHANNEL } from "@/lib/deck";
 
 export const Route = createFileRoute("/")({
-  validateSearch: (s: Record<string, unknown>) => ({ slide: Number(s.slide) > 0 ? Number(s.slide) : 1 }),
+  validateSearch: (s: Record<string, unknown>): { slide?: number } => (Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
   head: () => ({
     meta: [
       { title: "p53: El Guardián del Genoma — Presentación" },
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Deck() {
-  const { slide } = Route.useSearch();
+  const { slide = 1 } = Route.useSearch();
   const navigate = useNavigate({ from: "/" });
   const index = clampIndex(slide - 1);
   const [fs, setFs] = useState(false);
@@ -105,10 +105,10 @@ function Deck() {
           const r = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
           go(e.clientX - r.left < r.width / 3 ? index - 1 : index + 1);
         }}
-        onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+        onTouchStart={(e) => (touchX.current = e.touches[0]!.clientX)}
         onTouchEnd={(e) => {
           if (touchX.current == null) return;
-          const dx = e.changedTouches[0].clientX - touchX.current;
+          const dx = e.changedTouches[0]!.clientX - touchX.current;
           if (Math.abs(dx) > 50) go(dx < 0 ? index + 1 : index - 1);
           touchX.current = null;
         }}

@@ -6,7 +6,7 @@ import { SlideView } from "@/components/deck/SlideView";
 import { slides, TOTAL, clampIndex, CHANNEL, startMinute, fmtTime } from "@/lib/deck";
 
 export const Route = createFileRoute("/presenter")({
-  validateSearch: (s: Record<string, unknown>) => ({ slide: Number(s.slide) > 0 ? Number(s.slide) : 1 }),
+  validateSearch: (s: Record<string, unknown>): { slide?: number } => (Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
   head: () => ({
     meta: [
       { title: "Vista del orador — p53" },
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/presenter")({
 });
 
 function Presenter() {
-  const initial = Route.useSearch().slide - 1;
+  const initial = (Route.useSearch().slide ?? 1) - 1;
   const [index, setIndex] = useState(clampIndex(initial));
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(true);

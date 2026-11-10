@@ -19,13 +19,13 @@ export const TOTAL = slides.length;
 
 /** Minute mark (from start) at which each slide should begin. */
 export const startMinute = slides.reduce<number[]>((acc, s, i) => {
-  acc.push(i === 0 ? 0 : acc[i - 1] + slides[i - 1].minutes);
+  acc.push(i === 0 ? 0 : acc[i - 1]! + slides[i - 1]!.minutes);
   return acc;
 }, []);
 
 export const acts = Array.from(new Set(slides.map((s) => s.act))).map((a) => {
   const list = slides.filter((s) => s.act === a);
-  return { act: a, name: list[0].actName, title: list[0].actTitle, first: list[0].n - 1, count: list.length };
+  return { act: a, name: list[0]!.actName, title: list[0]!.actTitle, first: list[0]!.n - 1, count: list.length };
 });
 
 export const clampIndex = (i: number) => Math.max(0, Math.min(TOTAL - 1, i));
