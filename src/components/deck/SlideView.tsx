@@ -66,7 +66,7 @@ function Cover({ s }: { s: Slide }) {
   );
 }
 
-function CancerTypesSlide({ s }: { s: Slide }) {
+function CancerTypesSlide({ s, step }: { s: Slide; step: number }) {
   const categories = [
     { name: "Carcinomas", percent: 90, tissue: "Epitelios y glándulas", color: "var(--slide-warm)", example: "Piel, colon, pulmón, mama" },
     { name: "Leucemias y linfomas", percent: 8, tissue: "Sangre y sistema inmunitario", color: "var(--slide-accent)", example: "Médula ósea, linfocitos" },
@@ -103,11 +103,11 @@ function CancerTypesSlide({ s }: { s: Slide }) {
           ))}
         </div>
         <div className="mt-10 grid grid-cols-[1fr_1fr] gap-8">
-          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-8 py-7">
+          <div aria-hidden={step < 1} className={`rounded-[22px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-8 py-7 transition-all duration-500 ${step >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
             <p className="text-[34px] font-semibold leading-tight">¿Por qué son tan frecuentes los carcinomas?</p>
             <p className="mt-4 text-[27px] leading-snug text-[var(--slide-muted)]">Muchos epitelios se renuevan continuamente: más divisiones implican más oportunidades de errores de copia.</p>
           </div>
-          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-8 py-7">
+          <div aria-hidden={step < 2} className={`rounded-[22px] border-l-[8px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-8 py-7 transition-all duration-500 ${step >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
             <p className="text-[34px] font-semibold leading-tight">También importa la exposición</p>
             <p className="mt-4 text-[27px] leading-snug text-[var(--slide-muted)]">Radiación UV, humo, sustancias químicas, inflamación y defensas propias del tejido modifican el riesgo.</p>
           </div>
@@ -263,7 +263,7 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "houses") return <CancerSlide s={s} step={step ?? 0} />;
   if (s.layout === "peto") return <PetoSlide s={s} step={step ?? (s.steps ?? 1) - 1} />;
   if (s.n === 1) return <Cover s={s} />;
-  if (s.layout === "types") return <CancerTypesSlide s={s} />;
+  if (s.layout === "types") return <CancerTypesSlide s={s} step={step ?? 0} />;
   if (s.layout === "scribe") return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
