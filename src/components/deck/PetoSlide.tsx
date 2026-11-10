@@ -1,9 +1,6 @@
 import type { Slide } from "@/lib/deck";
 import { TOTAL } from "@/lib/deck";
 
-// Premise risk figure — placeholder until a sourced value is provided.
-const RISK = "1-10 mutaciones por división celular";
-
 const Mouse = () => (
   <svg viewBox="0 0 200 120" className="h-[120px]">
     <ellipse cx="95" cy="75" rx="60" ry="35" fill="currentColor" />
@@ -82,8 +79,7 @@ export function PetoSlide({ s, step }: { s: Slide; step: number }) {
       <div className="absolute left-[120px] top-[140px] w-[1680px]">
         <h2 className="slide-title font-display">{s.title}</h2>
         <p className="slide-body mt-6 max-w-[1500px] text-[var(--slide-muted)]">
-          Premisa: cada división celular tiene un riesgo fijo de mutación maligna (
-          <span className="text-[var(--slide-warm)]">{RISK}</span>). Más células × más años = más cáncer.
+          Cada división celular puede generar mutaciones. ¿Por qué los animales con muchas más células no necesariamente desarrollan más cáncer?
         </p>
         <p className="slide-subtitle mt-6 font-display text-[var(--slide-accent)]">
           {reveal ? "Realidad: la tasa está invertida. ¿Por qué?" : "¿Cuál creen que sea menos susceptible al cáncer?"}
