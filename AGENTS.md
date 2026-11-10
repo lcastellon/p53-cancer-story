@@ -29,3 +29,5 @@ use the editor.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
 - Deck content lives in src/data/slides.json (parsed from the user's script); slide layouts in src/components/deck render it at 1920x1080 — keeps text editable in one place.
+- Select specialized slide layouts using the JSON layout key, never slide numbers or the presence of steps, so inserted slides do not change existing visuals.
+- Share step transitions between audience and presenter views; keep analogy counts in a tested model so both views follow the same sequence.
