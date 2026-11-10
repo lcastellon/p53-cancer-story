@@ -69,8 +69,8 @@ function Cover({ s }: { s: Slide }) {
 function Stat({ s }: { s: Slide }) {
   const segments = [
     { value: 50, label: "TP53 mutado", description: "Mutación directa del gen", color: "var(--slide-warm)" },
-    { value: 45, label: "Vía p53 desactivada", description: "Otros mecanismos de inhibición", color: "var(--slide-accent)" },
-    { value: 5, label: "Otros casos", description: "Sin mecanismo especificado", color: "var(--slide-muted)" },
+    { value: 45, label: "p53 desactivada", description: "Por otros mecanismos", color: "var(--slide-accent)" },
+    { value: 5, label: "Otros casos", description: "Sin alteración clasificada", color: "var(--slide-muted)" },
   ];
   const radius = 86;
   const circumference = 2 * Math.PI * radius;
@@ -82,13 +82,13 @@ function Stat({ s }: { s: Slide }) {
       <div className="absolute left-[120px] top-[154px] w-[1680px]">
         <h2 className="slide-title font-display">{s.title}</h2>
         <p className="slide-caption mt-7 text-[var(--slide-muted)]">
-          Distribución conceptual 50 / 45 / 5 · no representa una estimación epidemiológica validada
+          Mutaciones directas y alteraciones de la vía p53
         </p>
       </div>
       <div className="absolute left-[120px] top-[302px] grid w-[1680px] grid-cols-[720px_1fr] items-center gap-[92px]">
         <div className="flex flex-col items-center">
           <svg viewBox="0 0 240 240" className="h-[640px] w-[640px]" role="img"
-            aria-label="Gráfico ilustrativo: 50 por ciento TP53 mutado, 45 por ciento vía p53 desactivada y 5 por ciento otros casos">
+            aria-label="Gráfico conceptual: 50 por ciento TP53 mutado, 45 por ciento p53 desactivada por otros mecanismos y 5 por ciento otros casos">
             <circle cx="120" cy="120" r={radius} fill="none" stroke="var(--slide-line)" strokeWidth="29" />
             {segments.map((segment) => {
               const length = circumference * segment.value / 100;
@@ -123,7 +123,7 @@ function Stat({ s }: { s: Slide }) {
             </div>
           ))}
           <p className="slide-caption mt-3 max-w-[820px] text-[var(--slide-muted)]">
-            Las proporciones son ilustrativas. La frecuencia real varía entre tipos de cáncer.
+            Distribución aproximada para divulgación; no es una prevalencia global medida.
           </p>
         </div>
       </div>
