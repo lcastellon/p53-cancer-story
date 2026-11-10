@@ -68,7 +68,7 @@ export function CancerSlide({ s, step }: { s: Slide; step: number }) {
           </>}
         </svg>
         <p className="slide-body">{cancer ? stage.cancerCaption : stage.healthyCaption}</p>
-        <p className="slide-caption mt-3 text-[var(--slide-muted)]">{cancer ? (step === 0 ? "El cambio todavía no es visible." : step === 1 ? "Adolescentes salen a colonizar otras casas." : "Sin control ni límites: se extiende por la ciudad.") : (step === 2 ? "Renovación ordenada, respetando el espacio." : "Crecimiento regulado, respetando el espacio.")}</p>
+        <p className="slide-caption mt-3 text-[var(--slide-muted)]">{cancer ? (step === 0 ? "El cambio todavía no es visible." : step === 1 ? "El agua, el dinero y la atención escasean. Los adolescentes empiezan a tener hijos a temprana edad." : "Sin control ni límites: se extiende por la ciudad.") : (step === 2 ? "Renovación ordenada, respetando el espacio." : "Crecimiento regulado, respetando el espacio.")}</p>
       </section>)}
     </div>
   </div>;
