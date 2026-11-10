@@ -123,7 +123,7 @@ function Stat({ s }: { s: Slide }) {
             </div>
           ))}
           <p className="slide-caption mt-3 max-w-[820px] text-[var(--slide-muted)]">
-            Distribución aproximada para divulgación; no es una prevalencia global medida.
+            Valores aproximados. Pueden variar dependiendo del tipo de cáncer y de cada individuo.
           </p>
         </div>
       </div>
