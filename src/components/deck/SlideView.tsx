@@ -34,7 +34,7 @@ function Chrome({ s }: { s: Slide }) {
           {String(s.n).padStart(2, "0")} / {TOTAL}
         </span>
       </div>
-      {s.n !== 3 && s.n !== 4 && (
+      {s.n !== 3 && s.layout !== "scribe" && (
         <div className="slide-footer absolute bottom-[56px] left-[120px] text-[var(--slide-muted)]">
           p53 · El guardián del genoma — basado en Sue Armstrong
         </div>
@@ -61,6 +61,58 @@ function Cover({ s }: { s: Slide }) {
           alt="Portada original del libro p53: The Gene That Cracked the Cancer Code, de Sue Armstrong"
           className="max-h-full max-w-full rounded-[8px] object-contain shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
         />
+      </div>
+    </div>
+  );
+}
+
+function CancerTypesSlide({ s }: { s: Slide }) {
+  const categories = [
+    { name: "Carcinomas", percent: 90, tissue: "Epitelios y glándulas", color: "var(--slide-warm)", example: "Piel, colon, pulmón, mama" },
+    { name: "Leucemias y linfomas", percent: 8, tissue: "Sangre y sistema inmunitario", color: "var(--slide-accent)", example: "Médula ósea, linfocitos" },
+    { name: "Sarcomas", percent: 1, tissue: "Tejidos conectivos", color: "var(--slide-fg)", example: "Hueso, músculo, grasa" },
+    { name: "Otros", percent: 1, tissue: "Otros orígenes celulares", color: "var(--slide-muted)", example: "Distintas neoplasias" },
+  ];
+  const summary = categories.reduce<{ start: number; percent: number; color: string }[]>((acc, category) => {
+    const start = acc.length ? acc[acc.length - 1]!.start + acc[acc.length - 1]!.percent : 0;
+    acc.push({ start, percent: category.percent, color: category.color });
+    return acc;
+  }, []);
+
+  return (
+    <div className="slide-content slide-bg">
+      <Chrome s={s} />
+      <div className="absolute left-[120px] top-[146px] w-[1680px]">
+        <h2 className="slide-title font-display">{s.title}</h2>
+        <p className="slide-caption mt-7 text-[var(--slide-muted)]">Proporciones históricas orientativas según el tejido de origen</p>
+      </div>
+      <div className="absolute left-[120px] top-[320px] w-[1680px]">
+        <div className="flex h-[84px] w-full overflow-hidden rounded-[18px] bg-[var(--slide-line)]" role="img" aria-label="Distribución histórica aproximada: 90 por ciento carcinomas, 8 por ciento leucemias y linfomas, 1 por ciento sarcomas y 1 por ciento otros tipos">
+          {summary.map((segment, i) => (
+            <div key={i} style={{ width: `${segment.percent}%`, backgroundColor: segment.color }} className="h-full border-r-[2px] border-[var(--slide-bg)] last:border-r-0" />
+          ))}
+        </div>
+        <div className="mt-9 grid grid-cols-4 gap-6">
+          {categories.map((category) => (
+            <div key={category.name} className="min-h-[250px] rounded-[24px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-7 py-7">
+              <div className="font-display text-[70px] leading-none" style={{ color: category.color }}>{category.percent}%</div>
+              <div className="mt-5 text-[31px] font-semibold leading-tight">{category.name}</div>
+              <div className="mt-3 text-[24px] leading-tight text-[var(--slide-muted)]">{category.tissue}</div>
+              <div className="mt-5 text-[21px] leading-tight text-[var(--slide-muted)]">{category.example}</div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 grid grid-cols-[1fr_1fr] gap-8">
+          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-8 py-7">
+            <p className="text-[34px] font-semibold leading-tight">¿Por qué son tan frecuentes los carcinomas?</p>
+            <p className="mt-4 text-[27px] leading-snug text-[var(--slide-muted)]">Muchos epitelios se renuevan continuamente: más divisiones implican más oportunidades de errores de copia.</p>
+          </div>
+          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-8 py-7">
+            <p className="text-[34px] font-semibold leading-tight">También importa la exposición</p>
+            <p className="mt-4 text-[27px] leading-snug text-[var(--slide-muted)]">Radiación UV, humo, sustancias químicas, inflamación y defensas propias del tejido modifican el riesgo.</p>
+          </div>
+        </div>
+        <p className="mt-5 text-[20px] text-[var(--slide-muted)]">Fuente: Cooper, <em>The Cell</em> (2000); cifras redondeadas, variables según edad y población.</p>
       </div>
     </div>
   );
@@ -211,7 +263,8 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "houses") return <CancerSlide s={s} step={step ?? 0} />;
   if (s.layout === "peto") return <PetoSlide s={s} step={step ?? (s.steps ?? 1) - 1} />;
   if (s.n === 1) return <Cover s={s} />;
-  if (s.n === 4) return <ScribeSlide s={s} />;
+  if (s.layout === "types") return <CancerTypesSlide s={s} />;
+  if (s.layout === "scribe") return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
   return <Standard s={s} />;
