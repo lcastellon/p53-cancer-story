@@ -51,7 +51,7 @@ function Cover({ s }: { s: Slide }) {
         </h1>
         <div className="mt-12 h-[4px] w-[115px] rounded-full bg-[var(--slide-warm)]" aria-hidden="true" />
         <p className="slide-body-lg mt-10 text-[var(--slide-muted)]">{s.subtitle}</p>
-        <p className="mt-14 text-[27px] tracking-[0.015em] text-[var(--slide-muted)]">Presentado por <span className="font-semibold text-[var(--slide-fg)]">MC León Felipe Castellón</span></p>
+        <p className="mt-14 text-[27px] tracking-[0.015em] text-[var(--slide-muted)]">Presentado por <span className="font-semibold text-[var(--slide-fg)]">M. C. León Felipe Castellón</span></p>
       </div>
       <div className="absolute right-[125px] top-[125px] flex h-[830px] w-[600px] items-center justify-center">
         <img
