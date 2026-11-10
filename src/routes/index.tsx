@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Maximize, Minimize, MonitorPlay, Grid3x3 } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ScaledSlide";
 import { SlideView } from "@/components/deck/SlideView";
-import { slides, TOTAL, acts, clampIndex, CHANNEL, stepsOf } from "@/lib/deck";
+import { slides, TOTAL, acts, clampIndex, CHANNEL, stepsOf, advancePosition, retreatPosition } from "@/lib/deck";
 
 export const Route = createFileRoute("/")({
   validateSearch: (s: Record<string, unknown>): { slide?: number; step?: number } => ({
@@ -15,9 +15,11 @@ export const Route = createFileRoute("/")({
       { title: "p53: El Guardián del Genoma — Presentación" },
       { name: "description", content: "Presentación interactiva de divulgación sobre p53, basada en el libro de Sue Armstrong." },
       { property: "og:title", content: "p53: El Guardián del Genoma — Presentación" },
-      { property: "og:description", content: "26 diapositivas en 5 actos sobre el gen que descifró el código del cáncer." },
+      { property: "og:description", content: `${TOTAL} diapositivas sobre p53, con analogías interactivas del cáncer y la paradoja de Peto.` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://mpd-biblio-covers.imgix.net/9781472910523.jpg?w=800" },
+      { name: "twitter:image", content: "https://mpd-biblio-covers.imgix.net/9781472910523.jpg?w=800" },
     ],
   }),
   component: Deck,
@@ -55,11 +57,11 @@ function Deck() {
   indexRef.current = index;
   const stepRef = useRef(step);
   stepRef.current = step;
-  const next = () => (step < stepsOf(index) - 1 ? go(index, true, step + 1) : go(index + 1));
-  const prev = () => (step > 0 ? go(index, true, step - 1) : go(index - 1, true, stepsOf(index - 1) - 1));
+  const next = () => { const pos = advancePosition(index, step); go(pos.index, true, pos.step); };
+  const prev = () => { const pos = retreatPosition(index, step); go(pos.index, true, pos.step); };
 
   useEffect(() => {
-    document.title = `${index + 1}/${TOTAL} — ${slides[index]!.label}`;
+    document.title = `${index + 1}/${TOTAL} — ${slides[index]?.label ?? "p53"}`;
   }, [index]);
 
   useEffect(() => {
@@ -99,11 +101,12 @@ function Deck() {
     else document.documentElement.requestFullscreen?.();
   }
   function openPresenter() {
-    window.open(`/presenter?slide=${indexRef.current + 1}`, "p53-presenter", "width=1400,height=850");
+    window.open(`/presenter?slide=${indexRef.current + 1}&step=${stepRef.current + 1}`, "p53-presenter", "width=1400,height=850");
   }
 
-  const s = slides[index]!;
+  const s = slides[index];
   const hide = idle && fs;
+  if (!s) return null;
 
   return (
     <div className={`flex h-screen flex-col bg-[var(--deck-stage)] ${hide ? "cursor-none" : ""}`}>
@@ -113,12 +116,13 @@ function Deck() {
           const r = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
           if (e.clientX - r.left < r.width / 3) prev(); else next();
         }}
-        onTouchStart={(e) => (touchX.current = e.touches[0]!.clientX)}
+        onTouchStart={(e) => (touchX.current = e.touches[0]?.clientX ?? null)}
         onTouchEnd={(e) => {
           if (touchX.current == null) return;
-          const dx = e.changedTouches[0]!.clientX - touchX.current;
+          const dx = (e.changedTouches[0]?.clientX ?? touchX.current) - touchX.current;
           if (Math.abs(dx) > 50) { if (dx < 0) next(); else prev(); }
           touchX.current = null;
+          if (Math.abs(dx) > 50) e.preventDefault();
         }}
       >
         <ScaledSlide className="h-full w-full">
