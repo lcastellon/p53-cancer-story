@@ -148,3 +148,5 @@
 .slide-kicker { font-size: var(--slide-kicker); line-height: 1.1; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
 .slide-footer, .slide-page { font-size: var(--slide-chrome); white-space: nowrap; }
 .font-display { font-family: var(--font-display); font-weight: 500; }
+@keyframes deck-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.deck-fade { animation: deck-fade 0.45s ease-out both; }

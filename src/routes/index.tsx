@@ -114,7 +114,7 @@ function Deck() {
         }}
       >
         <ScaledSlide className="h-full w-full">
-          <div key={index} className="animate-in fade-in duration-500">
+          <div key={index} className="deck-fade">
             <SlideView s={s} />
           </div>
         </ScaledSlide>
