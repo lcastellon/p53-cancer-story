@@ -2,7 +2,7 @@ import type { Slide } from "@/lib/deck";
 import { TOTAL } from "@/lib/deck";
 
 // Premise risk figure — placeholder until a sourced value is provided.
-const RISK = "[1-10 mutaciones por división celular]";
+const RISK = "1-10 mutaciones por división celular";
 
 const Mouse = () => (
   <svg viewBox="0 0 200 120" className="h-[120px]">
