@@ -114,7 +114,8 @@
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
     "minutes": 2.3,
-    "layout": "types"
+    "layout": "types",
+    "steps": 3
   },
   {
     "n": 7,
