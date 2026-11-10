@@ -3,10 +3,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Maximize, Minimize, MonitorPlay, Grid3x3 } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ScaledSlide";
 import { SlideView } from "@/components/deck/SlideView";
-import { slides, TOTAL, acts, clampIndex, CHANNEL } from "@/lib/deck";
+import { slides, TOTAL, acts, clampIndex, CHANNEL, stepsOf } from "@/lib/deck";
 
 export const Route = createFileRoute("/")({
-  validateSearch: (s: Record<string, unknown>): { slide?: number } => (Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
+  validateSearch: (s: Record<string, unknown>): { slide?: number; step?: number } => ({
+    ...(Number(s["slide"]) > 0 ? { slide: Number(s["slide"]) } : {}),
+    ...(Number(s["step"]) > 1 ? { step: Number(s["step"]) } : {}),
+  }),
   head: () => ({
     meta: [
       { title: "p53: El Guardián del Genoma — Presentación" },
@@ -21,19 +24,20 @@ export const Route = createFileRoute("/")({
 });
 
 function Deck() {
-  const { slide = 1 } = Route.useSearch();
+  const { slide = 1, step: stepParam = 1 } = Route.useSearch();
   const navigate = useNavigate({ from: "/" });
   const index = clampIndex(slide - 1);
+  const step = Math.min(stepParam, stepsOf(index)) - 1;
   const [fs, setFs] = useState(false);
   const [grid, setGrid] = useState(false);
   const [idle, setIdle] = useState(false);
   const chan = useRef<BroadcastChannel | null>(null);
 
   const go = useCallback(
-    (i: number, broadcast = true) => {
+    (i: number, broadcast = true, st = 0) => {
       const n = clampIndex(i);
-      navigate({ search: { slide: n + 1 }, replace: true });
-      if (broadcast) chan.current?.postMessage({ type: "goto", index: n });
+      navigate({ search: st > 0 ? { slide: n + 1, step: st + 1 } : { slide: n + 1 }, replace: true });
+      if (broadcast) chan.current?.postMessage({ type: "goto", index: n, step: st });
     },
     [navigate],
   );
@@ -42,13 +46,17 @@ function Deck() {
     const c = new BroadcastChannel(CHANNEL);
     chan.current = c;
     c.onmessage = (e) => {
-      if (e.data?.type === "goto") go(e.data.index, false);
-      if (e.data?.type === "hello") c.postMessage({ type: "goto", index: indexRef.current });
+      if (e.data?.type === "goto") go(e.data.index, false, e.data.step ?? 0);
+      if (e.data?.type === "hello") c.postMessage({ type: "goto", index: indexRef.current, step: stepRef.current });
     };
     return () => c.close();
   }, [go]);
   const indexRef = useRef(index);
   indexRef.current = index;
+  const stepRef = useRef(step);
+  stepRef.current = step;
+  const next = () => (step < stepsOf(index) - 1 ? go(index, true, step + 1) : go(index + 1));
+  const prev = () => (step > 0 ? go(index, true, step - 1) : go(index - 1, true, stepsOf(index - 1) - 1));
 
   useEffect(() => {
     document.title = `${index + 1}/${TOTAL} — ${slides[index]!.label}`;
@@ -56,8 +64,8 @@ function Deck() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); go(index + 1); }
-      else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); go(index - 1); }
+      if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); next(); }
+      else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); prev(); }
       else if (e.key === "Home") go(0);
       else if (e.key === "End") go(TOTAL - 1);
       else if (e.key === "f" || e.key === "F5") { e.preventDefault(); toggleFs(); }
@@ -67,7 +75,7 @@ function Deck() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [index, go]);
+  }, [index, step, go]);
 
   useEffect(() => {
     const h = () => setFs(!!document.fullscreenElement);
@@ -103,19 +111,19 @@ function Deck() {
         className="relative min-h-0 flex-1"
         onClick={(e) => {
           const r = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
-          go(e.clientX - r.left < r.width / 3 ? index - 1 : index + 1);
+          if (e.clientX - r.left < r.width / 3) prev(); else next();
         }}
         onTouchStart={(e) => (touchX.current = e.touches[0]!.clientX)}
         onTouchEnd={(e) => {
           if (touchX.current == null) return;
           const dx = e.changedTouches[0]!.clientX - touchX.current;
-          if (Math.abs(dx) > 50) go(dx < 0 ? index + 1 : index - 1);
+          if (Math.abs(dx) > 50) { if (dx < 0) next(); else prev(); }
           touchX.current = null;
         }}
       >
         <ScaledSlide className="h-full w-full">
           <div key={index} className="deck-fade">
-            <SlideView s={s} />
+            <SlideView s={s} step={step} />
           </div>
         </ScaledSlide>
       </div>
@@ -137,9 +145,9 @@ function Deck() {
           <span className="font-medium text-foreground">{s.actName}</span>
           <span className="hidden truncate sm:inline">{s.label}</span>
           <div className="ml-auto flex items-center gap-1">
-            <IconBtn label="Anterior (←)" onClick={() => go(index - 1)}><ChevronLeft size={18} /></IconBtn>
+            <IconBtn label="Anterior (←)" onClick={prev}><ChevronLeft size={18} /></IconBtn>
             <span className="w-16 text-center tabular-nums">{index + 1} / {TOTAL}</span>
-            <IconBtn label="Siguiente (→)" onClick={() => go(index + 1)}><ChevronRight size={18} /></IconBtn>
+            <IconBtn label="Siguiente (→)" onClick={next}><ChevronRight size={18} /></IconBtn>
             <IconBtn label="Vista general (G)" onClick={() => setGrid(true)}><Grid3x3 size={18} /></IconBtn>
             <IconBtn label="Vista del orador (P)" onClick={openPresenter}><MonitorPlay size={18} /></IconBtn>
             <IconBtn label="Pantalla completa (F)" onClick={toggleFs}>{fs ? <Minimize size={18} /> : <Maximize size={18} />}</IconBtn>

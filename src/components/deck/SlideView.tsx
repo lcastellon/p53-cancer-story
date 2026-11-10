@@ -1,6 +1,7 @@
 import type { Slide } from "@/lib/deck";
 import { TOTAL } from "@/lib/deck";
 import { Rich } from "./Rich";
+import { PetoSlide } from "./PetoSlide";
 
 function Helix({ className = "" }: { className?: string }) {
   const rungs = Array.from({ length: 22 });
@@ -133,7 +134,8 @@ function Standard({ s }: { s: Slide }) {
   );
 }
 
-export function SlideView({ s }: { s: Slide }) {
+export function SlideView({ s, step }: { s: Slide; step?: number }) {
+  if (s.steps) return <PetoSlide s={s} step={step ?? s.steps - 1} />;
   if (s.n === 1) return <Cover s={s} />;
   if (s.n === 4) return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
