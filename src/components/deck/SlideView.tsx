@@ -43,10 +43,9 @@ function Chrome({ s }: { s: Slide }) {
 function Cover({ s }: { s: Slide }) {
   return (
     <div className="slide-content slide-bg">
-      <div className="absolute left-[120px] top-[210px] w-[1030px]">
+      <div className="absolute left-[120px] top-[265px] w-[1030px]">
         <div className="slide-kicker mb-10 text-[var(--slide-accent)]">Divulgación científica · Sue Armstrong</div>
-        <div className="font-display text-[230px] leading-[0.85] tracking-[-0.06em] text-[var(--slide-warm)]">p53</div>
-        <h1 className="slide-title mt-16 font-display">El Guardián del Genoma y el Código del Cáncer</h1>
+        <h1 className="slide-title font-display">{s.title}</h1>
         <p className="slide-body-lg mt-10 max-w-[950px] text-[var(--slide-muted)]">{s.subtitle}</p>
       </div>
       <div className="absolute right-[160px] top-[118px] flex h-[830px] w-[565px] items-center justify-center">
