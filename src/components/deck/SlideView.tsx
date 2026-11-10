@@ -75,7 +75,7 @@ function Stat({ s }: { s: Slide }) {
           </ul>
         </div>
       </div>
-      <div className="absolute left-[120px] top-[490px] w-[640px] text-center">
+      <div className="absolute left-[120px] top-[400px] w-[640px] text-center">
         <div className="font-display text-[150px] leading-none text-[var(--slide-fg)]">50%</div>
         <div className="slide-caption text-[var(--slide-muted)]">con p53 mutado</div>
       </div>
