@@ -111,6 +111,32 @@ function Closing({ s }: { s: Slide }) {
   );
 }
 
+function ScribeSlide({ s }: { s: Slide }) {
+  return (
+    <div className="slide-content slide-bg">
+      <Chrome s={s} />
+      <div className="absolute left-[120px] top-[150px] w-[1680px]">
+        <h2 className="slide-title font-display max-w-[1580px]">{s.title}</h2>
+      </div>
+      <div className="absolute left-[120px] top-[320px] grid w-[1680px] grid-cols-[800px_1fr] items-center gap-[75px]">
+        <ul className="space-y-8">
+          {s.points.map((p, i) => (
+            <li key={i} className="slide-body flex gap-6">
+              <span className="mt-[0.45em] h-[0.5em] w-[0.5em] shrink-0 rotate-45 bg-[var(--slide-accent)]" />
+              <span><Rich text={p} /></span>
+            </li>
+          ))}
+        </ul>
+        <img
+          src="/monje-copista-animado.svg"
+          alt="Animación de un monje copista que escribe rápidamente rodeado de enciclopedias mientras llueve"
+          className="h-[600px] w-full rounded-[28px] border border-[var(--slide-line)] object-contain"
+        />
+      </div>
+    </div>
+  );
+}
+
 function Standard({ s }: { s: Slide }) {
   const cards = s.points.length <= 3 && s.points.every((p) => p.length < 200);
   const dense = s.points.length > 4;
@@ -148,6 +174,7 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "houses") return <CancerSlide s={s} step={step ?? 0} />;
   if (s.layout === "peto") return <PetoSlide s={s} step={step ?? (s.steps ?? 1) - 1} />;
   if (s.n === 1) return <Cover s={s} />;
+  if (s.n === 4) return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
   return <Standard s={s} />;
