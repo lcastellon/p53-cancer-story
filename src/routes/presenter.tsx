@@ -64,7 +64,7 @@ function Presenter() {
 
   const s = slides[index]!;
   const next = slides[index + 1];
-  const target = startMinute[index] * 60;
+  const target = (startMinute[index] ?? 0) * 60;
   const diff = elapsed - target; // + = behind schedule
   const onSlide = elapsed - slideStart;
   const budget = s.minutes * 60;
