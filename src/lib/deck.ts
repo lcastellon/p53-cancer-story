@@ -12,6 +12,7 @@ export type Slide = {
   actName: string;
   actTitle: string;
   minutes: number;
+  steps?: number;
 };
 
 export const slides = raw as Slide[];
@@ -35,5 +36,7 @@ export function fmtTime(sec: number) {
   const s = Math.floor(sec % 60);
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
+
+export const stepsOf = (i: number) => slides[i]?.steps ?? 1;
 
 export const CHANNEL = "p53-deck";
