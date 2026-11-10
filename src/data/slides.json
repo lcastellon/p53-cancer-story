@@ -54,6 +54,29 @@
   },
   {
     "n": 4,
+    "label": "¿Por qué algunos tejidos desarrollan más cáncer?",
+    "title": "¿Por qué predominan los carcinomas?",
+    "subtitle": "El origen celular explica gran parte de las diferencias de frecuencia.",
+    "points": [
+      "**Carcinomas (~90%)**: proceden de células epiteliales que recubren superficies y forman glándulas.",
+      "**Leucemias y linfomas (~8%)**: se originan en células hematopoyéticas o inmunitarias.",
+      "**Sarcomas (~1%)**: surgen en hueso, músculo y otros tejidos conectivos.",
+      "**Otros (~1%)**: distintas neoplasias no incluidas en las categorías anteriores."
+    ],
+    "visual": "Barras comparativas de frecuencia histórica aproximada: 90% carcinomas, 8% leucemias y linfomas, 1% sarcomas y 1% otros; explicación de renovación celular, exposición y contexto tisular.",
+    "notes": [
+      "¿Por qué los carcinomas son tan frecuentes? Suelen representar una gran mayoría de los cánceres en adultos. Una clasificación didáctica de Cooper, The Cell: A Molecular Approach, 2.ª edición (2000), redondea a ~90% carcinomas, ~8% leucemias y linfomas, ~1% sarcomas y ~1% otras neoplasias. Son proporciones históricas y orientativas: cambian con edad, región, exposición y los criterios de registro; no deben confundirse con cifras actuales de incidencia mundial.",
+      "Los carcinomas nacen del epitelio: piel, revestimientos del tubo digestivo, aparato respiratorio y glándulas. Muchos epitelios se renuevan constantemente; una mayor acumulación de divisiones incrementa las oportunidades de errores durante la replicación del ADN. Además, algunas superficies contactan con radiación UV, humo, agentes químicos o inflamación. No es que cada célula epitelial sea siempre más vulnerable: importan la exposición, la biología tisular, la edad y la vigilancia celular.",
+      "Las leucemias y los linfomas afectan células de la sangre o del sistema inmunitario; los sarcomas derivan del tejido conectivo, músculo y hueso. Aquí no estamos comparando la gravedad, sino el origen celular y la frecuencia. Referencias: Cooper GM. The Cell: A Molecular Approach, 2nd ed., NCBI Bookshelf, https://www.ncbi.nlm.nih.gov/books/NBK9963/ ; Frank SA. Dynamics of Cancer, capítulo 12, https://www.ncbi.nlm.nih.gov/books/NBK1566/ ; Tomasetti C & Vogelstein B (2015), Science, doi:10.1126/science.1260825. Transición: cada división requiere copiar el ADN; pasemos al monje copista."
+    ],
+    "act": 1,
+    "actName": "Apertura",
+    "actTitle": "El dilema de la multicelularidad",
+    "minutes": 2.3,
+    "layout": "types"
+  },
+  {
+    "n": 5,
     "label": "La ruleta rusa de la división celular",
     "title": "Copiar una enciclopedia 2 metros de largo sin equivocarse",
     "subtitle": "",
@@ -70,10 +93,11 @@
     "act": 1,
     "actName": "Apertura",
     "actTitle": "El dilema de la multicelularidad",
-    "minutes": 2
+    "minutes": 2,
+    "layout": "scribe"
   },
   {
-    "n": 5,
+    "n": 6,
     "label": "La estadística demoledora",
     "title": "El denominador común de los tumores",
     "subtitle": "",
@@ -93,7 +117,7 @@
     "layout": "stat"
   },
   {
-    "n": 6,
+    "n": 7,
     "label": "El descubrimiento en 1979",
     "title": "1979: Una sombra en el gel de electroforesis",
     "subtitle": "",
@@ -113,7 +137,7 @@
     "minutes": 2.4
   },
   {
-    "n": 7,
+    "n": 8,
     "label": "El gran malentendido: Acusada de ser el enemigo",
     "title": "1980 - 1988: Cuando la ciencia arrestó al sospechoso equivocado",
     "subtitle": "",
@@ -133,7 +157,7 @@
     "minutes": 2.4
   },
   {
-    "n": 8,
+    "n": 9,
     "label": "La epifanía de 1989",
     "title": "1989: El día que descubrieron el clon impostor",
     "subtitle": "",
@@ -153,7 +177,7 @@
     "minutes": 2.4
   },
   {
-    "n": 9,
+    "n": 10,
     "label": "De villana a \"Molécula del Año\"",
     "title": "1993: La coronación científica",
     "subtitle": "",
@@ -172,7 +196,7 @@
     "minutes": 2.4
   },
   {
-    "n": 10,
+    "n": 11,
     "label": "Lección epistemológica (Para el público general)",
     "title": "¿Por qué tardamos 10 años en darnos cuenta?",
     "subtitle": "",
@@ -191,7 +215,7 @@
     "minutes": 2.4
   },
   {
-    "n": 11,
+    "n": 12,
     "label": "La vida normal de p53 (El centinela dormido)",
     "title": "En condiciones normales: Producir y destruir al instante",
     "subtitle": "",
@@ -211,7 +235,7 @@
     "minutes": 2.3
   },
   {
-    "n": 12,
+    "n": 13,
     "label": "¡Alarma en el núcleo! La activación",
     "title": "Cuando suena la sirena: Daño en el ADN",
     "subtitle": "",
@@ -231,7 +255,7 @@
     "minutes": 2.3
   },
   {
-    "n": 13,
+    "n": 14,
     "label": "Las tres decisiones del Guardián",
     "title": "El dilema de p53: Las 3 opciones ante el daño",
     "subtitle": "",
@@ -253,7 +277,7 @@
     "minutes": 2.3
   },
   {
-    "n": 14,
+    "n": 15,
     "label": "La decisión 1 y 2: Pausa y reparación",
     "title": "El freno p21 y los mecánicos moleculares",
     "subtitle": "",
@@ -274,7 +298,7 @@
     "minutes": 2.3
   },
   {
-    "n": 15,
+    "n": 16,
     "label": "La decisión 3: Apoptosis (El sacrificio honorable)",
     "title": "Apoptosis: Morir por el bien de la comunidad",
     "subtitle": "",
@@ -294,7 +318,7 @@
     "minutes": 2.3
   },
   {
-    "n": 16,
+    "n": 17,
     "label": "La cuarta vía: Senescencia (La jubilación obligatoria)",
     "title": "Senescencia: La célula que nunca volverá a dividirse",
     "subtitle": "",
@@ -313,7 +337,7 @@
     "minutes": 2.3
   },
   {
-    "n": 17,
+    "n": 18,
     "label": "El Síndrome de Li-Fraumeni",
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
@@ -333,7 +357,7 @@
     "minutes": 2.5
   },
   {
-    "n": 18,
+    "n": 19,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -353,7 +377,7 @@
     "minutes": 2.5
   },
   {
-    "n": 19,
+    "n": 20,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -373,7 +397,7 @@
     "minutes": 2.5
   },
   {
-    "n": 20,
+    "n": 21,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -393,7 +417,7 @@
     "minutes": 2.5
   },
   {
-    "n": 21,
+    "n": 22,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -420,7 +444,7 @@
     "layout": "peto"
   },
   {
-    "n": 22,
+    "n": 23,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -441,7 +465,7 @@
     "minutes": 2.3
   },
   {
-    "n": 23,
+    "n": 24,
     "label": "¿Y las ballenas o las ratas topo desnudas?",
     "title": "Otras lecciones de la naturaleza",
     "subtitle": "",
@@ -460,7 +484,7 @@
     "minutes": 2.3
   },
   {
-    "n": 24,
+    "n": 25,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -480,7 +504,7 @@
     "minutes": 2.2
   },
   {
-    "n": 25,
+    "n": 26,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -499,7 +523,7 @@
     "minutes": 2.2
   },
   {
-    "n": 26,
+    "n": 27,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -521,7 +545,7 @@
     "minutes": 2.2
   },
   {
-    "n": 27,
+    "n": 28,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
