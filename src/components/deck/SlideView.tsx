@@ -43,12 +43,15 @@ function Chrome({ s }: { s: Slide }) {
 function Cover({ s }: { s: Slide }) {
   return (
     <div className="slide-content slide-bg">
-      <div className="absolute left-[120px] top-[265px] w-[1030px]">
-        <div className="slide-kicker mb-10 text-[var(--slide-accent)]">Divulgación científica · Sue Armstrong</div>
-        <h1 className="slide-title font-display">{s.title}</h1>
-        <p className="slide-body-lg mt-10 max-w-[950px] text-[var(--slide-muted)]">{s.subtitle}</p>
+      <div className="absolute left-[125px] top-[205px] flex h-[670px] w-[975px] flex-col justify-center">
+        <div className="slide-kicker mb-12 text-[var(--slide-accent)]">Sue Armstrong</div>
+        <h1 className="font-display text-[83px] leading-[1.08] tracking-[-0.035em] text-[var(--slide-fg)]">
+          {s.title}
+        </h1>
+        <div className="mt-12 h-[4px] w-[115px] rounded-full bg-[var(--slide-warm)]" aria-hidden="true" />
+        <p className="slide-body-lg mt-10 text-[var(--slide-muted)]">{s.subtitle}</p>
       </div>
-      <div className="absolute right-[160px] top-[118px] flex h-[830px] w-[565px] items-center justify-center">
+      <div className="absolute right-[125px] top-[125px] flex h-[830px] w-[600px] items-center justify-center">
         <img
           src="https://mpd-biblio-covers.imgix.net/9781472910523.jpg?w=800"
           alt="Portada original del libro p53: The Gene That Cracked the Cancer Code, de Sue Armstrong"
