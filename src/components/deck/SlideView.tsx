@@ -67,30 +67,65 @@ function Cover({ s }: { s: Slide }) {
 }
 
 function Stat({ s }: { s: Slide }) {
+  const segments = [
+    { value: 50, label: "TP53 mutado", description: "Mutación directa del gen", color: "var(--slide-warm)" },
+    { value: 45, label: "Vía p53 desactivada", description: "Otros mecanismos de inhibición", color: "var(--slide-accent)" },
+    { value: 5, label: "Otros casos", description: "Sin mecanismo especificado", color: "var(--slide-muted)" },
+  ];
+  const radius = 86;
+  const circumference = 2 * Math.PI * radius;
+  let current = 0;
+
   return (
     <div className="slide-content slide-bg">
       <Chrome s={s} />
-      <div className="absolute left-[120px] top-[170px] grid w-[1680px] grid-cols-[640px_1fr] items-center gap-[100px]">
-        <svg viewBox="0 0 200 200" className="h-[640px] w-[640px] -rotate-90">
-          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--slide-line)" strokeWidth="26" />
-          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--slide-warm)" strokeWidth="26" strokeDasharray="251.3 502.6" />
-          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--slide-accent)" strokeWidth="26" strokeDasharray="0 251.3 251.3 0" strokeOpacity="0.55" />
-        </svg>
-        <div>
-          <h2 className="slide-title font-display">{s.title}</h2>
-          <ul className="mt-12 space-y-8">
-            {s.points.map((p, i) => (
-              <li key={i} className="slide-body flex gap-6">
-                <span className="mt-[14px] h-4 w-4 shrink-0 rounded-full" style={{ background: i === 0 ? "var(--slide-warm)" : "var(--slide-accent)" }} />
-                <span><Rich text={p} /></span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="absolute left-[120px] top-[154px] w-[1680px]">
+        <h2 className="slide-title font-display">{s.title}</h2>
+        <p className="slide-caption mt-7 text-[var(--slide-muted)]">
+          Distribución conceptual 50 / 45 / 5 · no representa una estimación epidemiológica validada
+        </p>
       </div>
-      <div className="absolute left-[120px] top-[400px] w-[640px] text-center">
-        <div className="font-display text-[150px] leading-none text-[var(--slide-fg)]">50%</div>
-        <div className="slide-caption text-[var(--slide-muted)]">con p53 mutado</div>
+      <div className="absolute left-[120px] top-[302px] grid w-[1680px] grid-cols-[720px_1fr] items-center gap-[92px]">
+        <div className="flex flex-col items-center">
+          <svg viewBox="0 0 240 240" className="h-[640px] w-[640px]" role="img"
+            aria-label="Gráfico ilustrativo: 50 por ciento TP53 mutado, 45 por ciento vía p53 desactivada y 5 por ciento otros casos">
+            <circle cx="120" cy="120" r={radius} fill="none" stroke="var(--slide-line)" strokeWidth="29" />
+            {segments.map((segment) => {
+              const length = circumference * segment.value / 100;
+              const offset = circumference * current / 100;
+              current += segment.value;
+              return (
+                <circle key={segment.label} cx="120" cy="120" r={radius} fill="none"
+                  stroke={segment.color} strokeWidth="29"
+                  strokeDasharray={`${length} ${circumference - length}`}
+                  strokeDashoffset={-offset}
+                  transform="rotate(-90 120 120)"
+                />
+              );
+            })}
+            <text x="120" y="112" textAnchor="middle" fill="var(--slide-fg)"
+              fontSize="26" fontWeight="600" fontFamily="IBM Plex Sans, sans-serif">p53</text>
+            <text x="120" y="135" textAnchor="middle" fill="var(--slide-muted)"
+              fontSize="9" fontFamily="IBM Plex Sans, sans-serif">ESQUEMA</text>
+          </svg>
+        </div>
+        <div className="flex flex-col gap-7">
+          {segments.map((segment) => (
+            <div key={segment.label} className="flex items-center gap-9 rounded-[24px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-9 py-8">
+              <div className="h-[86px] w-[10px] shrink-0 rounded-full" style={{ backgroundColor: segment.color }} />
+              <div className="w-[140px] shrink-0 font-display text-[72px] leading-none" style={{ color: segment.color }}>
+                {segment.value}%
+              </div>
+              <div>
+                <div className="text-[36px] font-semibold leading-tight text-[var(--slide-fg)]">{segment.label}</div>
+                <div className="slide-caption mt-2 text-[var(--slide-muted)]">{segment.description}</div>
+              </div>
+            </div>
+          ))}
+          <p className="slide-caption mt-3 max-w-[820px] text-[var(--slide-muted)]">
+            Las proporciones son ilustrativas. La frecuencia real varía entre tipos de cáncer.
+          </p>
+        </div>
       </div>
     </div>
   );
