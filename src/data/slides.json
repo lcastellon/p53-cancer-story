@@ -78,13 +78,13 @@
     "title": "El denominador común de los tumores",
     "subtitle": "",
     "points": [
-      "Más del **50% de todos los cánceres humanos** tienen el gen p53 roto o mutado directamente.",
-      "En el otro 50%, la ruta de p53 está \"desactivada\" o saboteada por otros medios.",
-      "Prácticamente ningún tumor sólido logra expandirse sin haber neutralizado antes a p53."
+      "Alrededor de **la mitad de los tumores humanos** presenta alteraciones de **TP53**.",
+      "En otros tumores, la actividad de la **vía p53** se reduce por mecanismos distintos de una mutación directa.",
+      "La distribución **50% / 45% / 5%** de la gráfica es una **ilustración conceptual**, no una medición general de todos los cánceres."
     ],
-    "visual": "Un círculo dividido a la mitad: 50% con mutación directa en p53 (pulmón, colon, mama, cerebro), y en el otro 50% una flecha indicando que el interruptor de p53 fue saboteado.",
+    "visual": "Gráfico de dona ilustrativo con tres segmentos: 50% TP53 mutado, 45% vía p53 desactivada, 5% otros casos. Advertencia de que no es una prevalencia epidemiológica validada.",
     "notes": [
-      "Si analizan cualquier tumor humano en un laboratorio de oncología —sea cáncer de pulmón, de mama, de colon o de hueso—, en más de la mitad de los casos encontrarán que el gen de p53 está dañado. Y en el resto, el tumor encontró una forma mañosa de amordazarlo. Para que una célula se vuelva maligna, es casi un requisito obligatorio deshacerse de este centinela. Por eso Sue Armstrong subtitula su libro 'El gen que descifró el código del cáncer'."
+      "La gráfica 50/45/5 es un recurso conceptual y no debe describirse como porcentaje global observado. Las alteraciones de TP53 se encuentran en aproximadamente la mitad de los tumores humanos, pero el porcentaje adicional de inactivación por mecanismos alternativos varía según el tipo de cáncer y la metodología. Un análisis de unos 7,000 tumores (2023; PMID: 37095494) estimó que alrededor del 12% fenocopiaban pérdida de TP53 sin mutación inactivante evidente. Fuente general: revisión de TP53, Journal of Internal Medicine (2025), DOI: 10.1111/joim.20106."
     ],
     "act": 1,
     "actName": "Apertura",
