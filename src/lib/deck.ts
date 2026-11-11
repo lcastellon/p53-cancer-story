@@ -13,7 +13,7 @@ export type Slide = {
   actTitle: string;
   minutes: number;
   steps?: number;
-  layout?: "houses" | "peto" | "stat" | "types" | "scribe";
+  layout?: "houses" | "peto" | "stat" | "types" | "scribe" | "twohits";
 };
 
 export const slides = raw as Slide[];
