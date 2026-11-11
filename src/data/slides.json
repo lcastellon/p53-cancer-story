@@ -359,6 +359,30 @@
   },
   {
     "n": 19,
+    "label": "Knudson: la hipótesis de los dos golpes",
+    "title": "La teoría de los dos golpes",
+    "subtitle": "¿Por qué heredar una mutación no significa necesariamente desarrollar cáncer?",
+    "points": [
+      "Los genes supresores de tumores suelen tener dos copias: una heredada de cada progenitor.",
+      "En el modelo clásico de RB1, la pérdida funcional de ambas copias elimina un freno importante a la proliferación.",
+      "Hereditario: el primer golpe ya está presente al nacer. Esporádico: ambos golpes ocurren durante la vida."
+    ],
+    "visual": "Diagrama de dos vías paralelas, hereditaria y esporádica, con pares de alelos RB1; un clic revela la primera copia alterada, otro clic la pérdida de la segunda copia.",
+    "notes": [
+      "Knudson propuso en 1971 la hipótesis de los dos golpes al estudiar el retinoblastoma, un tumor infantil de la retina. No significa que todos los cánceres se originen tras exactamente dos mutaciones. El modelo explica específicamente la inactivación bialélica de determinados genes supresores de tumores, y fue demostrado molecularmente para RB1. Fuente: Knudson AG (1971), PNAS 68:820–823, doi:10.1073/pnas.68.4.820.",
+      "PASO 1 — Modelo inicial y primer clic: cada célula diploide tiene dos alelos del gen supresor RB1. En casos hereditarios, el primer alelo alterado está presente desde el nacimiento en las células del organismo; en casos esporádicos, la primera alteración aparece durante la vida en una célula retiniana. La predisposición hereditaria es dominante a nivel familiar, pero la pérdida de función de RB1 requiere habitualmente ambos alelos afectados a nivel celular.",
+      "PASO 2 — Segundo clic: en la misma célula se pierde o inactiva la copia funcional restante de RB1 (segunda alteración somática), eliminando ese freno y facilitando el desarrollo del retinoblastoma. En personas sin predisposición hereditaria, dos golpes somáticos deben acumularse en la misma línea celular. Es un paso importante, no una garantía de cáncer por sí solo en cualquier contexto.",
+      "RELACIÓN CON p53: TP53 es también un gen supresor tumoral, pero no sigue siempre un modelo recesivo estricto de dos golpes. Algunas variantes de TP53 actúan por efecto dominante negativo o presentan ganancia de función; en síndrome de Li-Fraumeni algunas células ya tienen alterada la función de p53 sin un segundo golpe detectable. Fuente: GeneReviews, Li-Fraumeni Syndrome, sección Mechanism of Disease Causation: https://www.ncbi.nlm.nih.gov/books/NBK1311/."
+    ],
+    "act": 4,
+    "actName": "Acto III",
+    "actTitle": "Cuando el guardián duerme",
+    "minutes": 2.5,
+    "steps": 3,
+    "layout": "twohits"
+  },
+  {
+    "n": 20,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -378,7 +402,7 @@
     "minutes": 2.5
   },
   {
-    "n": 20,
+    "n": 21,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -398,7 +422,7 @@
     "minutes": 2.5
   },
   {
-    "n": 21,
+    "n": 22,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -418,7 +442,7 @@
     "minutes": 2.5
   },
   {
-    "n": 22,
+    "n": 23,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -445,7 +469,7 @@
     "layout": "peto"
   },
   {
-    "n": 23,
+    "n": 24,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -466,7 +490,7 @@
     "minutes": 2.3
   },
   {
-    "n": 24,
+    "n": 25,
     "label": "¿Y las ballenas o las ratas topo desnudas?",
     "title": "Otras lecciones de la naturaleza",
     "subtitle": "",
@@ -485,7 +509,7 @@
     "minutes": 2.3
   },
   {
-    "n": 25,
+    "n": 26,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -505,7 +529,7 @@
     "minutes": 2.2
   },
   {
-    "n": 26,
+    "n": 27,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -524,7 +548,7 @@
     "minutes": 2.2
   },
   {
-    "n": 27,
+    "n": 28,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -546,7 +570,7 @@
     "minutes": 2.2
   },
   {
-    "n": 28,
+    "n": 29,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
