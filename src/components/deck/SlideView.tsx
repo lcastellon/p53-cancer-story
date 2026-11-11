@@ -246,7 +246,7 @@ function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
       </div>
       <div className="absolute left-[120px] top-[315px] w-[1680px]">
         <div className="grid grid-cols-[260px_1fr_1fr_1fr] gap-5 text-center text-[23px] font-semibold text-[var(--slide-muted)]">
-          <span></span><span>Dos copias funcionales</span><span>Primer golpe</span><span>Segundo golpe</span>
+          <span></span><span>Antes de los golpes</span><span>Primer golpe</span><span>Segundo golpe</span>
         </div>
         {rows.map((row) => (
           <div key={row.id} className="mt-5 grid grid-cols-[260px_1fr_1fr_1fr] items-center gap-5 rounded-[22px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-6">
