@@ -226,6 +226,51 @@ function ScribeSlide({ s }: { s: Slide }) {
   );
 }
 
+function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
+  const rows = [
+    { id: "hereditary", name: "Cáncer hereditario", detail: "Primer golpe: heredado", second: "Segundo golpe: somático" },
+    { id: "sporadic", name: "Cáncer esporádico", detail: "Primer golpe: somático", second: "Segundo golpe: somático" },
+  ];
+  const Allele = ({ altered, label }: { altered: boolean; label: string }) => (
+    <div className={`flex h-[96px] w-[164px] flex-col items-center justify-center rounded-[18px] border-[3px] ${altered ? "border-[var(--slide-warm)] bg-[var(--slide-warm)]/10 text-[var(--slide-warm)]" : "border-[var(--slide-accent)] bg-[var(--slide-card)] text-[var(--slide-accent)]"}`}>
+      <span className="text-[34px] font-semibold leading-none">{altered ? "RB1 −" : "RB1 +"}</span>
+      <span className="mt-2 text-[19px]">{label}</span>
+    </div>
+  );
+  return (
+    <div className="slide-content slide-bg">
+      <Chrome s={s} />
+      <div className="absolute left-[120px] top-[145px] w-[1680px]">
+        <h2 className="slide-title font-display">{s.title}</h2>
+        <p className="slide-body mt-7 text-[var(--slide-muted)]">Knudson (1971) · Retinoblastoma · Gen supresor <span className="font-semibold text-[var(--slide-fg)]">RB1</span></p>
+      </div>
+      <div className="absolute left-[120px] top-[315px] w-[1680px]">
+        <div className="grid grid-cols-[260px_1fr_1fr_1fr] gap-5 text-center text-[23px] font-semibold text-[var(--slide-muted)]">
+          <span></span><span>Dos copias funcionales</span><span>Primer golpe</span><span>Segundo golpe</span>
+        </div>
+        {rows.map((row) => (
+          <div key={row.id} className="mt-5 grid grid-cols-[260px_1fr_1fr_1fr] items-center gap-5 rounded-[22px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-6">
+            <div><p className="text-[33px] font-semibold leading-tight">{row.name}</p><p className="mt-3 text-[21px] text-[var(--slide-muted)]">{row.id === "hereditary" ? "Predisposición desde el nacimiento" : "Sin predisposición heredada"}</p></div>
+            <div className="flex items-center justify-center gap-3"><Allele altered={false} label="copia 1"/><Allele altered={false} label="copia 2"/></div>
+            <div className={`transition-all duration-500 ${step >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+              <div className="flex items-center justify-center gap-3"><Allele altered={true} label="copia 1"/><Allele altered={false} label="copia 2"/></div>
+              <p className="mt-3 text-center text-[21px] text-[var(--slide-muted)]">{row.detail}</p>
+            </div>
+            <div className={`transition-all duration-500 ${step >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+              <div className="flex items-center justify-center gap-3"><Allele altered={true} label="copia 1"/><Allele altered={true} label="copia 2"/></div>
+              <p className="mt-3 text-center text-[21px] text-[var(--slide-muted)]">{row.second}</p>
+            </div>
+          </div>
+        ))}
+        <div className="mt-8 rounded-[20px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-8 py-6">
+          <p className="text-[27px] leading-tight"><span className="font-semibold">Importante:</span> el modelo clásico se aplica a <span className="font-semibold">RB1</span>. En <span className="font-semibold">TP53</span> pueden intervenir efectos dominantes negativos y otros mecanismos.</p>
+        </div>
+        <p className="mt-4 text-[19px] text-[var(--slide-muted)]">Fuente: Knudson, PNAS (1971); GeneReviews, síndrome de Li-Fraumeni.</p>
+      </div>
+    </div>
+  );
+}
+
 function Standard({ s }: { s: Slide }) {
   const cards = s.points.length <= 3 && s.points.every((p) => p.length < 200);
   const dense = s.points.length > 4;
@@ -264,6 +309,7 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "peto") return <PetoSlide s={s} step={step ?? (s.steps ?? 1) - 1} />;
   if (s.n === 1) return <Cover s={s} />;
   if (s.layout === "types") return <CancerTypesSlide s={s} step={step ?? 0} />;
+  if (s.layout === "twohits") return <TwoHitsSlide s={s} step={step ?? 0} />;
   if (s.layout === "scribe") return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
