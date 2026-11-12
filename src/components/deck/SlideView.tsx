@@ -280,7 +280,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
       <Chrome s={s} />
       <div className="absolute left-[120px] top-[138px] w-[1680px]">
         <h2 className="font-display text-[66px] leading-[1.08] tracking-[-0.03em]">{s.title}</h2>
-        <p className="slide-caption mt-6 text-[var(--slide-muted)]">Un alelo activado puede acelerar; dos alelos inactivados pueden eliminar el freno</p>
+        <p className="mt-5 max-w-[1650px] text-[27px] leading-[1.25] text-[var(--slide-muted)]">{s.subtitle}</p>
       </div>
       <div className="absolute left-[120px] top-[290px] grid w-[1680px] grid-cols-[830px_1fr] gap-[65px]">
         <div className="rounded-[32px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-8">
@@ -310,7 +310,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
             </div>
             <div className="flex flex-col items-center">
               <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${acceleratorStuck ? "rotate-[-18deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
-                <span className="font-display text-[30px] font-semibold">ACELERADOR</span>
+                <span className="font-display text-[22px] font-semibold tracking-[-0.02em]">ACELERADOR</span>
               </div>
               <p className="mt-3 text-[27px] font-semibold" style={{ color: acceleratorStuck ? "var(--slide-warm)" : "var(--slide-accent)" }}>{acceleratorStuck ? "Atascado" : "Regulado"}</p>
             </div>
