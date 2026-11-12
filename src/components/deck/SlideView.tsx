@@ -273,13 +273,14 @@ function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
 
 function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
   const acceleratorStuck = step >= 1;
-  const brakeBroken = step >= 2;
+  const brakeFirstHit = step >= 2;
+  const brakeBroken = step >= 3;
   return (
     <div className="slide-content slide-bg">
       <Chrome s={s} />
       <div className="absolute left-[120px] top-[138px] w-[1680px]">
         <h2 className="font-display text-[66px] leading-[1.08] tracking-[-0.03em]">{s.title}</h2>
-        <p className="slide-caption mt-6 text-[var(--slide-muted)]">Una metáfora de los controles de crecimiento celular</p>
+        <p className="slide-caption mt-6 text-[var(--slide-muted)]">Un alelo activado puede acelerar; dos alelos inactivados pueden eliminar el freno</p>
       </div>
       <div className="absolute left-[120px] top-[290px] grid w-[1680px] grid-cols-[830px_1fr] gap-[65px]">
         <div className="rounded-[32px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-8">
@@ -296,7 +297,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
             {acceleratorStuck && <g stroke="var(--slide-warm)" strokeWidth="7" strokeLinecap="round"><path d="M70 195 L22 185 M78 217L17 221 M72 241 L27 263" /><path d="M733 213L781 198 M736 238L785 241" /></g>}
             <g transform="translate(400 74)"><rect x="-200" y="-39" width="400" height="77" rx="37" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="3"/>
               <text x="0" y="11" fontSize="31" textAnchor="middle" fill="var(--slide-fg)" fontWeight="600">
-                {brakeBroken ? "SIN CONTROL" : acceleratorStuck ? "ACELERACIÓN EXCESIVA" : "CRECIMIENTO REGULADO"}
+                {brakeBroken ? "SIN CONTROL" : brakeFirstHit ? "PRIMER GOLPE EN EL FRENO" : acceleratorStuck ? "ACELERACIÓN EXCESIVA" : "CRECIMIENTO REGULADO"}
               </text>
             </g>
           </svg>
@@ -305,7 +306,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
               <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${brakeBroken ? "rotate-[23deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
                 <span className="font-display text-[35px] font-semibold">FRENO</span>
               </div>
-              <p className="mt-3 text-[27px] font-semibold" style={{ color: brakeBroken ? "var(--slide-warm)" : "var(--slide-accent)" }}>{brakeBroken ? "Averiado" : "Funcional"}</p>
+              <p className="mt-3 text-[27px] font-semibold" style={{ color: brakeBroken ? "var(--slide-warm)" : "var(--slide-accent)" }}>{brakeBroken ? "Averiado" : brakeFirstHit ? "Una copia activa" : "Funcional"}</p>
             </div>
             <div className="flex flex-col items-center">
               <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${acceleratorStuck ? "rotate-[-18deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
@@ -315,20 +316,43 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-6">
-          <div className="rounded-[24px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-10 py-8">
-            <p className="text-[38px] font-semibold">Conducción normal</p>
-            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">La célula acelera cuando necesita dividirse y se detiene cuando corresponde.</p>
+        <div className="flex flex-col justify-center gap-5">
+          <div className="rounded-[21px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-8 py-5">
+            <p className="text-[30px] font-semibold">Dos copias de cada gen</p>
+            <p className="mt-2 text-[23px] text-[var(--slide-muted)]">Al inicio, ambos controles funcionan normalmente.</p>
           </div>
-          <div className={`rounded-[24px] border-l-[10px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-10 py-8 transition-all duration-500 ${acceleratorStuck ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
-            <p className="text-[38px] font-semibold">Oncogén: acelerador atascado</p>
-            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">Una señal de crecimiento permanece activa. Ejemplos: RAS, MYC.</p>
+          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-8 py-6">
+            <p className="text-[32px] font-semibold">Acelerador · Protooncogén</p>
+            <div className="mt-5 flex items-center gap-4">
+              {[0, 1].map((i) => {
+                const altered = i === 0 && acceleratorStuck;
+                return <div key={i} className="flex-1 rounded-[15px] border-[3px] px-3 py-3 text-center transition-colors duration-500"
+                    style={{ borderColor: altered ? "var(--slide-warm)" : "var(--slide-accent)", color: altered ? "var(--slide-warm)" : "var(--slide-accent)" }}>
+                    <p className="text-[25px] font-semibold">Alelo {i+1}</p>
+                    <p className="mt-1 text-[20px]">{altered ? "Activado" : "Normal"}</p>
+                  </div>;
+              })}
+            </div>
+            <p className="mt-4 text-[23px] leading-snug text-[var(--slide-muted)]">{acceleratorStuck ? "Un alelo activado puede bastar para acelerar (ej. RAS)." : "Ambos alelos responden a las señales celulares."}</p>
           </div>
-          <div className={`rounded-[24px] border-l-[10px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-10 py-8 transition-all duration-500 ${brakeBroken ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
-            <p className="text-[38px] font-semibold">Gen supresor: freno averiado</p>
-            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">Se pierde un mecanismo de control. Ejemplos: RB1 y TP53.</p>
+          <div className="rounded-[22px] border-l-[8px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-8 py-6">
+            <p className="text-[32px] font-semibold">Freno · Gen supresor (RB1)</p>
+            <div className="mt-5 flex items-center gap-4">
+              {[brakeFirstHit, brakeBroken].map((altered, i) => (
+                <div key={i} className="flex-1 rounded-[15px] border-[3px] px-3 py-3 text-center transition-colors duration-500"
+                  style={{ borderColor: altered ? "var(--slide-warm)" : "var(--slide-accent)", color: altered ? "var(--slide-warm)" : "var(--slide-accent)" }}>
+                  <p className="text-[25px] font-semibold">Alelo {i+1}</p>
+                  <p className="mt-1 text-[20px]">{altered ? "Inactivado" : "Normal"}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-[23px] leading-snug text-[var(--slide-muted)]">
+              {brakeBroken ? "Segundo golpe: se pierde la segunda copia funcional." : brakeFirstHit ? "Primer golpe: la otra copia aún funciona." : "Dos copias funcionales mantienen el control."}
+            </p>
           </div>
-          <p className="text-[23px] leading-snug text-[var(--slide-muted)]">Analogía ilustrativa: no todos los tumores requieren ambas fallas.</p>
+          <p className="text-[21px] leading-snug text-[var(--slide-muted)]">
+            Modelo clásico de RB1. TP53 puede tener efectos dominantes negativos; no todos los cánceres siguen exactamente esta secuencia.
+          </p>
         </div>
       </div>
     </div>
