@@ -119,6 +119,54 @@
   },
   {
     "n": 7,
+    "label": "1971: Knudson y el retinoblastoma",
+    "title": "1971: La teoría de los dos golpes",
+    "subtitle": "¿Por qué algunos niños desarrollaban retinoblastoma antes y en ambos ojos, y otros después y en uno solo?",
+    "points": [
+      "Los genes supresores de tumores suelen tener dos copias: una heredada de cada progenitor.",
+      "En el modelo clásico de RB1, la pérdida funcional de ambas copias elimina un freno importante a la proliferación.",
+      "Hereditario: el primer golpe ya está presente al nacer. Esporádico: ambos golpes ocurren durante la vida."
+    ],
+    "visual": "Comparativa interactiva de dos alteraciones en RB1, con el hallazgo histórico de Knudson basado en retinoblastomas hereditarios y esporádicos.",
+    "notes": [
+      "CONTEXTO Y MOTIVACIÓN: Alfred G. Knudson, médico e investigador, quería explicar una diferencia clínica muy llamativa del retinoblastoma, un cáncer de la retina de la infancia: algunos niños presentaban la enfermedad muy temprano y en ambos ojos, a menudo con antecedentes familiares; otros, sin antecedentes, la desarrollaban por lo general más tarde y en un solo ojo. Analizó las edades al diagnóstico, la bilateralidad y datos de 48 casos propios más informes publicados. Ese patrón le impulsó a proponer en 1971 la hipótesis de dos acontecimientos mutacionales. Fuentes: Knudson AG (1971), PNAS 68:820–823, doi:10.1073/pnas.68.4.820; revisión histórica: https://pmc.ncbi.nlm.nih.gov/articles/PMC8694077/ .",
+      "PASO 1 — Dos copias: cada célula diploide tiene dos alelos de RB1. En el modelo hereditario, una copia está alterada desde la concepción en muchas células y solo falta un evento adicional en la retina; en el no hereditario hay que adquirir ambos cambios en una misma línea celular. Primer clic: aparece el primer golpe en ambas rutas.",
+      "PASO 2 — Segunda copia: un segundo golpe somático afecta la copia restante de RB1 y facilita la aparición del retinoblastoma. En la forma hereditaria explica la mayor frecuencia de tumores tempranos, bilaterales o multifocales. Es un modelo específico de pérdida bialélica de genes supresores, no una receta universal de solo dos mutaciones para cualquier cáncer.",
+      "PUENTE A p53: TP53 es un gen supresor, pero no sigue siempre un patrón recesivo idéntico a RB1: algunas proteínas p53 mutantes interfieren con las normales (dominancia negativa) o adquieren nuevas funciones. La investigación sobre RB1 fue decisiva para consolidar el concepto de genes supresores tumorales. Fuente: https://www.ncbi.nlm.nih.gov/books/NBK1311/ ."
+    ],
+    "act": 2,
+    "actName": "Acto I",
+    "actTitle": "De villano a salvador",
+    "minutes": 2.5,
+    "steps": 3,
+    "layout": "twohits"
+  },
+  {
+    "n": 8,
+    "label": "Acelerador y freno: dos clases de genes",
+    "title": "El cáncer: acelerador atascado y frenos averiados",
+    "subtitle": "Protooncogenes y genes supresores de tumores regulan la proliferación celular.",
+    "points": [
+      "Los protooncogenes favorecen señales de crecimiento cuando corresponde.",
+      "Si un protooncogén se activa anormalmente, puede transformarse en oncogén: acelerador atascado.",
+      "Los genes supresores, como RB1 y TP53, ayudan a detener el ciclo celular ante señales inapropiadas."
+    ],
+    "visual": "Infografía interactiva de automóvil y sus pedales: conducción regulada, acelerador atascado por oncogén activado y freno deficiente por pérdida de un gen supresor.",
+    "notes": [
+      "Una analogía sencilla: la proliferación celular es como conducir. Es necesario acelerar para crecer y reparar tejidos, pero también detenerse para evitar daños. Las señales de protooncogenes funcionan como un acelerador regulado; genes supresores como RB1 y TP53 participan en los frenos y controles. El automóvil no equivale literalmente a una célula: es una metáfora pedagógica.",
+      "PASO 1 — Conducción normal: el acelerador y el freno responden a las necesidades del organismo. Primer clic: el acelerador queda atascado. Una mutación activadora en un protooncogén puede convertirlo en oncogén; ejemplos como RAS o ciertas amplificaciones de MYC producen señales proliferativas excesivas. Habitualmente basta con afectar una copia para un efecto dominante a nivel celular.",
+      "PASO 2 — Segundo clic: se pierde el control del freno. Cuando se alteran genes supresores del crecimiento, como RB1 o TP53, pueden fallar el arresto del ciclo celular, la reparación del daño o la eliminación de células peligrosas. RB1 suele ajustarse al modelo de dos golpes; TP53 presenta excepciones, incluidos efectos dominantes negativos.",
+      "CIERRE: el cáncer no exige necesariamente ambas alteraciones de este dibujo en todos los tumores ni sigue una secuencia única. Se acumulan distintos cambios genéticos y epigenéticos. Esta analogía permite entender por qué las investigaciones de Knudson fueron decisivas para descubrir las funciones de los genes supresores y cómo se conecta con el descubrimiento de p53 en 1979."
+    ],
+    "act": 2,
+    "actName": "Acto I",
+    "actTitle": "De villano a salvador",
+    "minutes": 2.1,
+    "steps": 3,
+    "layout": "car"
+  },
+  {
+    "n": 9,
     "label": "El descubrimiento en 1979",
     "title": "1979: Una sombra en el gel de electroforesis",
     "subtitle": "",
@@ -138,7 +186,7 @@
     "minutes": 2.4
   },
   {
-    "n": 8,
+    "n": 10,
     "label": "El gran malentendido: Acusada de ser el enemigo",
     "title": "1980 - 1988: Cuando la ciencia arrestó al sospechoso equivocado",
     "subtitle": "",
@@ -158,7 +206,7 @@
     "minutes": 2.4
   },
   {
-    "n": 9,
+    "n": 11,
     "label": "La epifanía de 1989",
     "title": "1989: El día que descubrieron el clon impostor",
     "subtitle": "",
@@ -178,7 +226,7 @@
     "minutes": 2.4
   },
   {
-    "n": 10,
+    "n": 12,
     "label": "De villana a \"Molécula del Año\"",
     "title": "1993: La coronación científica",
     "subtitle": "",
@@ -197,7 +245,7 @@
     "minutes": 2.4
   },
   {
-    "n": 11,
+    "n": 13,
     "label": "Lección epistemológica (Para el público general)",
     "title": "¿Por qué tardamos 10 años en darnos cuenta?",
     "subtitle": "",
@@ -216,7 +264,7 @@
     "minutes": 2.4
   },
   {
-    "n": 12,
+    "n": 14,
     "label": "La vida normal de p53 (El centinela dormido)",
     "title": "En condiciones normales: Producir y destruir al instante",
     "subtitle": "",
@@ -236,7 +284,7 @@
     "minutes": 2.3
   },
   {
-    "n": 13,
+    "n": 15,
     "label": "¡Alarma en el núcleo! La activación",
     "title": "Cuando suena la sirena: Daño en el ADN",
     "subtitle": "",
@@ -256,7 +304,7 @@
     "minutes": 2.3
   },
   {
-    "n": 14,
+    "n": 16,
     "label": "Las tres decisiones del Guardián",
     "title": "El dilema de p53: Las 3 opciones ante el daño",
     "subtitle": "",
@@ -278,7 +326,7 @@
     "minutes": 2.3
   },
   {
-    "n": 15,
+    "n": 17,
     "label": "La decisión 1 y 2: Pausa y reparación",
     "title": "El freno p21 y los mecánicos moleculares",
     "subtitle": "",
@@ -299,7 +347,7 @@
     "minutes": 2.3
   },
   {
-    "n": 16,
+    "n": 18,
     "label": "La decisión 3: Apoptosis (El sacrificio honorable)",
     "title": "Apoptosis: Morir por el bien de la comunidad",
     "subtitle": "",
@@ -319,7 +367,7 @@
     "minutes": 2.3
   },
   {
-    "n": 17,
+    "n": 19,
     "label": "La cuarta vía: Senescencia (La jubilación obligatoria)",
     "title": "Senescencia: La célula que nunca volverá a dividirse",
     "subtitle": "",
@@ -338,7 +386,7 @@
     "minutes": 2.3
   },
   {
-    "n": 18,
+    "n": 20,
     "label": "El Síndrome de Li-Fraumeni",
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
@@ -358,31 +406,7 @@
     "minutes": 2.5
   },
   {
-    "n": 19,
-    "label": "Knudson: la hipótesis de los dos golpes",
-    "title": "La teoría de los dos golpes",
-    "subtitle": "¿Por qué heredar una mutación no significa necesariamente desarrollar cáncer?",
-    "points": [
-      "Los genes supresores de tumores suelen tener dos copias: una heredada de cada progenitor.",
-      "En el modelo clásico de RB1, la pérdida funcional de ambas copias elimina un freno importante a la proliferación.",
-      "Hereditario: el primer golpe ya está presente al nacer. Esporádico: ambos golpes ocurren durante la vida."
-    ],
-    "visual": "Diagrama de dos vías paralelas, hereditaria y esporádica, con pares de alelos RB1; un clic revela la primera copia alterada, otro clic la pérdida de la segunda copia.",
-    "notes": [
-      "Knudson propuso en 1971 la hipótesis de los dos golpes al estudiar el retinoblastoma, un tumor infantil de la retina. No significa que todos los cánceres se originen tras exactamente dos mutaciones. El modelo explica específicamente la inactivación bialélica de determinados genes supresores de tumores, y fue demostrado molecularmente para RB1. Fuente: Knudson AG (1971), PNAS 68:820–823, doi:10.1073/pnas.68.4.820.",
-      "PASO 1 — Modelo inicial y primer clic: cada célula diploide tiene dos alelos del gen supresor RB1. En casos hereditarios, el primer alelo alterado está presente desde el nacimiento en las células del organismo; en casos esporádicos, la primera alteración aparece durante la vida en una célula retiniana. La predisposición hereditaria es dominante a nivel familiar, pero la pérdida de función de RB1 requiere habitualmente ambos alelos afectados a nivel celular.",
-      "PASO 2 — Segundo clic: en la misma célula se pierde o inactiva la copia funcional restante de RB1 (segunda alteración somática), eliminando ese freno y facilitando el desarrollo del retinoblastoma. En personas sin predisposición hereditaria, dos golpes somáticos deben acumularse en la misma línea celular. Es un paso importante, no una garantía de cáncer por sí solo en cualquier contexto.",
-      "RELACIÓN CON p53: TP53 es también un gen supresor tumoral, pero no sigue siempre un modelo recesivo estricto de dos golpes. Algunas variantes de TP53 actúan por efecto dominante negativo o presentan ganancia de función; en síndrome de Li-Fraumeni algunas células ya tienen alterada la función de p53 sin un segundo golpe detectable. Fuente: GeneReviews, Li-Fraumeni Syndrome, sección Mechanism of Disease Causation: https://www.ncbi.nlm.nih.gov/books/NBK1311/."
-    ],
-    "act": 4,
-    "actName": "Acto III",
-    "actTitle": "Cuando el guardián duerme",
-    "minutes": 2.5,
-    "steps": 3,
-    "layout": "twohits"
-  },
-  {
-    "n": 20,
+    "n": 21,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -402,7 +426,7 @@
     "minutes": 2.5
   },
   {
-    "n": 21,
+    "n": 22,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -422,7 +446,7 @@
     "minutes": 2.5
   },
   {
-    "n": 22,
+    "n": 23,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -442,7 +466,7 @@
     "minutes": 2.5
   },
   {
-    "n": 23,
+    "n": 24,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -469,7 +493,7 @@
     "layout": "peto"
   },
   {
-    "n": 24,
+    "n": 25,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -490,7 +514,7 @@
     "minutes": 2.3
   },
   {
-    "n": 25,
+    "n": 26,
     "label": "¿Y las ballenas o las ratas topo desnudas?",
     "title": "Otras lecciones de la naturaleza",
     "subtitle": "",
@@ -509,7 +533,7 @@
     "minutes": 2.3
   },
   {
-    "n": 26,
+    "n": 27,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -529,7 +553,7 @@
     "minutes": 2.2
   },
   {
-    "n": 27,
+    "n": 28,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -548,7 +572,7 @@
     "minutes": 2.2
   },
   {
-    "n": 28,
+    "n": 29,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -570,7 +594,7 @@
     "minutes": 2.2
   },
   {
-    "n": 29,
+    "n": 30,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
