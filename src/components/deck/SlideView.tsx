@@ -357,57 +357,18 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
 }
 
 function DiscoverySlide({ s }: { s: Slide }) {
-  const scientists = [
-    { name:"David Lane", role:"Co-descubridor de p53", url:"https://novonordiskfoundationprize.com/awardees/sir-david-lane" },
-    { name:"Arnold Levine", role:"Co-descubridor de p53", url:"https://www.simonsfoundation.org/people/arnold-j-levine/" },
-  ];
-  const bands = [
-    { y:90, strength:[0.64,0.22,0.18,0.29] },
-    { y:160, strength:[0.83,0.27,0.35,0.22] },
-    { y:248, strength:[0.78,0.96,0.31,0.56] },
-    { y:326, strength:[0.72,0.25,0.37,0.18] },
-    { y:408, strength:[0.68,0.48,0.16,0.43] },
-  ];
   return (
     <div className="slide-content slide-bg">
       <Chrome s={s} />
-      <div className="absolute left-[120px] top-[143px] w-[1680px]">
-        <h2 className="font-display text-[68px] leading-tight">{s.title}</h2>
-        <p className="mt-5 text-[27px] text-[var(--slide-muted)]">1979 · La pista era una proteína celular de aproximadamente 53 kilodaltons.</p>
+      <div className="absolute left-[120px] top-[145px] w-[1680px]">
+        <h2 className="font-display text-[69px] leading-tight">{s.title}</h2>
+        <p className="mt-5 text-[27px] text-[var(--slide-muted)]">Una proteína inesperada de aproximadamente 53 kilodaltons cambió la historia de la oncología.</p>
       </div>
-      <div className="absolute left-[120px] top-[318px] grid w-[1680px] grid-cols-[1.05fr_1fr] gap-[44px]">
-        <div className="rounded-[27px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-8">
-          <svg viewBox="0 0 720 520" className="h-[510px] w-full" role="img" aria-label="Recreación de un gel de proteínas: flecha roja señala la banda de 53 kDa">
-            <rect x="115" y="18" width="578" height="483" rx="8" fill="#d4d1cb"/>
-            <rect x="126" y="28" width="558" height="463" fill="#eceae5"/>
-            {[0,1,2,3].map(i=><rect key={i} x={170+i*125} y="28" width="95" height="463" fill="#969696" opacity=".10" />)}
-            {bands.map((band,j)=>band.strength.map((strength,i)=><g key={j+"-"+i}>
-              <rect x={182+i*125} y={band.y} width="70" height={j===2?19:13} rx="7" fill="#191919" opacity={strength}/>
-              <rect x={173+i*125} y={band.y-5} width="88" height={j===2?29:23} rx="10" fill="#444" opacity={strength*.10}/>
-            </g>))}
-            {[["97",88],["68",161],["53",251],["43",327],["30",407]].map(([n,y])=><g key={n}>
-              <text x="20" y={Number(y)+11} fontSize="37" fill="var(--slide-fg)" fontFamily="serif">{n}</text>
-              <line x1="78" y1={Number(y)+2} x2="112" y2={Number(y)+2} stroke="var(--slide-fg)" strokeWidth="4"/>
-            </g>)}
-            <text x="20" y="45" fill="var(--slide-muted)" fontSize="27">kDa</text>
-            <path d="M657 198 L407 248" fill="none" stroke="#d32223" strokeWidth="13" strokeLinecap="round" />
-            <path d="M395 250 L440 220 L437 267 Z" fill="#d32223" />
-            <rect x="470" y="143" width="200" height="52" rx="12" fill="#fffdf9" opacity=".94"/>
-            <text x="570" y="178" textAnchor="middle" fontSize="31" fontWeight="700" fill="#b91c1c">53 kDa</text>
-          </svg>
-          <p className="mt-3 text-[20px] italic text-[var(--slide-muted)]">Recreación didáctica, no imagen del experimento original.</p>
+      <div className="absolute left-[120px] top-[330px] w-[1680px]">
+        <div className="overflow-hidden rounded-[28px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
+          <img src="/p53-discovery-collage.svg" alt="Ilustración histórica recreada: gel de electroforesis en blanco y negro con una flecha roja sobre la banda de 53 kDa; a la derecha, representaciones artísticas de David Lane y Arnold Levine jóvenes en sus laboratorios." className="block h-[576px] w-full object-cover" />
         </div>
-        <div className="grid grid-rows-[1fr_1fr_auto] gap-5">
-          {scientists.map(sc=><a href={sc.url} target="_blank" rel="noopener noreferrer" key={sc.name} className="flex items-center gap-7 rounded-[26px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-8 py-6">
-              <div className="flex h-[152px] w-[152px] shrink-0 items-center justify-center rounded-[18px] border border-[var(--slide-line)] bg-[var(--slide-bg)]">
-                <svg viewBox="0 0 120 120" className="h-[110px] w-[110px]" aria-hidden="true"><circle cx="60" cy="39" r="22" fill="var(--slide-muted)" opacity=".55"/><path d="M17 110 Q20 67 60 67 Q100 67 103 110" fill="var(--slide-muted)" opacity=".55"/></svg>
-              </div>
-              <div><p className="font-display text-[39px] leading-tight">{sc.name}</p><p className="mt-2 text-[25px] text-[var(--slide-muted)]">{sc.role}</p><p className="mt-4 text-[22px] text-[var(--slide-accent)]">Consultar retrato institucional ↗</p></div>
-            </a>)}
-          <div className="rounded-[21px] border-l-[8px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-7 py-5">
-            <p className="text-[26px] leading-snug">La proteína se detectó al estudiar la interacción de células y proteínas del virus SV40.</p>
-          </div>
-        </div>
+        <p className="mt-3 text-[19px] italic text-[var(--slide-muted)]">Recreación artística de los hallazgos de 1979; el gel y los retratos no son fotografías originales de aquella época.</p>
       </div>
     </div>
   );
