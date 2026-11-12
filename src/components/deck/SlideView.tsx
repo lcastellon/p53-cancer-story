@@ -242,7 +242,7 @@ function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
       <Chrome s={s} />
       <div className="absolute left-[120px] top-[145px] w-[1680px]">
         <h2 className="slide-title font-display">{s.title}</h2>
-        <p className="slide-body mt-7 text-[var(--slide-muted)]">Knudson (1971) · Retinoblastoma · Gen supresor <span className="font-semibold text-[var(--slide-fg)]">RB1</span></p>
+        <p className="slide-body mt-7 text-[var(--slide-muted)]">Knudson comparó 48 casos: tumores familiares tempranos, a menudo bilaterales, frente a otros generalmente unilaterales y más tardíos.</p>
       </div>
       <div className="absolute left-[120px] top-[315px] w-[1680px]">
         <div className="grid grid-cols-[260px_1fr_1fr_1fr] gap-5 text-center text-[23px] font-semibold text-[var(--slide-muted)]">
@@ -266,6 +266,70 @@ function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
           <p className="text-[27px] leading-tight"><span className="font-semibold">Importante:</span> el modelo clásico se aplica a <span className="font-semibold">RB1</span>. En <span className="font-semibold">TP53</span> pueden intervenir efectos dominantes negativos y otros mecanismos.</p>
         </div>
         <p className="mt-4 text-[19px] text-[var(--slide-muted)]">Fuente: Knudson, PNAS (1971); GeneReviews, síndrome de Li-Fraumeni.</p>
+      </div>
+    </div>
+  );
+}
+
+function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
+  const acceleratorStuck = step >= 1;
+  const brakeBroken = step >= 2;
+  return (
+    <div className="slide-content slide-bg">
+      <Chrome s={s} />
+      <div className="absolute left-[120px] top-[138px] w-[1680px]">
+        <h2 className="slide-title font-display">{s.title}</h2>
+        <p className="slide-caption mt-6 text-[var(--slide-muted)]">Una metáfora de los controles de crecimiento celular</p>
+      </div>
+      <div className="absolute left-[120px] top-[290px] grid w-[1680px] grid-cols-[830px_1fr] gap-[65px]">
+        <div className="rounded-[32px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-8">
+          <svg viewBox="0 0 800 430" className="h-[400px] w-full" role="img" aria-label="Automóvil y velocímetro de una célula; su rapidez aumenta cuando el acelerador queda atascado y falla el freno">
+            <defs>
+              <linearGradient id="carFill" x1="0" y1="0" x2="1" y2="1"><stop stopColor="var(--slide-accent)" /><stop offset="1" stopColor="var(--slide-warm)" /></linearGradient>
+            </defs>
+            <path d="M96 306H705" stroke="var(--slide-line)" strokeWidth="12" strokeLinecap="round" />
+            <path d="M145 232 L244 137 Q269 116 314 116 H492 Q532 116 562 152 L623 220 H685 Q711 221 719 250 L726 292 H96 L103 254 Q108 232 145 232Z" fill="url(#carFill)" opacity=".94" />
+            <path d="M259 154 H487 Q508 154 534 182 L560 218 H216Z" fill="var(--slide-bg)" opacity=".85" />
+            <path d="M386 155V220" stroke="var(--slide-muted)" strokeWidth="8" />
+            <rect x="104" y="268" width="610" height="31" rx="12" fill="var(--slide-bg-2)" />
+            {[220,610].map(x=><g key={x}><circle cx={x} cy="306" r="66" fill="var(--slide-bg)" stroke="var(--slide-muted)" strokeWidth="14"/><circle cx={x} cy="306" r="31" fill="var(--slide-line)" /></g>)}
+            {acceleratorStuck && <g stroke="var(--slide-warm)" strokeWidth="7" strokeLinecap="round"><path d="M70 195 L22 185 M78 217L17 221 M72 241 L27 263" /><path d="M733 213L781 198 M736 238L785 241" /></g>}
+            <g transform="translate(400 74)"><rect x="-200" y="-39" width="400" height="77" rx="37" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="3"/>
+              <text x="0" y="11" fontSize="31" textAnchor="middle" fill="var(--slide-fg)" fontWeight="600">
+                {brakeBroken ? "SIN CONTROL" : acceleratorStuck ? "ACELERACIÓN EXCESIVA" : "CRECIMIENTO REGULADO"}
+              </text>
+            </g>
+          </svg>
+          <div className="mt-1 grid grid-cols-2 gap-10">
+            <div className="flex flex-col items-center">
+              <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${brakeBroken ? "rotate-[23deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
+                <span className="font-display text-[35px] font-semibold">FRENO</span>
+              </div>
+              <p className="mt-3 text-[27px] font-semibold" style={{ color: brakeBroken ? "var(--slide-warm)" : "var(--slide-accent)" }}>{brakeBroken ? "Averiado" : "Funcional"}</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${acceleratorStuck ? "rotate-[-18deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
+                <span className="font-display text-[30px] font-semibold">ACELERADOR</span>
+              </div>
+              <p className="mt-3 text-[27px] font-semibold" style={{ color: acceleratorStuck ? "var(--slide-warm)" : "var(--slide-accent)" }}>{acceleratorStuck ? "Atascado" : "Regulado"}</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center gap-6">
+          <div className="rounded-[24px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-10 py-8">
+            <p className="text-[38px] font-semibold">Conducción normal</p>
+            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">La célula acelera cuando necesita dividirse y se detiene cuando corresponde.</p>
+          </div>
+          <div className={`rounded-[24px] border-l-[10px] border-[var(--slide-warm)] bg-[var(--slide-card)] px-10 py-8 transition-all duration-500 ${acceleratorStuck ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
+            <p className="text-[38px] font-semibold">Oncogén: acelerador atascado</p>
+            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">Una señal de crecimiento permanece activa. Ejemplos: RAS, MYC.</p>
+          </div>
+          <div className={`rounded-[24px] border-l-[10px] border-[var(--slide-accent)] bg-[var(--slide-card)] px-10 py-8 transition-all duration-500 ${brakeBroken ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 invisible"}`}>
+            <p className="text-[38px] font-semibold">Gen supresor: freno averiado</p>
+            <p className="mt-3 text-[28px] leading-snug text-[var(--slide-muted)]">Se pierde un mecanismo de control. Ejemplos: RB1 y TP53.</p>
+          </div>
+          <p className="text-[23px] leading-snug text-[var(--slide-muted)]">Analogía ilustrativa: no todos los tumores requieren ambas fallas.</p>
+        </div>
       </div>
     </div>
   );
@@ -310,6 +374,7 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.n === 1) return <Cover s={s} />;
   if (s.layout === "types") return <CancerTypesSlide s={s} step={step ?? 0} />;
   if (s.layout === "twohits") return <TwoHitsSlide s={s} step={step ?? 0} />;
+  if (s.layout === "car") return <CarPedalsSlide s={s} step={step ?? 0} />;
   if (s.layout === "scribe") return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
