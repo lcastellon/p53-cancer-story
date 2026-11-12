@@ -297,7 +297,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
             {acceleratorStuck && <g stroke="var(--slide-warm)" strokeWidth="7" strokeLinecap="round"><path d="M70 195 L22 185 M78 217L17 221 M72 241 L27 263" /><path d="M733 213L781 198 M736 238L785 241" /></g>}
             <g transform="translate(400 74)"><rect x="-200" y="-39" width="400" height="77" rx="37" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="3"/>
               <text x="0" y="11" fontSize="31" textAnchor="middle" fill="var(--slide-fg)" fontWeight="600">
-                {brakeBroken ? "SIN CONTROL" : brakeFirstHit ? "PRIMER GOLPE EN EL FRENO" : acceleratorStuck ? "ACELERACIÓN EXCESIVA" : "CRECIMIENTO REGULADO"}
+                {brakeBroken ? "SIN CONTROL" : brakeFirstHit ? "PRIMER GOLPE" : acceleratorStuck ? "ACELERACIÓN EXCESIVA" : "CRECIMIENTO REGULADO"}
               </text>
             </g>
           </svg>
