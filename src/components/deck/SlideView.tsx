@@ -304,7 +304,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
           <div className="mt-1 grid grid-cols-2 gap-10">
             <div className="flex flex-col items-center">
               <div className={`flex h-[170px] w-[185px] origin-top items-center justify-center rounded-[26px] border-[5px] transition-all duration-500 ${brakeBroken ? "rotate-[23deg] border-[var(--slide-warm)] bg-[var(--slide-warm)]/15" : "border-[var(--slide-accent)] bg-[var(--slide-bg)]"}`}>
-                <span className="font-display text-[35px] font-semibold">FRENO</span>
+                <span className="font-display text-[22px] font-semibold tracking-[-0.02em]">FRENO</span>
               </div>
               <p className="mt-3 text-[27px] font-semibold" style={{ color: brakeBroken ? "var(--slide-warm)" : "var(--slide-accent)" }}>{brakeBroken ? "Averiado" : brakeFirstHit ? "Una copia activa" : "Funcional"}</p>
             </div>
