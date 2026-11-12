@@ -359,33 +359,33 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
 function DiscoverySlide({ s }: { s: Slide }) {
   const collage = "/p53-discovery-collage.svg";
   const scientists = [
-    { name: "David Lane", crop: "571 0 547 820", description: "Recreación artística de David Lane joven en el laboratorio" },
-    { name: "Arnold Levine", crop: "1124 0 548 820", description: "Recreación artística de Arnold Levine joven en el laboratorio" },
+    { name: "David Lane", crop: "571 95 547 550", description: "Retrato recreado de David Lane joven en un laboratorio" },
+    { name: "Arnold Levine", crop: "1124 95 548 550", description: "Retrato recreado de Arnold Levine joven en un laboratorio" },
   ];
   return (
     <div className="slide-content slide-bg">
       <Chrome s={s} />
-      <div className="absolute left-[120px] top-[148px] w-[1680px]">
-        <h2 className="slide-title font-display">{s.title}</h2>
+      <div className="absolute left-[120px] top-[155px] w-[1680px]">
+        <h2 className="font-display text-[76px] leading-[1.12] tracking-[-0.025em]">{s.title}</h2>
       </div>
-      <div className="absolute left-[120px] top-[315px] grid h-[620px] w-[1680px] grid-cols-[760px_1fr] gap-[40px]">
+      <div className="absolute left-[120px] top-[295px] grid h-[660px] w-[1680px] grid-cols-[525px_1fr_1fr] gap-[28px]">
         <div className="overflow-hidden rounded-[26px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
-          <svg viewBox="0 0 560 941" preserveAspectRatio="none" className="h-full w-full" role="img" aria-label="Gel de electroforesis recreado con banda a 53 kDa señalada por una flecha roja">
+          <svg viewBox="0 90 555 760" preserveAspectRatio="xMidYMid slice" className="h-full w-full" role="img" aria-label="Gel de electroforesis recreado con flecha roja señalando una banda de 53 kDa">
             <image href={collage} width="1672" height="941" />
           </svg>
         </div>
-        <div className="grid grid-rows-2 gap-[24px]">
-          {scientists.map((scientist) => (
-            <div key={scientist.name} className="flex overflow-hidden rounded-[25px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
-              <svg viewBox={scientist.crop} preserveAspectRatio="xMidYMid slice" className="h-full w-[290px] shrink-0" role="img" aria-label={scientist.description}>
+        {scientists.map((scientist) => (
+          <div key={scientist.name} className="flex min-w-0 flex-col overflow-hidden rounded-[26px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
+            <div className="h-[564px] w-full overflow-hidden">
+              <svg viewBox={scientist.crop} preserveAspectRatio="xMidYMid slice" className="h-full w-full" role="img" aria-label={scientist.description}>
                 <image href={collage} width="1672" height="941" />
               </svg>
-              <div className="flex flex-1 items-center px-10">
-                <p className="font-display text-[48px] leading-tight">{scientist.name}</p>
-              </div>
             </div>
-          ))}
-        </div>
+            <div className="flex min-h-0 flex-1 items-center justify-center border-t border-[var(--slide-line)] px-4">
+              <p className="font-display text-[42px] leading-tight">{scientist.name}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
