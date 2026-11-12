@@ -357,18 +357,35 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
 }
 
 function DiscoverySlide({ s }: { s: Slide }) {
+  const collage = "/p53-discovery-collage.svg";
+  const scientists = [
+    { name: "David Lane", crop: "571 0 547 820", description: "Recreación artística de David Lane joven en el laboratorio" },
+    { name: "Arnold Levine", crop: "1124 0 548 820", description: "Recreación artística de Arnold Levine joven en el laboratorio" },
+  ];
   return (
     <div className="slide-content slide-bg">
       <Chrome s={s} />
-      <div className="absolute left-[120px] top-[145px] w-[1680px]">
-        <h2 className="font-display text-[69px] leading-tight">{s.title}</h2>
-        <p className="mt-5 text-[27px] text-[var(--slide-muted)]">Una proteína inesperada de aproximadamente 53 kilodaltons cambió la historia de la oncología.</p>
+      <div className="absolute left-[120px] top-[148px] w-[1680px]">
+        <h2 className="slide-title font-display">{s.title}</h2>
       </div>
-      <div className="absolute left-[120px] top-[330px] w-[1680px]">
-        <div className="overflow-hidden rounded-[28px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
-          <img src="/p53-discovery-collage.svg" alt="Ilustración histórica recreada: gel de electroforesis en blanco y negro con una flecha roja sobre la banda de 53 kDa; a la derecha, representaciones artísticas de David Lane y Arnold Levine jóvenes en sus laboratorios." className="block h-[576px] w-full object-cover" />
+      <div className="absolute left-[120px] top-[315px] grid h-[620px] w-[1680px] grid-cols-[760px_1fr] gap-[40px]">
+        <div className="overflow-hidden rounded-[26px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
+          <svg viewBox="0 0 560 941" preserveAspectRatio="none" className="h-full w-full" role="img" aria-label="Gel de electroforesis recreado con banda a 53 kDa señalada por una flecha roja">
+            <image href={collage} width="1672" height="941" />
+          </svg>
         </div>
-        <p className="mt-3 text-[19px] italic text-[var(--slide-muted)]">Recreación artística de los hallazgos de 1979; el gel y los retratos no son fotografías originales de aquella época.</p>
+        <div className="grid grid-rows-2 gap-[24px]">
+          {scientists.map((scientist) => (
+            <div key={scientist.name} className="flex overflow-hidden rounded-[25px] border border-[var(--slide-line)] bg-[var(--slide-card)]">
+              <svg viewBox={scientist.crop} preserveAspectRatio="xMidYMid slice" className="h-full w-[290px] shrink-0" role="img" aria-label={scientist.description}>
+                <image href={collage} width="1672" height="941" />
+              </svg>
+              <div className="flex flex-1 items-center px-10">
+                <p className="font-display text-[48px] leading-tight">{scientist.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
