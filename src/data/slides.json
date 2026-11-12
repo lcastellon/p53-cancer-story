@@ -145,24 +145,24 @@
     "n": 8,
     "label": "Acelerador y freno: dos clases de genes",
     "title": "1971: La teoría de los dos golpes",
-    "subtitle": "Protooncogenes y genes supresores de tumores regulan la proliferación celular.",
+    "subtitle": "Dos alelos: ganancia de función del acelerador y pérdida de función del freno.",
     "points": [
       "Los protooncogenes favorecen señales de crecimiento cuando corresponde.",
       "Si un protooncogén se activa anormalmente, puede transformarse en oncogén: acelerador atascado.",
       "Los genes supresores, como RB1 y TP53, ayudan a detener el ciclo celular ante señales inapropiadas."
     ],
-    "visual": "Infografía interactiva de automóvil y sus pedales: conducción regulada, acelerador atascado por oncogén activado y freno deficiente por pérdida de un gen supresor.",
+    "visual": "Animación de un automóvil con dos alelos visibles para el protooncogén y dos para RB1; clic 1 activa un alelo del acelerador, clic 2 altera el primer alelo del freno y clic 3 el segundo.",
     "notes": [
-      "Una analogía sencilla: la proliferación celular es como conducir. Es necesario acelerar para crecer y reparar tejidos, pero también detenerse para evitar daños. Las señales de protooncogenes funcionan como un acelerador regulado; genes supresores como RB1 y TP53 participan en los frenos y controles. El automóvil no equivale literalmente a una célula: es una metáfora pedagógica.",
-      "PASO 1 — Conducción normal: el acelerador y el freno responden a las necesidades del organismo. Primer clic: el acelerador queda atascado. Una mutación activadora en un protooncogén puede convertirlo en oncogén; ejemplos como RAS o ciertas amplificaciones de MYC producen señales proliferativas excesivas. Habitualmente basta con afectar una copia para un efecto dominante a nivel celular.",
-      "PASO 2 — Segundo clic: se pierde el control del freno. Cuando se alteran genes supresores del crecimiento, como RB1 o TP53, pueden fallar el arresto del ciclo celular, la reparación del daño o la eliminación de células peligrosas. RB1 suele ajustarse al modelo de dos golpes; TP53 presenta excepciones, incluidos efectos dominantes negativos.",
-      "CIERRE: el cáncer no exige necesariamente ambas alteraciones de este dibujo en todos los tumores ni sigue una secuencia única. Se acumulan distintos cambios genéticos y epigenéticos. Esta analogía permite entender por qué las investigaciones de Knudson fueron decisivas para descubrir las funciones de los genes supresores y cómo se conecta con el descubrimiento de p53 en 1979."
+      "ESTADO INICIAL: La proliferación celular se regula mediante señales activadoras (protooncogenes) y mecanismos inhibidores (genes supresores). El esquema muestra dos alelos de cada gen. Esta metáfora no implica que cualquier cáncer requiera literalmente ambas fallas del automóvil.",
+      "PRIMER CLIC — ACELERADOR: una alteración con ganancia de función puede convertir un protooncogén en oncogén. En ciertos oncogenes (por ejemplo RAS), una sola copia activada puede producir una señal de proliferación excesiva, aunque la otra permanezca normal.",
+      "SEGUNDO CLIC — PRIMER GOLPE EN EL FRENO: se inactiva una copia de RB1. El otro alelo puede conservar función. En el modelo clásico de Knudson la célula todavía dispone de un freno funcional.",
+      "TERCER CLIC — SEGUNDO GOLPE: una alteración somática inactiva el otro alelo de RB1, lo que facilita perder el control del ciclo celular. Se trata del modelo clásico de los dos golpes, originalmente propuesto para el retinoblastoma (Knudson, PNAS, 1971; DOI 10.1073/pnas.68.4.820). TP53 también es supresor tumoral, pero ciertas variantes tienen efecto dominante negativo o ganancia de función y no siempre requieren la pérdida secuencial de las dos copias."
     ],
     "act": 2,
     "actName": "Acto I",
     "actTitle": "De villano a salvador",
     "minutes": 2.1,
-    "steps": 3,
+    "steps": 4,
     "layout": "car"
   },
   {
