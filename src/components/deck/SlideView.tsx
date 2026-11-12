@@ -350,9 +350,6 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
               {brakeBroken ? "Segundo golpe: se pierde la segunda copia funcional." : brakeFirstHit ? "Primer golpe: la otra copia aún funciona." : "Dos copias funcionales mantienen el control."}
             </p>
           </div>
-          <p className="text-[21px] leading-snug text-[var(--slide-muted)]">
-            Modelo clásico de RB1. TP53 puede tener efectos dominantes negativos; no todos los cánceres siguen exactamente esta secuencia.
-          </p>
         </div>
       </div>
     </div>
