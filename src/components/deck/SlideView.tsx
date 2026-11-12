@@ -242,7 +242,7 @@ function TwoHitsSlide({ s, step }: { s: Slide; step: number }) {
       <Chrome s={s} />
       <div className="absolute left-[120px] top-[145px] w-[1680px]">
         <h2 className="slide-title font-display">{s.title}</h2>
-        <p className="slide-body mt-7 text-[var(--slide-muted)]">Knudson comparó 48 casos: tumores familiares tempranos, a menudo bilaterales, frente a otros generalmente unilaterales y más tardíos.</p>
+        <p className="slide-caption mt-6 text-[var(--slide-muted)]">¿Qué lo impulsó? Estudió 48 casos: tumores familiares tempranos y bilaterales frente a casos generalmente más tardíos y unilaterales.</p>
       </div>
       <div className="absolute left-[120px] top-[315px] w-[1680px]">
         <div className="grid grid-cols-[260px_1fr_1fr_1fr] gap-5 text-center text-[23px] font-semibold text-[var(--slide-muted)]">
@@ -278,7 +278,7 @@ function CarPedalsSlide({ s, step }: { s: Slide; step: number }) {
     <div className="slide-content slide-bg">
       <Chrome s={s} />
       <div className="absolute left-[120px] top-[138px] w-[1680px]">
-        <h2 className="slide-title font-display">{s.title}</h2>
+        <h2 className="font-display text-[66px] leading-[1.08] tracking-[-0.03em]">{s.title}</h2>
         <p className="slide-caption mt-6 text-[var(--slide-muted)]">Una metáfora de los controles de crecimiento celular</p>
       </div>
       <div className="absolute left-[120px] top-[290px] grid w-[1680px] grid-cols-[830px_1fr] gap-[65px]">
