@@ -13,7 +13,7 @@ export type Slide = {
   actTitle: string;
   minutes: number;
   steps?: number;
-  layout?: "houses" | "peto" | "stat" | "types" | "scribe" | "twohits" | "car" | "discovery" | "visual";
+  layout?: "houses" | "peto" | "stat" | "types" | "scribe" | "twohits" | "car" | "discovery" | "visual" | "police";
   pointsSize?: "lg" | "xl";
   visualKind?: string;
 };
