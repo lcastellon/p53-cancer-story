@@ -131,9 +131,45 @@ function OtherSpecies(){
   </div>;
 }
 function Pharma(){
-  return <div className={frame+" grid grid-cols-2 gap-6"}>
-    <div className={panel+" flex flex-col items-center justify-around text-center"}><p className="font-display text-[38px]">Bloquear una proteína</p><div className="relative flex h-[260px] w-[260px] items-center justify-center rounded-[36px] border-[7px] border-[var(--slide-accent)]"><Lock size={175} strokeWidth={1.3} className="text-[var(--slide-accent)]"/><Pill size={71} className="absolute right-1 top-1 rotate-45 text-[var(--slide-warm)]"/></div><p className="text-[27px] text-[var(--slide-accent)]">Inhibición · más accesible</p></div>
-    <div className={panel+" flex flex-col items-center justify-around text-center border-[var(--slide-warm)]"}><p className="font-display text-[38px]">Reparar una proteína</p><svg viewBox="0 0 320 260" className="h-[260px] w-[320px]" role="img" aria-label="Escultura de cristal partida en fragmentos que se intenta reconstruir"><path d="M152 15L214 40 234 98 212 180 165 222 104 181 88 97Z" fill="#7ac4ce" opacity=".15" stroke="#89cacf" strokeWidth="6" strokeDasharray="13 10"/>{["M145 38L194 53 171 110 118 95Z","M192 69L212 118 173 147 172 115Z","M119 116L151 130 136 194 101 161Z","M155 150L204 151 177 208 141 195Z"].map((p,i)=><path key={i} d={p} fill="#81ccd6" fillOpacity=".62" stroke="#b7e3e8" strokeWidth="3" transform={"translate("+(i%2?14:-11)+" "+(i%2?8:-5)+")"}/>)}</svg><p className="text-[27px] text-[var(--slide-warm)]">Reactivación · gran desafío</p></div>
+  return <div className={frame+" flex flex-col gap-5"}>
+    <div>
+      <p className="font-display text-[40px]">Cuatro formas distintas de actuar</p>
+      <p className="mt-1 text-[23px] text-[var(--slide-muted)]">No todos son tratamientos aprobados</p>
+    </div>
+    <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-5">
+      <div className={panel+" flex min-h-0 flex-col justify-between border-[var(--slide-accent)]"}>
+        <div className="flex items-center gap-4 text-[var(--slide-accent)]">
+          <ShieldCheck size={51} strokeWidth={1.7} className="shrink-0"/>
+          <h3 className="font-display text-[38px]">Nutlin</h3>
+        </div>
+        <p className="text-[27px] leading-[1.17]">Libera a p53 del bloqueo de <strong>MDM2</strong>.</p>
+        <p className="text-[20px] text-[var(--slide-muted)]">Compuesto experimental</p>
+      </div>
+      <div className={panel+" flex min-h-0 flex-col justify-between border-[var(--slide-warm)]"}>
+        <div className="flex items-center gap-4 text-[var(--slide-warm)]">
+          <Dna size={51} strokeWidth={1.7} className="shrink-0"/>
+          <h3 className="font-display text-[38px]">Gendicine</h3>
+        </div>
+        <p className="text-[27px] leading-[1.17]">Un virus modificado lleva una copia funcional de <strong>TP53</strong> al tumor.</p>
+        <p className="text-[20px] text-[var(--slide-muted)]">Aprobado en China (2003)</p>
+      </div>
+      <div className={panel+" flex min-h-0 flex-col justify-between border-[var(--slide-warm)]"}>
+        <div className="flex items-center gap-4 text-[var(--slide-warm)]">
+          <Skull size={51} strokeWidth={1.7} className="shrink-0"/>
+          <h3 className="font-display text-[38px]">ONYX-015</h3>
+        </div>
+        <p className="text-[27px] leading-[1.17]">Un virus diseñado para multiplicarse en ciertos tumores y destruir sus células.</p>
+        <p className="text-[20px] text-[var(--slide-muted)]">Virus oncolítico en investigación</p>
+      </div>
+      <div className={panel+" flex min-h-0 flex-col justify-between border-[var(--slide-accent)]"}>
+        <div className="flex items-center gap-4 text-[var(--slide-accent)]">
+          <Wrench size={51} strokeWidth={1.7} className="shrink-0"/>
+          <h3 className="font-display text-[38px]">PRIMA-1</h3>
+        </div>
+        <p className="text-[27px] leading-[1.17]">Busca recuperar la actividad de algunas formas de <strong>p53 mutante</strong>.</p>
+        <p className="text-[20px] text-[var(--slide-muted)]">Compuesto experimental</p>
+      </div>
+    </div>
   </div>;
 }
 function Therapies(){
