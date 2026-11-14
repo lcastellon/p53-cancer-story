@@ -176,29 +176,25 @@ function Therapies(){
   const milestones = [
     {
       year: "2015", name: "APR-246",
-      label: "Una promesa",
-      description: "Intentar recuperar la actividad de p53 mutante.",
+      description: "Buscaba recuperar la actividad de p53 mutante.",
       emphasis: "var(--slide-accent)",
       icon: <Wrench size={49} strokeWidth={1.8}/>,
     },
     {
       year: "2020", name: "Ensayo sin éxito",
-      label: "Una lección",
-      description: "APR-246 no alcanzó el objetivo principal de fase III.",
+      description: "APR-246 no superó una prueba decisiva en fase III.",
       emphasis: "var(--slide-warm)",
       icon: <Ban size={49} strokeWidth={1.8}/>,
     },
     {
       year: "2025", name: "Inmunoterapia",
-      label: "Nueva estrategia",
-      description: "CLSP-1025 busca que las defensas ataquen tumores con p53 R175H.",
+      description: "CLSP-1025 dirige defensas contra tumores con p53 R175H.",
       emphasis: "var(--slide-accent)",
       icon: <Users size={49} strokeWidth={1.8}/>,
     },
     {
       year: "2026", name: "Rezatapopt",
-      label: "Resultados clínicos",
-      description: "Muestra respuestas en ciertos tumores con TP53 Y220C.",
+      description: "Mostró respuestas en tumores con TP53 Y220C.",
       emphasis: "var(--slide-accent)",
       icon: <ShieldCheck size={49} strokeWidth={1.8}/>,
     },
@@ -209,14 +205,13 @@ function Therapies(){
       <p className="shrink-0 text-[22px] text-[var(--slide-muted)]">2015 — 2026</p>
     </div>
     <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-5">
-      {milestones.map(m => <div key={m.year} className={panel+" flex min-h-0 flex-col justify-between gap-2"} style={{borderColor:m.emphasis}}>
+      {milestones.map(m => <div key={m.year} className={panel+" flex min-h-0 flex-col justify-between gap-2 !p-5"} style={{borderColor:m.emphasis}}>
         <div className="flex items-center justify-between">
-          <span className="font-display text-[49px] leading-none" style={{color:m.emphasis}}>{m.year}</span>
+          <span className="font-display text-[46px] leading-none" style={{color:m.emphasis}}>{m.year}</span>
           <span style={{color:m.emphasis}}>{m.icon}</span>
         </div>
-        <p className="font-display text-[31px] leading-tight">{m.name}</p>
-        <p className="text-[24px] leading-[1.18]">{m.description}</p>
-        <p className="text-[20px] text-[var(--slide-muted)]">{m.label}</p>
+        <p className="font-display text-[30px] leading-tight">{m.name}</p>
+        <p className="text-[23px] leading-[1.18]">{m.description}</p>
       </div>)}
     </div>
     <p className="text-[20px] text-[var(--slide-muted)]">Los avances de 2025–2026 continúan en investigación clínica, no son curas aprobadas.</p>
