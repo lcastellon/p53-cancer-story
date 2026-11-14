@@ -396,6 +396,31 @@
   },
   {
     "n": 19,
+    "label": "La policía del barrio celular",
+    "title": "p53: La policía del barrio celular",
+    "subtitle": "Volvemos al tejido de las dos casas",
+    "points": [
+      "Una célula alterada pone en riesgo al tejido.",
+      "Las señales de daño activan la respuesta de p53.",
+      "p53 puede detener la división mediante p21.",
+      "Según el daño, la célula repara, entra en senescencia o inicia apoptosis."
+    ],
+    "visual": "Animación original de las mismas casas y personajes de la diapositiva 2, en cuatro pasos: barrio alterado, llegada de la policía p53, arresto del ciclo y tres desenlaces celulares.",
+    "notes": [
+      "PASO 1. Retomamos la misma analogía visual de la diapositiva 2: cada casa representa un tejido y cada habitante representa una célula. Una familia equilibrada ilustra la regulación normal; la casa abarrotada representa proliferación desregulada. En la vida real el cáncer no es una infección y las células tumorales no son personas 'infectadas'.",
+      "PASO 2. En la analogía aparece la policía p53 tras una señal de alarma. En realidad, p53 es una proteína que actúa DENTRO de las células, principalmente como factor de transcripción ante estrés genotóxico y otras señales, no como un policía que recorre físicamente el tejido. Las vías de detección del daño activan p53.",
+      "PASO 3. Arresto del ciclo celular: p53 induce p21 y otros genes para frenar temporalmente la proliferación. La pausa permite evaluar y reparar el daño del ADN. Esta protección opera antes de la progresión tumoral; algunas células cancerosas pueden eludirla.",
+      "PASO 4. Si el daño es reparable, la célula puede recuperarse y retomar el ciclo. Si el daño es persistente o grave, p53 puede contribuir a senescencia o apoptosis dependiendo del contexto. No son destinos simultáneos para una misma célula. Cierre: ¿qué sucede cuando el guardián también falla? Introducir el síndrome de Li-Fraumeni."
+    ],
+    "act": 3,
+    "actName": "Acto II",
+    "actTitle": "Anatomía de un guardián",
+    "minutes": 2,
+    "steps": 4,
+    "layout": "police"
+  },
+  {
+    "n": 20,
     "label": "El Síndrome de Li-Fraumeni",
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
@@ -418,7 +443,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 20,
+    "n": 21,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -441,7 +466,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 21,
+    "n": 22,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -464,7 +489,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 22,
+    "n": 23,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -487,7 +512,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 23,
+    "n": 24,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -514,7 +539,7 @@
     "layout": "peto"
   },
   {
-    "n": 24,
+    "n": 25,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -537,7 +562,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 25,
+    "n": 26,
     "label": "¿Y las ballenas o las ratas topo desnudas?",
     "title": "Otras lecciones de la naturaleza",
     "subtitle": "",
@@ -559,7 +584,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 26,
+    "n": 27,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -582,7 +607,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 27,
+    "n": 28,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -605,7 +630,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 28,
+    "n": 29,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -630,7 +655,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 29,
+    "n": 30,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
