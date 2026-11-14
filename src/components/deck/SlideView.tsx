@@ -3,6 +3,7 @@ import { TOTAL } from "@/lib/deck";
 import { Rich } from "./Rich";
 import { PetoSlide } from "./PetoSlide";
 import { CancerSlide } from "./CancerSlide";
+import { PoliceNeighborhoodSlide } from "./PoliceNeighborhoodSlide";
 import { PartOneVisual } from "./VisualPartOne";
 import { PartTwoVisual } from "./VisualPartTwo";
 
@@ -456,6 +457,7 @@ function Standard({ s }: { s: Slide }) {
 
 export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "houses") return <CancerSlide s={s} step={step ?? 0} />;
+  if (s.layout === "police") return <PoliceNeighborhoodSlide s={s} step={step ?? 0} />;
   if (s.layout === "peto") return <PetoSlide s={s} step={step ?? (s.steps ?? 1) - 1} />;
   if (s.n === 1) return <Cover s={s} />;
   if (s.layout === "types") return <CancerTypesSlide s={s} step={step ?? 0} />;
