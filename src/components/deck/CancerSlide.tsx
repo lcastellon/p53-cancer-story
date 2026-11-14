@@ -43,8 +43,8 @@ export function CancerSlide({ s, step }: { s: Slide; step: number }) {
   const stage = houseStages[step] ?? houseStages[0];
   return <div className="slide-content slide-bg house-slide" data-house-step={step + 1}>
     <div className="absolute left-[120px] right-[120px] top-[64px] flex justify-between">
-      <span className="slide-kicker text-[var(--slide-accent)]">{s.actName} · {s.actTitle}</span>
-      <span className="slide-page text-[var(--slide-muted)]">{String(s.n).padStart(2, "0")} / {TOTAL}</span>
+      {s.actName !== "Apertura" && <span className="slide-kicker text-[var(--slide-accent)]">{s.actName} · {s.actTitle}</span>}
+      <span className="slide-page ml-auto text-[var(--slide-muted)]">{String(s.n).padStart(2, "0")} / {TOTAL}</span>
     </div>
     <h2 className="slide-title font-display absolute left-[120px] top-[135px]">{s.title}</h2>
     <div className="absolute left-[120px] right-[120px] top-[238px] flex items-center gap-7">
