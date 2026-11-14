@@ -173,12 +173,54 @@ function Pharma(){
   </div>;
 }
 function Therapies(){
-  const treatments=[
-    {name:"APR-246",desc:"Explora reactivación de p53 mutante",icon:<Wrench size={108} className="text-[var(--slide-accent)]"/>,number:"01"},
-    {name:"Nutlins",desc:"Bloqueo de MDM2 para liberar p53",icon:<ShieldCheck size={108} className="text-[var(--slide-accent)]"/>,number:"02"},
-    {name:"Virus oncolíticos",desc:"Plataformas de infección tumoral selectiva",icon:<Syringe size={108} className="text-[var(--slide-accent)]"/>,number:"03"},
+  const milestones = [
+    {
+      year: "2015", name: "APR-246",
+      label: "Una promesa",
+      description: "Intentar recuperar la actividad de p53 mutante.",
+      emphasis: "var(--slide-accent)",
+      icon: <Wrench size={49} strokeWidth={1.8}/>,
+    },
+    {
+      year: "2020", name: "Ensayo sin éxito",
+      label: "Una lección",
+      description: "APR-246 no alcanzó el objetivo principal de fase III.",
+      emphasis: "var(--slide-warm)",
+      icon: <Ban size={49} strokeWidth={1.8}/>,
+    },
+    {
+      year: "2025", name: "Inmunoterapia",
+      label: "Nueva estrategia",
+      description: "CLSP-1025 busca que las defensas ataquen tumores con p53 R175H.",
+      emphasis: "var(--slide-accent)",
+      icon: <Users size={49} strokeWidth={1.8}/>,
+    },
+    {
+      year: "2026", name: "Rezatapopt",
+      label: "Resultados clínicos",
+      description: "Muestra respuestas en ciertos tumores con TP53 Y220C.",
+      emphasis: "var(--slide-accent)",
+      icon: <ShieldCheck size={49} strokeWidth={1.8}/>,
+    },
   ];
-  return <div className={frame+" flex flex-col gap-6"}><p className="font-display text-[42px]">Tres estrategias experimentales</p><div className="grid flex-1 grid-cols-3 gap-5">{treatments.map(t=><div key={t.name} className={panel+" flex flex-col justify-between gap-4 text-center"}><p className="text-[27px] font-semibold text-[var(--slide-warm)]">{t.number}</p><div className="flex justify-center">{t.icon}</div><p className="font-display text-[33px]">{t.name}</p><p className="text-[23px] text-[var(--slide-muted)]">{t.desc}</p></div>)}</div><p className="text-[19px] text-[var(--slide-muted)]">Son líneas de investigación: eficacia y aprobación dependen de cada tratamiento, tumor y ensayo clínico.</p></div>;
+  return <div className={frame+" flex flex-col gap-5"}>
+    <div className="flex items-baseline justify-between gap-5">
+      <p className="font-display text-[39px]">Una década de avances y tropiezos</p>
+      <p className="shrink-0 text-[22px] text-[var(--slide-muted)]">2015 — 2026</p>
+    </div>
+    <div className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-5">
+      {milestones.map(m => <div key={m.year} className={panel+" flex min-h-0 flex-col justify-between gap-2"} style={{borderColor:m.emphasis}}>
+        <div className="flex items-center justify-between">
+          <span className="font-display text-[49px] leading-none" style={{color:m.emphasis}}>{m.year}</span>
+          <span style={{color:m.emphasis}}>{m.icon}</span>
+        </div>
+        <p className="font-display text-[31px] leading-tight">{m.name}</p>
+        <p className="text-[24px] leading-[1.18]">{m.description}</p>
+        <p className="text-[20px] text-[var(--slide-muted)]">{m.label}</p>
+      </div>)}
+    </div>
+    <p className="text-[20px] text-[var(--slide-muted)]">Los avances de 2025–2026 continúan en investigación clínica, no son curas aprobadas.</p>
+  </div>;
 }
 function Lessons(){
   const data=[
