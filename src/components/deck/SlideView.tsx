@@ -414,9 +414,9 @@ function VisualSlide({ s, step }: { s: Slide; step: number }) {
         </div>
         <div className={"flex min-h-0 flex-col overflow-hidden rounded-[27px] border border-[var(--slide-line)] bg-[var(--slide-card)] " + (s.pointsSize ? "self-center gap-[30px] px-[38px] py-[44px]" : "justify-center gap-[14px] px-[32px] py-[24px]")}>
           {s.points.map((point, i) => (
-            <div key={i} className="flex items-start gap-4">
+            <div key={i} className={"flex items-start gap-4 " + pointSize}>
               <span className="mt-[0.42em] h-[0.375em] w-[0.375em] shrink-0 rotate-45 bg-[var(--slide-accent)]" />
-              <p className={pointSize + " leading-[1.26]"}><Rich text={point} /></p>
+              <p className="min-w-0 flex-1 leading-[1.26]"><Rich text={point} /></p>
             </div>
           ))}
         </div>
