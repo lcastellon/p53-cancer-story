@@ -3,6 +3,8 @@ import { TOTAL } from "@/lib/deck";
 import { Rich } from "./Rich";
 import { PetoSlide } from "./PetoSlide";
 import { CancerSlide } from "./CancerSlide";
+import { PartOneVisual } from "./VisualPartOne";
+import { PartTwoVisual } from "./VisualPartTwo";
 
 function Helix({ className = "" }: { className?: string }) {
   const rungs = Array.from({ length: 22 });
@@ -391,6 +393,34 @@ function DiscoverySlide({ s }: { s: Slide }) {
   );
 }
 
+function VisualSlide({ s, step }: { s: Slide; step: number }) {
+  const kind = s.visualKind ?? "";
+  const dense = s.points.join(" ").length > 590;
+  const titleSize = s.title.length > 61 ? "text-[60px]" : "text-[70px]";
+  return (
+    <div className="slide-content slide-bg">
+      <Chrome s={s} />
+      <div className="absolute left-[120px] top-[152px] w-[1680px]">
+        <h2 className={"font-display max-w-[1660px] leading-[1.08] tracking-[-0.025em] " + titleSize}>{s.title}</h2>
+      </div>
+      <div className="absolute left-[120px] top-[316px] grid h-[632px] w-[1680px] grid-cols-[1000px_640px] gap-[40px]">
+        <div className="min-h-0 min-w-0">
+          <PartOneVisual kind={kind} step={step} />
+          <PartTwoVisual kind={kind} step={step} />
+        </div>
+        <div className="flex min-h-0 flex-col justify-center gap-[14px] overflow-hidden rounded-[27px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-[32px] py-[24px]">
+          {s.points.map((point, i) => (
+            <div key={i} className="flex items-start gap-4">
+              <span className="mt-[10px] h-[9px] w-[9px] shrink-0 rotate-45 bg-[var(--slide-accent)]" />
+              <p className={(dense ? "text-[21px]" : "text-[24px]") + " leading-[1.26]"}><Rich text={point} /></p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Standard({ s }: { s: Slide }) {
   const cards = s.points.length <= 3 && s.points.every((p) => p.length < 200);
   const dense = s.points.length > 4;
@@ -432,6 +462,7 @@ export function SlideView({ s, step }: { s: Slide; step?: number }) {
   if (s.layout === "twohits") return <TwoHitsSlide s={s} step={step ?? 0} />;
   if (s.layout === "car") return <CarPedalsSlide s={s} step={step ?? 0} />;
   if (s.layout === "discovery") return <DiscoverySlide s={s} />;
+  if (s.layout === "visual") return <VisualSlide s={s} step={step ?? 0} />;
   if (s.layout === "scribe") return <ScribeSlide s={s} />;
   if (s.layout === "stat") return <Stat s={s} />;
   if (s.n === TOTAL) return <Closing s={s} />;
