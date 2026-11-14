@@ -192,10 +192,10 @@
     "title": "1989: El día que descubrieron el clon impostor",
     "subtitle": "",
     "points": [
-      "Investigadores como Moshe Oren, Arnold Levine y Bert Vogelstein compararon el gen clonado con el gen de células sanas.",
-      "¡El gen que habían clonado en 1980 estaba mutado y deforme!",
-      "Al probar el p53 **normal y silvestre (*wild-type*)**, el resultado fue el opuesto: detenía en seco el crecimiento de los tumores.",
-      "p53 no era el acelerador del cáncer; **¡era el freno de emergencia!**"
+      "El p53 clonado provenía de tumores: **estaba mutado**.",
+      "Al compararlo con p53 normal, cambió la historia.",
+      "El **p53 silvestre** frenaba el crecimiento tumoral.",
+      "**No era el acelerador: era el freno.**"
     ],
     "visual": "Ilustración de un auto donde se tacha el acelerador y se dibuja un freno de mano rojo brillante de alta resistencia.",
     "notes": [
@@ -206,7 +206,8 @@
     "actTitle": "De villano a salvador",
     "minutes": 2.4,
     "layout": "visual",
-    "visualKind": "reversal"
+    "visualKind": "reversal",
+    "pointsSize": "xl"
   },
   {
     "n": 11,
@@ -214,9 +215,9 @@
     "title": "1993: La coronación científica",
     "subtitle": "",
     "points": [
-      "David Lane publica en 1992 su célebre artículo en *Nature*: bautiza a p53 como **\"El Guardián del Genoma\"**.",
-      "La revista *Science* nombra a p53 la **\"Molécula del Año\" en 1993**.",
-      "Se desata una fiebre mundial: p53 se convierte en el gen más estudiado en la historia de la biología."
+      "**1992:** David Lane lo llama «Guardián del Genoma».",
+      "**1993:** *Science* elige a p53 «Molécula del Año».",
+      "Comienza una nueva era en la investigación del cáncer."
     ],
     "visual": "Portada real de la revista *Science* de diciembre de 1993 (\"Molecule of the Year: p53\") mostrando la proteína con una corona o halo protector.",
     "notes": [
@@ -227,7 +228,8 @@
     "actTitle": "De villano a salvador",
     "minutes": 2.4,
     "layout": "visual",
-    "visualKind": "recognition"
+    "visualKind": "recognition",
+    "pointsSize": "xl"
   },
   {
     "n": 12,
@@ -235,9 +237,10 @@
     "title": "¿Por qué tardamos 10 años en darnos cuenta?",
     "subtitle": "",
     "points": [
-      "El sesgo de confirmación en la ciencia: si buscas un oncogén, cualquier resultado parece confirmar que encontraste un oncogén.",
-      "La diferencia entre proteínas mutadas con \"ganancia de función negativa\" y supresores de tumores.",
-      "La importancia del rigor experimental y la replicabilidad."
+      "Se esperaba encontrar un oncogén.",
+      "Los clones mutantes reforzaban esa hipótesis.",
+      "Comparar con **p53 normal** reveló el error.",
+      "Lección: **cuestionar, verificar y replicar**."
     ],
     "visual": "Diagrama de flujo simplificado mostrando el camino del sesgo contra el camino de la verificación independiente.",
     "notes": [
@@ -248,7 +251,8 @@
     "actTitle": "De villano a salvador",
     "minutes": 2.4,
     "layout": "visual",
-    "visualKind": "bias"
+    "visualKind": "bias",
+    "pointsSize": "xl"
   },
   {
     "n": 13,
@@ -256,10 +260,10 @@
     "title": "En condiciones normales: Producir y destruir al instante",
     "subtitle": "",
     "points": [
-      "En una célula sana y sin estrés, p53 se produce constantemente, pero vive apenas 20 minutos.",
-      "Su pareja de baile: **MDM2** (su vigilante y freno de mano).",
-      "MDM2 le pone una etiqueta de desecho (ubiquitina) y la envía al reciclador celular (proteasoma).",
-      "¿Por qué? Tener a p53 activo todo el tiempo frenaría el crecimiento de los tejidos sanos."
+      "p53 se produce sin parar, pero dura unos **20 min**.",
+      "**MDM2** la marca con ubiquitina.",
+      "El **proteasoma** la degrada.",
+      "Así se evita frenar a las células sanas."
     ],
     "visual": "Diagrama animado/secuencial: p53 nace -> MDM2 lo abraza y le pone una etiqueta roja de basura -> el camión de basura (proteasoma) lo degrada. Concentración celular en niveles mínimos.",
     "notes": [
@@ -271,7 +275,8 @@
     "minutes": 2.3,
     "layout": "visual",
     "visualKind": "turnover",
-    "steps": 3
+    "steps": 3,
+    "pointsSize": "xl"
   },
   {
     "n": 14,
@@ -279,10 +284,9 @@
     "title": "Cuando suena la sirena: Daño en el ADN",
     "subtitle": "",
     "points": [
-      "Sensores moleculares detectan una rotura en el ADN (por ejemplo, tras tomar el sol en la playa).",
-      "Las enzimas de alarma (ATM/ATR) fosforilan a p53 (le pegan grupos fosfato).",
-      "Efecto: MDM2 ya no puede unirse a p53.",
-      "Los niveles de p53 se disparan en cuestión de minutos y entra al núcleo a tomar el mando."
+      "El daño en el ADN activa sensores **ATM/ATR**.",
+      "Estas vías favorecen la estabilidad de **p53**.",
+      "p53 se acumula y activa genes de respuesta."
     ],
     "visual": "La doble hélice de ADN se fractura con chispas amarillas; unas campanas de alarma (enzimas) le colocan medallas (fosfatos) a p53; p53 se vuelve inmune a MDM2 y se multiplica en el núcleo.",
     "notes": [
@@ -294,7 +298,8 @@
     "minutes": 2.3,
     "layout": "visual",
     "visualKind": "alarm",
-    "steps": 3
+    "steps": 3,
+    "pointsSize": "xl"
   },
   {
     "n": 15,
@@ -302,9 +307,9 @@
     "title": "El dilema de p53: Las 3 opciones ante el daño",
     "subtitle": "",
     "points": [
-      "**Pausar el reloj (Arresto del ciclo celular):** Frenar la división para que el error no se copie.",
-      "**Llamar al taller mecánico (Reparación):** Activar los sistemas de soldadura de ADN.",
-      "**La autodestrucción altruista (Apoptosis):** Si el daño es irreparable, ordenar el suicidio celular."
+      "**Pausa:** detiene el ciclo celular mediante **p21**.",
+      "**Reparación:** permite corregir el ADN.",
+      "**Apoptosis:** elimina células con daño grave."
     ],
     "visual": "Una bifurcación de caminos con tres flechas claras: Freno amarillo (p21), Herramientas verdes (reparación) y Botón rojo de explosión controlada (apoptosis).",
     "notes": [
@@ -318,7 +323,8 @@
     "actTitle": "Anatomía de un guardián",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "options"
+    "visualKind": "options",
+    "pointsSize": "xl"
   },
   {
     "n": 16,
@@ -326,11 +332,10 @@
     "title": "El freno p21 y los mecánicos moleculares",
     "subtitle": "",
     "points": [
-      "p53 es un **factor de transcripción**: enciende genes específicos.",
-      "Enciende el gen **p21**: una cuña que bloquea el motor de la división celular (las ciclinas y CDKs).",
-      "La célula queda en pausa en la fase G1.",
-      "Mientras tanto, enzimas reparadoras recorren el ADN y corrigen las letras rotas.",
-      "Si la reparación es exitosa, p53 se apaga y la célula reanuda su vida normal."
+      "**p53** activa la expresión de **p21**.",
+      "**p21** inhibe los complejos ciclina–CDK.",
+      "Se frena la transición **G1/S**.",
+      "El ADN puede repararse antes de continuar."
     ],
     "visual": "Diagrama mecánico: p21 actuando como una barra de hierro que se mete entre los engranes del ciclo celular y detiene la marcha.",
     "notes": [
@@ -341,7 +346,8 @@
     "actTitle": "Anatomía de un guardián",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "p21"
+    "visualKind": "p21",
+    "pointsSize": "xl"
   },
   {
     "n": 17,
@@ -349,10 +355,10 @@
     "title": "Apoptosis: Morir por el bien de la comunidad",
     "subtitle": "",
     "points": [
-      "Si el ADN está irremediablemente destrozado, reparar sería peligroso (podría quedar mutante).",
-      "p53 activa genes pro-muerte: **Bax, PUMA, Noxa**.",
-      "Las mitocondrias liberan citocromo c: se activan las caspasas (las \"tijeras\" internas).",
-      "La célula se desensambla limpiamente sin causar inflamación ni dañar a sus vecinas."
+      "Daño grave: p53 activa **BAX, PUMA y NOXA**.",
+      "Las mitocondrias liberan **citocromo c**.",
+      "Las **caspasas** desarman la célula.",
+      "Los restos se eliminan de forma ordenada."
     ],
     "visual": "Ilustración de la apoptosis: La célula encogiéndose y fragmentándose en pequeñas vesículas que son digeridas pacíficamente por un macrófago, en contraste con una necrosis caótica.",
     "notes": [
@@ -363,7 +369,8 @@
     "actTitle": "Anatomía de un guardián",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "apoptosis"
+    "visualKind": "apoptosis",
+    "pointsSize": "xl"
   },
   {
     "n": 18,
@@ -371,9 +378,9 @@
     "title": "Senescencia: La célula que nunca volverá a dividirse",
     "subtitle": "",
     "points": [
-      "Si la célula no muere pero no debe dividirse, p53 puede enviarla a \"senescencia\".",
-      "Una jubilación celular permanente.",
-      "La célula sigue viva y metabólicamente activa, pero sus puertas de reproducción quedan clausuradas de por vida."
+      "p53 puede inducir **senescencia**.",
+      "La célula sigue viva y metabólicamente activa.",
+      "Pero deja de dividirse: un **freno duradero**."
     ],
     "visual": "La imagen de un candado dorado cerrando los cromosomas de una célula que ahora luce envejecida pero tranquila.",
     "notes": [
@@ -384,7 +391,8 @@
     "actTitle": "Anatomía de un guardián",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "senescence"
+    "visualKind": "senescence",
+    "pointsSize": "xl"
   },
   {
     "n": 19,
@@ -392,10 +400,10 @@
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
     "points": [
-      "En 1969, Frederick Li y Joseph Fraumeni identificaron familias con una maldición: miembros jóvenes con múltiples cánceres distintos (sarcomas, mama, cerebro, leucemia).",
-      "En 1990 se descubrió la causa: **heredaban una sola copia funcional de TP53** (la otra ya venía mutada de nacimiento).",
-      "Riesgo de desarrollar cáncer: cercano al **90-100%** a lo largo de la vida.",
-      "La prueba humana irrefutable de que p53 es el escudo que nos mantiene con vida."
+      "**1969:** Li y Fraumeni describen cánceres familiares tempranos.",
+      "**1990:** se vincula el síndrome con **TP53**.",
+      "Una variante heredada eleva mucho el riesgo.",
+      "Puede causar sarcomas y tumores de mama o cerebro."
     ],
     "visual": "Árbol genealógico estilizado (pedigrí genético) de una familia real del estudio de Li-Fraumeni, mostrando cómo múltiples generaciones sufrieron tumores diversos a edades tempranas.",
     "notes": [
@@ -406,7 +414,8 @@
     "actTitle": "Cuando el guardián duerme",
     "minutes": 2.5,
     "layout": "visual",
-    "visualKind": "pedigree"
+    "visualKind": "pedigree",
+    "pointsSize": "xl"
   },
   {
     "n": 20,
@@ -414,10 +423,10 @@
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
     "points": [
-      "Los carcinógenos no mutan el ADN al azar; cada tóxico ataca letras específicas en posiciones exactas de p53.",
-      "**Fumar tabaco:** El benzo[a]pireno causa transversiones exactas de G a T en los codones 157, 248 y 273.",
-      "**Luz solar (UV):** Causa dímeros que provocan transiciones CC a TT en melanomas y carcinomas de piel.",
-      "**Aflatoxina (moho en alimentos en Asia/África):** Muta específicamente la letra G en el codón 249 en cáncer de hígado."
+      "Los carcinógenos dejan **firmas mutacionales**.",
+      "**Tabaco:** son frecuentes cambios **G→T**.",
+      "**Radiación UV:** son típicos cambios **CC→TT**.",
+      "**Aflatoxina:** alteración característica en **TP53 249**."
     ],
     "visual": "Gráfica comparativa de \"huellas dactilares moleculares\": Tres barras de mutaciones mostrando cómo el perfil de p53 de un fumador es radicalmente diferente al de alguien expuesto al sol o a toxinas alimentarias.",
     "notes": [
@@ -428,7 +437,8 @@
     "actTitle": "Cuando el guardián duerme",
     "minutes": 2.5,
     "layout": "visual",
-    "visualKind": "signatures"
+    "visualKind": "signatures",
+    "pointsSize": "xl"
   },
   {
     "n": 21,
@@ -436,10 +446,9 @@
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
     "points": [
-      "No todos los tumores se molestan en mutar el gen p53.",
-      "El **Virus del Papiloma Humano (VPH)**: Produce una proteína llamada **E6**.",
-      "E6 actúa como un sicario: se une al p53 perfectamente sano y lo envía directo al basurero celular.",
-      "Resultado: El gen está intacto, pero la proteína desaparece. La célula queda desprotegida."
+      "El **VPH** produce la proteína **E6**.",
+      "E6 facilita la degradación de **p53**.",
+      "**TP53 puede estar intacto**, pero sin defensa eficaz."
     ],
     "visual": "Ilustración del virus VPH introduciendo la proteína E6 como una ganzúa que desactiva el candado de p53.",
     "notes": [
@@ -451,7 +460,8 @@
     "minutes": 2.5,
     "layout": "visual",
     "visualKind": "hpv",
-    "steps": 3
+    "steps": 3,
+    "pointsSize": "xl"
   },
   {
     "n": 22,
@@ -459,10 +469,10 @@
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
     "points": [
-      "En la mayoría de los supresores de tumores, mutar significa perder la función (recesivo).",
-      "En p53, muchas mutaciones son de \"cambio de sentido\" (*missense*): cambian un solo aminoácido.",
-      "La proteína mutante no se degrada; se acumula en enormes cantidades en la célula.",
-      "No solo no frena el cáncer: ¡se une a otros factores y ayuda activamente al tumor a invadir y resistir la quimioterapia!"
+      "Muchas variantes de **TP53** son *missense*.",
+      "Algunas proteínas mutantes se acumulan.",
+      "Ciertas variantes favorecen invasión y resistencia.",
+      "**Perder el freno** puede no ser el único efecto."
     ],
     "visual": "Metáfora visual: Un policía que no solo cuelga la placa, sino que se pone la chaqueta de la mafia y les enseña cómo desactivar las alarmas del banco.",
     "notes": [
@@ -473,7 +483,8 @@
     "actTitle": "Cuando el guardián duerme",
     "minutes": 2.5,
     "layout": "visual",
-    "visualKind": "mutant"
+    "visualKind": "mutant",
+    "pointsSize": "xl"
   },
   {
     "n": 23,
@@ -508,11 +519,10 @@
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
     "points": [
-      "El ser humano tiene **2 copias** del gen TP53 (1 de cada progenitor).",
-      "En 2015, Joshua Schiffman y su equipo descubrieron que el elefante africano tiene **40 copias (20 pares)** de TP53.",
-      "¿Cómo responden sus células al daño por radiación?",
-      "No pierden tiempo reparando: ante la menor sospecha de falla, la célula entra en apoptosis inmediata.",
-      "Para un elefante con tantas células, es más barato quemar la célula dañada que arriesgarse a repararla mal."
+      "Humanos: **2 alelos TP53**.",
+      "Elefantes: unas **40 copias** relacionadas con TP53.",
+      "Sus células activan más apoptosis ante daño.",
+      "Una defensa evolutiva frente al cáncer."
     ],
     "visual": "Ilustración de un elefante protegiéndose con una muralla de 40 escudos brillantes marcados con \"p53\", comparado con un ser humano con solo dos escudos.",
     "notes": [
@@ -523,7 +533,8 @@
     "actTitle": "La paradoja de Peto",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "elephant"
+    "visualKind": "elephant",
+    "pointsSize": "xl"
   },
   {
     "n": 25,
@@ -531,9 +542,9 @@
     "title": "Otras lecciones de la naturaleza",
     "subtitle": "",
     "points": [
-      "La ballena de Groenlandia vive más de 200 años y tiene duplicaciones en genes de reparación de ADN y apoptosis.",
-      "La rata topo desnuda vive 30 años bajo tierra sin cáncer gracias a un ácido hialurónico especial que activa el freno de p53 ante el menor contacto celular.",
-      "La cura del cáncer quizás no esté en una probeta humana, sino en aprender cómo la evolución resolvió el problema hace millones de años."
+      "**Ballena boreal:** vive más de 200 años.",
+      "**Rata topo desnuda:** notable resistencia al cáncer.",
+      "Sus defensas ofrecen pistas contra los tumores."
     ],
     "visual": "Fotografías de una ballena boreal y de una rata topo desnuda, con iconos destacando sus respectivos superpoderes antitumorales.",
     "notes": [
@@ -544,7 +555,8 @@
     "actTitle": "La paradoja de Peto",
     "minutes": 2.3,
     "layout": "visual",
-    "visualKind": "species"
+    "visualKind": "species",
+    "pointsSize": "xl"
   },
   {
     "n": 26,
@@ -552,10 +564,10 @@
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
     "points": [
-      "La mayoría de los medicamentos oncológicos exitosos (como Imatinib para leucemia) son **inhibidores**: bloquean enzimas aceleradoras (apagan un motor desbocado).",
-      "En p53, el problema es que el freno **ya está roto o ausente**.",
-      "En farmacología, es miles de veces más fácil diseñar una molécula pequeña que encaje en un bolsillo y bloquee una enzima, que fabricar un fármaco que reconstruya una proteína deforme.",
-      "Metáfora: Es fácil desinflar una llanta con un clavo; es casi imposible inflar una llanta reventada arrojándole pegamento desde lejos."
+      "**Inhibir** una proteína hiperactiva suele ser viable.",
+      "**Reactivar p53** mutante es mucho más difícil.",
+      "Bloquear un motor no es reconstruir un freno.",
+      "Ése es el desafío de la terapia dirigida."
     ],
     "visual": "Ilustración comparativa: A la izquierda, una llave molecular bloqueando una cerradura (fácil). A la derecha, intentar recomponer con pinzas una escultura de cristal rota en mil pedazos dentro de una célula viva (el reto de p53).",
     "notes": [
@@ -566,7 +578,8 @@
     "actTitle": "La frontera médica",
     "minutes": 2.2,
     "layout": "visual",
-    "visualKind": "pharma"
+    "visualKind": "pharma",
+    "pointsSize": "xl"
   },
   {
     "n": 27,
@@ -574,9 +587,10 @@
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
     "points": [
-      "**Los chaperones químicos (ej. APR-246 / Eprenetapopt):** Moléculas que se unen al p53 deforme y le devuelven su estructura correcta para que vuelva a ordenar apoptosis.",
-      "**Inhibidores de MDM2 (Nutlins):** En tumores donde p53 está sano pero silenciado por MDM2, las Nutlins bloquean el bolsillo de MDM2 y liberan al p53 secuestrado.",
-      "**Virus oncolíticos (Onyx-015):** Virus modificados genéticamente que solo pueden infectar y matar células que no tienen p53 funcional."
+      "**APR-246:** se investiga para reactivar p53 mutante.",
+      "**Nutlins:** bloquean la interacción MDM2–p53.",
+      "**Virus oncolíticos:** otra vía antitumoral.",
+      "Son estrategias en estudio, no curas universales."
     ],
     "visual": "Tres iconos claros: Una abrazadera enderezando una estructura curva (APR-246), un escudo que bloquea a MDM2 (Nutlins), y un virus terapéutico selectivo.",
     "notes": [
@@ -587,7 +601,8 @@
     "actTitle": "La frontera médica",
     "minutes": 2.2,
     "layout": "visual",
-    "visualKind": "therapies"
+    "visualKind": "therapies",
+    "pointsSize": "xl"
   },
   {
     "n": 28,
@@ -595,9 +610,9 @@
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
     "points": [
-      "**La cooperación celular es un milagro frágil:** Vivir como organismos complejos requiere una vigilancia molecular permanente e implacable.",
-      "**El error como motor de la ciencia:** Diez años de equivocación sobre p53 pavimentaron las técnicas que hoy salvan vidas.",
-      "**La medicina personalizada del futuro:** El tratamiento del cáncer ya no se define solo por el órgano donde empezó (mama, próstata, pulmón), sino por el estado genético de sus guardianes moleculares."
+      "**Cooperación:** las células protegen al conjunto.",
+      "**Ciencia:** los errores también enseñan.",
+      "**Medicina de precisión:** importa el perfil molecular."
     ],
     "visual": "Tres tarjetas gráficas limpias con iconos minimalistas: una molécula de ADN, un microscopio con luz y una silueta humana iluminada.",
     "notes": [
@@ -611,7 +626,8 @@
     "actTitle": "La frontera médica",
     "minutes": 2.2,
     "layout": "visual",
-    "visualKind": "lessons"
+    "visualKind": "lessons",
+    "pointsSize": "xl"
   },
   {
     "n": 29,
@@ -619,9 +635,9 @@
     "title": "Gracias por su atención",
     "subtitle": "",
     "points": [
-      "*\"Al final, p53 nos recuerda que para mantenernos con vida, nuestras células deben estar dispuestas a morir.\"*",
-      "Libro recomendado: *p53: The Gene That Cracked the Cancer Code* – Sue Armstrong (Bloomsbury Publishing).",
-      "Espacio abierto para preguntas y comentarios."
+      "«Para vivir, algunas células deben morir».",
+      "Lectura: *p53: The Gene That Cracked the Cancer Code*.",
+      "Preguntas y comentarios."
     ],
     "visual": "Una hermosa microfotografía de fluorescencia celular con los núcleos teñidos de azul y el citoesqueleto en verde y rojo. Datos de contacto del expositor.",
     "notes": [
@@ -632,6 +648,7 @@
     "actTitle": "La frontera médica",
     "minutes": 2.2,
     "layout": "visual",
-    "visualKind": "finale"
+    "visualKind": "finale",
+    "pointsSize": "xl"
   }
 ]
