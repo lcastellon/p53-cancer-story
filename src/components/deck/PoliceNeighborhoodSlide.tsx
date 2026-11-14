@@ -42,7 +42,7 @@ function Officer({ x = 583, y = 449 }: { x?: number; y?: number }) {
 function CellAlert({ stage }: { stage: number }) {
   return (
     <g className="house-scene" key={stage}>
-      {stage >= 1 && (
+      {stage >= 1 && stage <= 2 && (
         <g>
           <circle cx="512" cy="433" r="48" fill="none" stroke="var(--slide-warm)" strokeWidth="7" strokeDasharray="12 8" />
           <path d="M486 405 L492 416 L505 400" fill="none" stroke="var(--slide-warm)" strokeWidth="6" strokeLinecap="round" />
@@ -100,7 +100,7 @@ export function PoliceNeighborhoodSlide({ s, step }: { s: Slide; step: number })
             <House x={370} y={320} size={0.85} children={2} age="teen" />
             <path d="M185 480 H560" stroke="currentColor" strokeWidth="3" opacity=".45"/>
           </svg>
-          <p className="text-[30px] leading-[1.2]">{current.healthy}</p>
+          <p className="text-[36px] leading-[1.2]">{current.healthy}</p>
         </section>
         <section className="house-cancer" aria-label="Tejido alterado con vigilancia de p53">
           <h3 className="slide-body-lg font-display">Tejido alterado</h3>
@@ -113,10 +113,10 @@ export function PoliceNeighborhoodSlide({ s, step }: { s: Slide; step: number })
                 <path d="M410 439 Q463 432 483 455" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="10 8"/>
               </g>
             )}
-            {stage >= 1 && <Officer x={590} y={503} />}
+            {stage >= 1 && stage <= 2 && <Officer x={590} y={503} />}
             <CellAlert stage={stage} />
           </svg>
-          <p className="text-[30px] leading-[1.2]">{current.cancer}</p>
+          <p className="text-[36px] leading-[1.2]">{current.cancer}</p>
         </section>
       </div>
       {stage === 3 && (
