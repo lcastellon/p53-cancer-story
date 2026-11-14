@@ -74,8 +74,8 @@ function Elephants(){
 }
 function OtherSpecies(){
   return <div className={frame+" grid grid-cols-2 gap-6"}>
-    <PhotoCard url="https://www.fisheries.noaa.gov/s3/dam-migration/asamm-post6-8-.jpg" name="Ballena de Groenlandia" subtitle="Longevidad excepcional · más de 200 años" credit="Fotografía: NOAA Fisheries"/>
-    <PhotoCard url="https://i.natgeofe.com/n/f86b37f9-165d-418d-a1c9-1af25b8e26e4/naked-mole-rat_thumb_4x3.jpg" name="Rata topo desnuda" subtitle="Resistencia notable al cáncer" credit="Fotografía: National Geographic"/>
+    <PhotoCard url="https://upload.wikimedia.org/wikipedia/commons/d/d3/Bowhead_Whale_NOAA.jpg" name="Ballena de Groenlandia" subtitle="Longevidad excepcional · más de 200 años" credit="Fotografía: Vicki Beaver / NOAA Fisheries (dominio público)"/>
+    <PhotoCard url="https://upload.wikimedia.org/wikipedia/commons/7/7c/Naked_Mole_Rats.jpg" name="Rata topo desnuda" subtitle="Resistencia notable al cáncer" credit="Fotografía: Edward Russell (CC BY 2.0)"/>
   </div>;
 }
 function Pharma(){
@@ -102,9 +102,9 @@ function Lessons(){
 }
 function Finale(){
   return <div className={frame+" relative overflow-hidden !p-0"}>
-    <img src="https://royalsociety.org/-/media/journals/photo-competition/2016/micro-short-13-2016.jpg" alt="Microfotografía de fluorescencia de células HeLa, núcleos azules y citoesqueleto verde y rojo" className="h-full w-full object-cover"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/FluorescentCells.jpg" alt="Microfotografía de células endoteliales bovinas: núcleos azules, microtúbulos verdes y actina roja" className="h-full w-full object-cover"/>
     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent px-12 pb-12 pt-36">
-      <p className="font-display text-[51px] text-white">Gracias por su atención</p><p className="mt-3 text-[26px] text-white/85">Fotografía: Royal Society, concurso de microfotografía 2016.</p>
+      <p className="font-display text-[51px] text-white">Gracias por su atención</p><p className="mt-3 text-[26px] text-white/85">Microfotografía: fuente pública, Wikimedia Commons / NIH.</p>
     </div>
   </div>;
 }
