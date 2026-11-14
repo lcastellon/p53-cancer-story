@@ -2,7 +2,7 @@ import type { Slide } from "@/lib/deck";
 import { TOTAL } from "@/lib/deck";
 import { houseStages } from "@/lib/house-analogy";
 
-function Person({ x, y, size = 1, child = false }: { x: number; y: number; size?: number; child?: boolean }) {
+export function Person({ x, y, size = 1, child = false }: { x: number; y: number; size?: number; child?: boolean }) {
   return <g transform={`translate(${x} ${y}) scale(${size})`} data-person={child ? "child" : "parent"}>
     <circle cy="-36" r="12" fill="currentColor" />
     <path d="M-11-17 Q0-24 11-17 L17 19 H-17 Z" fill="currentColor" />
@@ -10,7 +10,7 @@ function Person({ x, y, size = 1, child = false }: { x: number; y: number; size?
   </g>;
 }
 
-function House({ x, y, size = 1, children = 2, age = "small", parents = 2 }: { x: number; y: number; size?: number; children?: number; age?: string; parents?: number }) {
+export function House({ x, y, size = 1, children = 2, age = "small", parents = 2 }: { x: number; y: number; size?: number; children?: number; age?: string; parents?: number }) {
   return <g transform={`translate(${x} ${y}) scale(${size})`}>
     <path d="M-175-130 L0-245 L175-130" fill="none" stroke="currentColor" strokeWidth="9" strokeLinejoin="round" />
     <path d="M-153-140 V180 H153 V-140" fill="var(--slide-bg)" stroke="currentColor" strokeWidth="6" />
