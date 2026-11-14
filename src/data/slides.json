@@ -563,28 +563,6 @@
   },
   {
     "n": 26,
-    "label": "¿Y las ballenas o las ratas topo desnudas?",
-    "title": "Otras lecciones de la naturaleza",
-    "subtitle": "",
-    "points": [
-      "**Ballena boreal:** vive más de 200 años.",
-      "**Rata topo desnuda:** notable resistencia al cáncer.",
-      "Sus defensas ofrecen pistas contra los tumores."
-    ],
-    "visual": "Fotografías de una ballena boreal y de una rata topo desnuda, con iconos destacando sus respectivos superpoderes antitumorales.",
-    "notes": [
-      "El libro de Sue Armstrong nos invita a mirar más allá de nuestra propia especie. La naturaleza lleva 600 millones de años haciendo ensayos clínicos. Las ballenas de Groenlandia viven más de dos siglos surcando los océanos helados sin desarrollar tumores, y las extrañas ratas topo desnudas viven bajo tierra casi inmunes a la malignidad. Todos estos animales llegaron a la misma conclusión evolutiva: para vivir mucho y en cuerpos grandes, el secreto innegociable es perfeccionar los sistemas de vigilancia de p53."
-    ],
-    "act": 5,
-    "actName": "Acto IV",
-    "actTitle": "La paradoja de Peto",
-    "minutes": 2.3,
-    "layout": "visual",
-    "visualKind": "species",
-    "pointsSize": "xl"
-  },
-  {
-    "n": 27,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -607,7 +585,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 28,
+    "n": 27,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -630,7 +608,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 29,
+    "n": 28,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -655,7 +633,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 30,
+    "n": 29,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
