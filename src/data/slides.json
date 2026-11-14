@@ -306,18 +306,19 @@
   },
   {
     "n": 15,
-    "label": "La decisión 3: Apoptosis (El sacrificio honorable)",
-    "title": "Apoptosis: Morir por el bien de la comunidad",
+    "label": "Apoptosis: una decisión de protección",
+    "title": "Apoptosis: cuando el daño es demasiado grave",
     "subtitle": "",
     "points": [
-      "Daño grave: p53 activa **BAX, PUMA y NOXA**.",
-      "Las mitocondrias liberan **citocromo c**.",
-      "Las **caspasas** desarman la célula.",
-      "Los restos se eliminan de forma ordenada."
+      "Si el ADN está demasiado dañado, **p53 puede inducir la muerte celular**.",
+      "**p53 activa genes como BAX, PUMA y NOXA**.",
+      "Así ayuda a impedir que una célula peligrosa siga multiplicándose."
     ],
-    "visual": "Ilustración de la apoptosis: La célula encogiéndose y fragmentándose en pequeñas vesículas que son digeridas pacíficamente por un macrófago, en contraste con una necrosis caótica.",
+    "visual": "Diagrama simple: célula con ADN gravemente dañado → activación de p53 → genes BAX, PUMA y NOXA. Sin comparación con necrosis ni cuerpos apoptóticos.",
     "notes": [
-      "Pero a veces el daño es demasiado grave. Intentar reparar un ADN devastado equivale a pegar con cinta adhesiva las alas de un avión comercial en pleno vuelo: el riesgo de engendrar un tumor es inaceptable. Es aquí donde p53 toma su decisión más conmovedora y radical: la apoptosis. Ordena a la célula disolverse pacíficamente desde adentro. La célula empaca sus componentes en pequeñas bolsas biodegradables para que los glóbulos blancos las reciclen. No hay dolor, no hay pus, no hay inflamación. Es el máximo acto de sacrificio biológico por el bien del cuerpo entero."
+      "Cuando el daño en el ADN es demasiado grave y la célula no puede resolverlo de manera segura, p53 puede activar una respuesta de apoptosis o muerte celular programada. No significa que toda lesión lleve automáticamente a la muerte: depende del daño y del contexto.",
+      "p53 favorece esa respuesta activando genes como BAX, PUMA y NOXA. Lo importante para el público es que esta respuesta impide que algunas células gravemente dañadas continúen dividiéndose y acumulando alteraciones que podrían favorecer el cáncer.",
+      "Apunte opcional: apoptosis procede de una expresión griega asociada a la caída de hojas o pétalos. Esa imagen explica la referencia a «autumn leaves», que no debe confundirse con la senescencia celular."
     ],
     "act": 3,
     "actName": "Acto II",
