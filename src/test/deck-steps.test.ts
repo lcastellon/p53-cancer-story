@@ -37,4 +37,10 @@ describe("Two-house analogy", () => {
   it("shows slide 9 titled only 'El sospechoso equivocado'", () => {
     expect(slides[8]?.title).toBe("1980 - 1988: El sospechoso equivocado");
   });
+  it("keeps slide 9's right box short and in the large type tier", () => {
+    const s = slides[8]!;
+    expect(s.pointsSize).toBe("xl");
+    expect(s.points.join(" ").length).toBeLessThan(200);
+    expect(s.points.every((p) => p.length <= 70)).toBe(true);
+  });
 });

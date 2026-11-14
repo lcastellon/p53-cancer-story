@@ -14,6 +14,7 @@ export type Slide = {
   minutes: number;
   steps?: number;
   layout?: "houses" | "peto" | "stat" | "types" | "scribe" | "twohits" | "car" | "discovery" | "visual";
+  pointsSize?: "lg" | "xl";
   visualKind?: string;
 };
 

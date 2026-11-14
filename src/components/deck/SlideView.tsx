@@ -396,6 +396,10 @@ function DiscoverySlide({ s }: { s: Slide }) {
 function VisualSlide({ s, step }: { s: Slide; step: number }) {
   const kind = s.visualKind ?? "";
   const dense = s.points.join(" ").length > 590;
+  const pointSize =
+    s.pointsSize === "xl" ? "text-[38px]" :
+    s.pointsSize === "lg" ? "text-[34px]" :
+    dense ? "text-[21px]" : "text-[24px]";
   const titleSize = s.title.length > 61 ? "text-[60px]" : "text-[70px]";
   return (
     <div className="slide-content slide-bg">
@@ -408,11 +412,11 @@ function VisualSlide({ s, step }: { s: Slide; step: number }) {
           <PartOneVisual kind={kind} step={step} />
           <PartTwoVisual kind={kind} step={step} />
         </div>
-        <div className="flex min-h-0 flex-col justify-center gap-[14px] overflow-hidden rounded-[27px] border border-[var(--slide-line)] bg-[var(--slide-card)] px-[32px] py-[24px]">
+        <div className={"flex min-h-0 flex-col overflow-hidden rounded-[27px] border border-[var(--slide-line)] bg-[var(--slide-card)] " + (s.pointsSize ? "self-center gap-[30px] px-[38px] py-[44px]" : "justify-center gap-[14px] px-[32px] py-[24px]")}>
           {s.points.map((point, i) => (
             <div key={i} className="flex items-start gap-4">
-              <span className="mt-[10px] h-[9px] w-[9px] shrink-0 rotate-45 bg-[var(--slide-accent)]" />
-              <p className={(dense ? "text-[21px]" : "text-[24px]") + " leading-[1.26]"}><Rich text={point} /></p>
+              <span className="mt-[0.42em] h-[0.375em] w-[0.375em] shrink-0 rotate-45 bg-[var(--slide-accent)]" />
+              <p className={pointSize + " leading-[1.26]"}><Rich text={point} /></p>
             </div>
           ))}
         </div>

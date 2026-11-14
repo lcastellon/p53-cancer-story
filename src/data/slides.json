@@ -169,11 +169,12 @@
     "title": "1980 - 1988: El sospechoso equivocado",
     "subtitle": "",
     "points": [
-      "Los primeros experimentos clonaron el gen de p53 sacándolo de células cancerosas.",
-      "Al inyectar este gen en células de laboratorio normales junto a otro gen maligno (*ras*), las células se volvían cancerosas.",
-      "Veredicto de la comunidad científica: **\"p53 es un oncogén\"** (un acelerador del cáncer).",
-      "Durante casi diez años, los laboratorios invirtieron millones buscando cómo apagar a p53."
+      "Clonaron el gen desde células tumorales.",
+      "Inyectado en células normales junto a *ras*, las volvía cancerosas.",
+      "Veredicto: **\"p53 es un oncogén\"**.",
+      "Diez años buscando cómo apagarlo."
     ],
+    "pointsSize": "xl",
     "visual": "Gráfico conceptual: Un auto con el pedal del acelerador marcado como \"Oncogén: p53\". El titular de una revista científica de los años 80 clasificando a p53 como oncogén.",
     "notes": [
       "Aquí viene el giro de novela policíaca que Sue Armstrong narra con maestría. Los investigadores querían probar qué hacía p53. Así que extrajeron el gen de células tumorales, lo copiaron y lo introdujeron en células sanas. ¿Y qué pasó? Las células sanas se convirtieron en tumores. La conclusión lógica fue unánime: '¡Eureka! p53 es un oncogén, un villano, una proteína que causa cáncer'. Durante casi una década, congresos enteros discutieron cómo fabricar medicamentos para inhibir o destruir a p53. Estaban intentando matar al policía."
