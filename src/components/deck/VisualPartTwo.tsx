@@ -1,4 +1,5 @@
 import { ArrowRight, Ban, BookOpen, Brain, Check, CircleAlert, Dna, FlaskConical, HeartHandshake, Lock, Microscope, Pill, ScanSearch, Shield, ShieldCheck, Skull, Sparkles, Syringe, UserRound, Users, Wrench, X, Zap } from "lucide-react";
+import { House, Person } from "./CancerSlide";
 type Props = { kind: string; step: number };
 const frame="h-full w-full overflow-hidden rounded-[28px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-[30px]";
 const panel="rounded-[22px] border border-[var(--slide-line)] bg-[var(--slide-bg)] p-6";
@@ -54,15 +55,67 @@ function HPVE6({step}: {step:number}){
     <div className="flex items-center justify-center gap-5 rounded-[21px] bg-[var(--slide-bg)] py-6 text-[29px]"><Lock size={50} className="text-[var(--slide-warm)]"/>El gen TP53 puede permanecer intacto.</div>
   </div>;
 }
+function CorruptOfficer() {
+  return (
+    <g transform="translate(729 277)" aria-label="Policía p53 mutante que deja proliferar a las células">
+      {/* Mismo lenguaje de personajes que en la casa, ahora con insignia adulterada. */}
+      <ellipse cx="6" cy="125" rx="104" ry="15" fill="var(--slide-warm)" opacity=".12"/>
+      <path d="M-22 65 L-24 118 M23 65 L27 118" fill="none" stroke="var(--slide-warm)" strokeWidth="19" strokeLinecap="round"/>
+      <path d="M-43-18 Q0-42 43-18 L47 65 H-47Z" fill="var(--slide-warm)" stroke="var(--slide-fg)" strokeWidth="5"/>
+      <path d="M-43 24 L-85 53 M42 24 L99 -10" stroke="var(--slide-warm)" strokeWidth="18" strokeLinecap="round"/>
+      <circle cy="-64" r="30" fill="var(--slide-warm)" stroke="var(--slide-fg)" strokeWidth="5"/>
+      <path d="M-44-93 H43 L29-111 H-30Z" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="6" strokeLinejoin="round"/>
+      <path d="M-44-92 H44" fill="none" stroke="var(--slide-fg)" strokeWidth="7" strokeLinecap="round"/>
+      {/* Expresión cómplice y placa policial tachada. */}
+      <circle cx="-11" cy="-70" r="3.7" fill="var(--slide-bg)"/>
+      <circle cx="12" cy="-70" r="3.7" fill="var(--slide-bg)"/>
+      <path d="M-10-52 Q4-41 19-54" fill="none" stroke="var(--slide-bg)" strokeWidth="4" strokeLinecap="round"/>
+      <path d="M0-7 l15 8 -4 18 -11 9 -11-9 -4-18Z" fill="var(--slide-bg)" stroke="var(--slide-fg)" strokeWidth="3"/>
+      <path d="M-10-5 L11 22" stroke="var(--slide-warm)" strokeWidth="6" strokeLinecap="round"/>
+      <text x="0" y="53" textAnchor="middle" fontSize="28" fontWeight="800" fill="var(--slide-bg)">p53</text>
+      {/* El policía corrupto da luz verde a las células alteradas. */}
+      <g transform="translate(112 -31) rotate(-8)">
+        <rect width="125" height="76" rx="13" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="5"/>
+        <text x="63" y="31" textAnchor="middle" fontSize="24" fontWeight="800" fill="var(--slide-fg)">PASE</text>
+        <text x="63" y="60" textAnchor="middle" fontSize="24" fontWeight="800" fill="var(--slide-warm)">LIBRE</text>
+      </g>
+      {/* Dinero: símbolo gráfico de corrupción, no una afirmación biológica literal. */}
+      <g transform="translate(-132 34) rotate(15)">
+        <rect width="75" height="43" rx="6" fill="var(--slide-bg)" stroke="var(--slide-accent)" strokeWidth="4"/>
+        <circle cx="37" cy="21" r="15" fill="none" stroke="var(--slide-accent)" strokeWidth="3"/>
+        <text x="37" y="29" textAnchor="middle" fontSize="22" fontWeight="800" fill="var(--slide-accent)">$</text>
+      </g>
+    </g>
+  );
+}
 function MutantPolice(){
   return <div className={frame+" flex flex-col justify-between"}>
-    <div><p className="font-display text-[42px]">Cuando el guardián cambia de bando</p><p className="mt-3 text-[23px] text-[var(--slide-muted)]">Mutación con posible ganancia de función</p></div>
-    <div className="flex items-center justify-between gap-5">
-      <div className={panel+" flex flex-1 flex-col items-center gap-6"}><ShieldCheck size={154} strokeWidth={1.3} className="text-[var(--slide-accent)]"/><p className="font-display text-[34px]">p53 normal</p><p className="text-[24px] text-center text-[var(--slide-muted)]">Protege el genoma</p></div>
-      <ArrowRight size={65} className="shrink-0 text-[var(--slide-warm)]"/>
-      <div className={panel+" flex flex-1 flex-col items-center gap-6 border-[var(--slide-warm)]"}><div className="relative"><Shield size={154} strokeWidth={1.3} className="text-[var(--slide-warm)]"/><X size={64} className="absolute left-[46px] top-[50px] text-[var(--slide-warm)]"/></div><p className="font-display text-[34px]">p53 mutante</p><p className="text-[24px] text-center text-[var(--slide-muted)]">Pierde control; algunas variantes favorecen al tumor</p></div>
+    <div>
+      <p className="font-display text-[42px]">Cuando el guardián cambia de bando</p>
+      <p className="mt-2 text-[24px] text-[var(--slide-muted)]">Un p53 mutante puede favorecer el crecimiento tumoral</p>
     </div>
-    <div className="grid grid-cols-3 gap-5 text-center text-[24px]"><div className={panel}>Invasión</div><div className={panel}>Supervivencia</div><div className={panel}>Resistencia</div></div>
+    <svg viewBox="0 0 1000 450" className="w-full h-[445px]" role="img" aria-label="La casa que representa un tejido canceroso está repleta de células que se multiplican; el policía p53 mutante, convertido en corrupto, les da pase libre en lugar de detenerlas">
+      <rect x="20" y="25" width="500" height="385" rx="27" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="3"/>
+      <rect x="543" y="25" width="432" height="385" rx="27" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3"/>
+      <text x="271" y="68" textAnchor="middle" fontSize="27" fontWeight="700" fill="var(--slide-warm)">TEJIDO ALTERADO</text>
+      <text x="759" y="68" textAnchor="middle" fontSize="27" fontWeight="700" fill="var(--slide-warm)">POLICÍA CORRUPTO</text>
+      <g color="var(--slide-warm)">
+        <House x={270} y={253} size={0.78} children={15} age="teen" />
+      </g>
+      {/* Las células salen de la casa sin que el policía las detenga. */}
+      <path d="M406 319 Q486 333 575 325 M406 348 Q485 370 573 377" fill="none" stroke="var(--slide-warm)" strokeWidth="5" strokeDasharray="13 9" opacity=".85"/>
+      <g color="var(--slide-warm)">
+        <Person x={484} y={317} size={0.52} child />
+        <Person x={528} y={359} size={0.52} child />
+        <Person x={574} y={347} size={0.52} child />
+      </g>
+      <CorruptOfficer/>
+      <path d="M822 372 H900" stroke="var(--slide-warm)" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M886 357 L906 372 L886 387" fill="none" stroke="var(--slide-warm)" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+    <div className="rounded-[18px] border border-[var(--slide-warm)] bg-[var(--slide-bg)] px-6 py-3 text-center text-[29px]">
+      En lugar de frenar a las células alteradas, <strong>algunas formas mutantes de p53 las favorecen</strong>.
+    </div>
   </div>;
 }
 function Elephants(){
