@@ -29,10 +29,10 @@ describe("Two-house analogy", () => {
   });
   it("keeps the statistic and Peto layouts after renumbering", () => {
     expect(slides[4]?.layout).toBe("stat");
-    expect(slides[22]?.layout).toBe("peto");
-    expect(slides[22]?.steps).toBe(3);
-    expect(advancePosition(22, 0)).toEqual({ index: 22, step: 1 });
-    expect(advancePosition(22, 2)).toEqual({ index: 23, step: 0 });
+    expect(slides[23]?.layout).toBe("peto");
+    expect(slides[23]?.steps).toBe(3);
+    expect(advancePosition(23, 0)).toEqual({ index: 23, step: 1 });
+    expect(advancePosition(23, 2)).toEqual({ index: 24, step: 0 });
   });
   it("shows slide 9 titled only 'El sospechoso equivocado'", () => {
     expect(slides[8]?.title).toBe("1980 - 1988: El sospechoso equivocado");
@@ -42,5 +42,10 @@ describe("Two-house analogy", () => {
     expect(s.pointsSize).toBe("xl");
     expect(s.points.join(" ").length).toBeLessThan(200);
     expect(s.points.every((p) => p.length <= 70)).toBe(true);
+  });
+  it("names Vogelstein and Oren on slide 10", () => {
+    const points = slides[9]!.points.join(" ");
+    expect(points).toContain("Vogelstein");
+    expect(points).toContain("Oren");
   });
 });
