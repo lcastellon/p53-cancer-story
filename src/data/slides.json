@@ -454,11 +454,12 @@
       "Muchas variantes de **TP53** son *missense*.",
       "Algunas proteínas mutantes se acumulan.",
       "Ciertas variantes favorecen invasión y resistencia.",
-      "**Perder el freno** puede no ser el único efecto."
+      "**Varda Rotter (1984):** evidencia pionera de la **ganancia de función** del p53 mutante."
     ],
     "visual": "Metáfora visual: Un policía que no solo cuelga la placa, sino que se pone la chaqueta de la mafia y les enseña cómo desactivar las alarmas del banco.",
     "notes": [
-      "Normalmente, si un gen protector se rompe, simplemente deja de funcionar. Con p53 pasa algo mucho más siniestro. Muchas mutaciones alteran una sola letra de las cientos que componen la proteína. Esa pequeña alteración no la destruye; la deforma. Y la proteína deforme se vuelve inmune a MDM2, acumulándose dentro de la célula. Peor aún: adquiere lo que los genetistas llaman 'ganancia de función oncogénica'. El antiguo policía se pasa al bando del crimen organizado: ayuda a la célula tumoral a migrar, a crear vasos sanguíneos para alimentarse y a resistir los fármacos. No es solo la ausencia de un amigo; es la creación de un monstruo."
+      "Normalmente, si un gen protector se rompe, simplemente deja de funcionar. Con p53 pasa algo mucho más siniestro. Muchas mutaciones alteran una sola letra de las cientos que componen la proteína. Esa pequeña alteración no la destruye; la deforma. Y la proteína deforme se vuelve inmune a MDM2, acumulándose dentro de la célula. Peor aún: adquiere lo que los genetistas llaman 'ganancia de función oncogénica'. El antiguo policía se pasa al bando del crimen organizado: ayuda a la célula tumoral a migrar, a crear vasos sanguíneos para alimentarse y a resistir los fármacos. No es solo la ausencia de un amigo; es la creación de un monstruo.",
+      "Contexto histórico: en 1984, trabajos del laboratorio de la investigadora Varda Rotter mostraron que la introducción de p53 —que posteriormente se supo era una forma mutante— en células sin p53 podía aumentar su actividad oncogénica. Fueron evidencias pioneras de ganancia de función, no una demostración de que todas las variantes mutantes de p53 actúan de este modo. Fuentes: Instituto Weizmann, https://www.weizmann.ac.il/mcb/Varda/research; Oren y Rotter (2010), Mutant p53 Gain-of-Function in Cancer, https://doi.org/10.1101/cshperspect.a001107."
     ],
     "act": 4,
     "actName": "Acto III",
