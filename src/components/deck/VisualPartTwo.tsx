@@ -24,7 +24,6 @@ function Pedigree(){
       {groups.map((generation,i)=><div key={i} className="relative flex items-center justify-center gap-7"><span className="absolute left-0 text-[21px] text-[var(--slide-muted)]">Gen. {i+1}</span>{generation.map((person,j)=><Thumb key={j} altered={person.affected} round={person.type==="circle"}/>)}</div>)}
     </div>
     <div className="flex items-center justify-center gap-5 text-[21px]"><Thumb round/><span>No afectado</span><Thumb altered round/><span>Afectado</span></div>
-    <p className="text-center text-[19px] italic text-[var(--slide-muted)]">Esquema explicativo, no árbol genealógico de una familia identificable.</p>
   </div>;
 }
 function Signatures(){
