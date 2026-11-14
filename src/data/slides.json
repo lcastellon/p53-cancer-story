@@ -549,23 +549,28 @@
   },
   {
     "n": 25,
-    "label": "Las estrategias revolucionarias en marcha",
-    "title": "La nueva artillería: Reactivar al Guardián",
+    "label": "Avances y tropiezos de las terapias dirigidas a p53",
+    "title": "p53: de 2015 a 2026",
     "subtitle": "",
     "points": [
-      "**APR-246:** se investiga para reactivar p53 mutante.",
-      "**Nutlins:** bloquean la interacción MDM2–p53.",
-      "**Virus oncolíticos:** otra vía antitumoral.",
-      "Son estrategias en estudio, no curas universales."
+      "**2015:** APR-246 ofrecía una esperanza para p53 mutante.",
+      "**2020:** un ensayo de fase III no alcanzó su objetivo.",
+      "**2025:** nueva inmunoterapia contra p53 R175H en ensayos.",
+      "**2026:** rezatapopt muestra respuestas en tumores con Y220C."
     ],
-    "visual": "Tres iconos claros: Una abrazadera enderezando una estructura curva (APR-246), un escudo que bloquea a MDM2 (Nutlins), y un virus terapéutico selectivo.",
+    "visual": "Línea del tiempo de cuatro hitos: 2015 investigación con APR-246; 2020 ensayo fase III negativo de eprenetapopt; 2025 inicio de investigación clínica con un reclutador de linfocitos T contra p53 R175H (CLSP-1025); 2026 resultados clínicos de rezatapopt para TP53 Y220C. Visual de cuatro tarjetas con fechas, iconos y explicaciones sencillas.",
     "notes": [
-      "A pesar de la dificultad, los científicos no se han rendido, y Sue Armstrong documenta los avances más audaces. Hoy existen moléculas llamadas 'chaperones' como APR-246, que entran a la célula mutada, se abrazan a la proteína deformada y la obligan a enderezarse; en cuanto recupera su forma, el p53 'resucitado' mira a la célula cancerosa y aprieta el botón de autodestrucción. En otros casos, usamos moléculas llamadas Nutlins para arrancar de golpe el freno de MDM2 y desatar al p53 natural. Estamos aprendiendo a rearmar al guardián en su propio territorio."
+      "INTRODUCCIÓN. La diapositiva anterior explicaba cuatro mecanismos terapéuticos presentes en la historia de p53. Ésta muestra qué cambió en la investigación entre 2015 y noviembre de 2026. La enseñanza central es que la medicina de precisión ya distingue mutaciones concretas de TP53, aunque todavía no existe una cura universal basada en p53.",
+      "2015 — ESPERANZA CON APR-246. Trabajos como Mohell y colaboradores, Cell Death & Disease (2015), mostraron que APR-246 (eprenetapopt, derivado de PRIMA-1) podía alterar respuestas al tratamiento en células de cáncer de ovario resistentes, mediante mecanismos que incluían reactivación de p53 mutante y cambios en el balance redox. No fue descubierto ni probado por primera vez en 2015; su ensayo inicial en humanos se publicó en 2012. Fuente 2015: https://www.nature.com/articles/cddis2015143 ; fase I 2012: https://pubmed.ncbi.nlm.nih.gov/22965953/ ",
+      "2020 — UN TROPIEZO IMPORTANTE. En diciembre de 2020, el ensayo de fase III de eprenetapopt (APR-246) combinado con azacitidina en síndrome mielodisplásico con TP53 mutante no cumplió su objetivo principal de remisión completa: la diferencia entre los grupos no alcanzó significación estadística. No es correcto afirmar que todo el trabajo con p53 fracasó; esta combinación, en ese ensayo, no demostró el beneficio principal esperado. Fuente: https://ir.aprea.com/news-releases/news-release-details/aprea-therapeutics-announces-results-primary-endpoint-phase-3",
+      "2025 — ENTRAR EN JUEGO CON EL SISTEMA INMUNITARIO. En 2025 comenzó la evaluación clínica de CLSP-1025 (GUARDIAN-101; NCT06778863). Es un fármaco que intenta acercar linfocitos T a células tumorales que presentan la forma mutante p53 R175H, en personas con HLA-A*02:01. No busca reparar p53, sino reconocer el blanco mutado y dirigir una respuesta inmunitaria. Es un ensayo de fase I, por lo que eficacia y seguridad aún se investigan. Fuentes: https://clinicaltrials.ucsf.edu/trial/NCT06778863 ; https://www.mskcc.org/cancer-care/clinical-trials/25-146",
+      "2026 — TERAPIA DE PRECISIÓN CON REZATAPOPT. A diferencia de abordajes de reactivación más generales, rezatapopt (PC14586) busca un cambio molecular específico: TP53 Y220C. Se une a una cavidad producida por esa mutación y puede estabilizar la proteína. Un estudio de fase I publicado el 25 de febrero de 2026 en NEJM informó respuesta global objetiva de 20% en pacientes evaluados; en datos de fase II del ensayo PYNNACLE divulgados en agosto de 2026 para cáncer de ovario avanzado con Y220C se comunicaron respuestas en aproximadamente 44% de las pacientes evaluables. Son ensayos sin comparación aleatorizada definitiva, con selección molecular estricta; rezatapopt sigue en investigación y no es una terapia universal ni un fármaco ya aprobado. Fuentes: https://www.nejm.org/doi/10.1056/NEJMoa2508820 ; https://ascopost.com/issues/august-25-2026/rezatapopt-shows-activity-in-tp53-y220c-mutated-advanced-ovarian-cancer/ ; registro NCT04585750: https://clinicaltrials.gov/study/NCT04585750",
+      "CIERRE PARA LA PRESENTACIÓN. Antes se pensaba principalmente en 'reparar' p53 de modo general. Hoy hay líneas muy diferentes: algunas tratan de recuperar actividad en una mutación específica; otras buscan que la inmunidad reconozca esa mutación. Los avances dependen de la alteración molecular y del tipo de cáncer; todavía debemos confirmar beneficio clínico y seguridad de cada candidato. La información de 2025–2026 es posterior al libro de Sue Armstrong, no contenido atribuible a la autora."
     ],
     "act": 6,
     "actName": "Acto V",
     "actTitle": "La frontera médica",
-    "minutes": 2.2,
+    "minutes": 2.5,
     "layout": "visual",
     "visualKind": "therapies",
     "pointsSize": "xl"
