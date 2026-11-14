@@ -1,4 +1,4 @@
-import { ArrowRight, Ban, BookOpen, CarFront, Check, CircleAlert, Dna, FlaskConical, Gauge, LockKeyhole, Microscope, Pause, RotateCcw, Shield, ShieldCheck, Sparkles, Sun, Tag, Trash2, Wrench, X, Zap } from "lucide-react";
+import { ArrowRight, Ban, BookOpen, CarFront, Check, CircleAlert, Dna, FlaskConical, Gauge, LockKeyhole, Microscope, Pause, RotateCcw, Shield, ShieldCheck, Sun, Tag, Trash2, Wrench, X, Zap } from "lucide-react";
 
 type Props = { kind: string; step: number };
 const frame = "h-full w-full rounded-[28px] border border-[var(--slide-line)] bg-[var(--slide-card)] p-[32px] overflow-hidden";
@@ -66,7 +66,7 @@ export function PartOneVisual({kind,step}:Props){
     case "turnover": return <div className={frame+" flex flex-col justify-around"}>
       <h3 className="font-display text-[37px]">Vida media corta de p53 en condiciones normales</h3>
       <div className="flex items-center justify-between gap-2">
-        <MediaCard icon={<Sparkles size={65}/>} title="1. p53" body="Síntesis continua"/>
+        <MediaCard icon={<ShieldCheck size={65}/>} title="1. p53" body="Síntesis continua"/>
         <Arrow/><MediaCard visible={step>=1} icon={<Tag size={65}/>} title="2. MDM2" body="Ubiquitinación"/><Arrow/>
         <MediaCard visible={step>=2} icon={<Trash2 size={65}/>} title="3. Proteasoma" body="Degradación"/>
       </div>
