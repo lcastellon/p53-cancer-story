@@ -359,14 +359,14 @@
       "Una célula alterada pone en riesgo al tejido.",
       "Las señales de daño activan la respuesta de p53.",
       "p53 detiene temporalmente el ciclo celular.",
-      "Según el daño, la célula repara, entra en senescencia o inicia apoptosis."
+      "Si el daño es grave o persistente, p53 puede inducir apoptosis o senescencia."
     ],
-    "visual": "El barrio de la diapositiva 2. En el tercer paso la casa alterada se convierte en una cárcel con barrotes y cerradura cuando p53 detiene el ciclo celular.",
+    "visual": "Animación del barrio celular: una célula alterada llama la atención de p53, la casa se convierte en cárcel cuando se detiene el ciclo celular y, en el último paso, una cruz marca la célula mientras aparecen únicamente dos destinos: apoptosis o senescencia.",
     "notes": [
       "PASO 1. Retomamos la misma analogía visual de la diapositiva 2: cada casa representa un tejido y cada habitante representa una célula. Una familia equilibrada ilustra la regulación normal; la casa abarrotada representa proliferación desregulada. En la vida real el cáncer no es una infección y las células tumorales no son personas 'infectadas'.",
       "PASO 2. En la analogía aparece la policía p53 tras una señal de alarma. En realidad, p53 es una proteína que actúa DENTRO de las células, principalmente como factor de transcripción ante estrés genotóxico y otras señales, no como un policía que recorre físicamente el tejido. Las vías de detección del daño activan p53.",
       "PASO 3. Arresto del ciclo celular: p53 induce p21 y otros genes para frenar temporalmente la proliferación. La pausa permite evaluar y reparar el daño del ADN. Esta protección opera antes de la progresión tumoral; algunas células cancerosas pueden eludirla.",
-      "PASO 4. Si el daño es reparable, la célula puede recuperarse y retomar el ciclo. Si el daño es persistente o grave, p53 puede contribuir a senescencia o apoptosis dependiendo del contexto. No son destinos simultáneos para una misma célula. Cierre: ¿qué sucede cuando el guardián también falla? Introducir el síndrome de Li-Fraumeni."
+      "PASO 4. Último paso: apoptosis o senescencia. Si el daño es grave o persistente, p53 puede inducir la muerte celular programada (apoptosis) o favorecer un estado duradero de detención de la división (senescencia), según el contexto. Estos desenlaces no ocurren al mismo tiempo en una misma célula. La cruz dibujada sobre la célula representa que ya no continuará proliferando; no implica que la senescencia mate a la célula."
     ],
     "act": 3,
     "actName": "Acto II",
