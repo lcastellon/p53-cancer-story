@@ -306,29 +306,6 @@
   },
   {
     "n": 15,
-    "label": "La decisión 1 y 2: Pausa y reparación",
-    "title": "El freno p21 y los mecánicos moleculares",
-    "subtitle": "",
-    "points": [
-      "**p53** activa la expresión de **p21**.",
-      "**p21** inhibe los complejos ciclina–CDK.",
-      "Se frena la transición **G1/S**.",
-      "El ADN puede repararse antes de continuar."
-    ],
-    "visual": "Diagrama mecánico: p21 actuando como una barra de hierro que se mete entre los engranes del ciclo celular y detiene la marcha.",
-    "notes": [
-      "¿Cómo frena p53 a la célula físicamente? p53 es un maestro de orquesta genético: se sienta sobre el ADN y ordena fabricar una pequeña proteína llamada p21. Piensen en p21 como una cuña de madera que metes entre los engranes del motor celular. El motor se apaga en seco. La célula no se puede dividir mientras los mecánicos moleculares parchean el ADN dañado. Si todo queda impecable, p53 levanta el freno y la célula sigue trabajando como si nada hubiera pasado."
-    ],
-    "act": 3,
-    "actName": "Acto II",
-    "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3,
-    "layout": "visual",
-    "visualKind": "p21",
-    "pointsSize": "xl"
-  },
-  {
-    "n": 16,
     "label": "La decisión 3: Apoptosis (El sacrificio honorable)",
     "title": "Apoptosis: Morir por el bien de la comunidad",
     "subtitle": "",
@@ -351,7 +328,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 17,
+    "n": 16,
     "label": "La cuarta vía: Senescencia (La jubilación obligatoria)",
     "title": "Senescencia: La célula que nunca volverá a dividirse",
     "subtitle": "",
@@ -373,7 +350,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 18,
+    "n": 17,
     "label": "La policía del barrio celular",
     "title": "p53: La policía del barrio celular",
     "subtitle": "Volvemos al tejido de las dos casas",
@@ -398,7 +375,7 @@
     "layout": "police"
   },
   {
-    "n": 19,
+    "n": 18,
     "label": "El Síndrome de Li-Fraumeni",
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
@@ -421,7 +398,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 20,
+    "n": 19,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -444,7 +421,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 21,
+    "n": 20,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -467,7 +444,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 22,
+    "n": 21,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -490,7 +467,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 23,
+    "n": 22,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -517,7 +494,7 @@
     "layout": "peto"
   },
   {
-    "n": 24,
+    "n": 23,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -540,7 +517,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 25,
+    "n": 24,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -563,7 +540,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 26,
+    "n": 25,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -586,7 +563,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 27,
+    "n": 26,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -611,7 +588,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 28,
+    "n": 27,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
