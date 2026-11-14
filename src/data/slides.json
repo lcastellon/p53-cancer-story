@@ -181,7 +181,9 @@
     "act": 2,
     "actName": "Acto I",
     "actTitle": "De villano a salvador",
-    "minutes": 2.4
+    "minutes": 2.4,
+    "layout": "visual",
+    "visualKind": "suspect"
   },
   {
     "n": 10,
@@ -201,7 +203,9 @@
     "act": 2,
     "actName": "Acto I",
     "actTitle": "De villano a salvador",
-    "minutes": 2.4
+    "minutes": 2.4,
+    "layout": "visual",
+    "visualKind": "reversal"
   },
   {
     "n": 11,
@@ -220,7 +224,9 @@
     "act": 2,
     "actName": "Acto I",
     "actTitle": "De villano a salvador",
-    "minutes": 2.4
+    "minutes": 2.4,
+    "layout": "visual",
+    "visualKind": "recognition"
   },
   {
     "n": 12,
@@ -239,7 +245,9 @@
     "act": 2,
     "actName": "Acto I",
     "actTitle": "De villano a salvador",
-    "minutes": 2.4
+    "minutes": 2.4,
+    "layout": "visual",
+    "visualKind": "bias"
   },
   {
     "n": 13,
@@ -259,7 +267,10 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "turnover",
+    "steps": 3
   },
   {
     "n": 14,
@@ -279,7 +290,10 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "alarm",
+    "steps": 3
   },
   {
     "n": 15,
@@ -301,7 +315,9 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "options"
   },
   {
     "n": 16,
@@ -322,7 +338,9 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "p21"
   },
   {
     "n": 17,
@@ -342,7 +360,9 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "apoptosis"
   },
   {
     "n": 18,
@@ -361,7 +381,9 @@
     "act": 3,
     "actName": "Acto II",
     "actTitle": "Anatomía de un guardián",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "senescence"
   },
   {
     "n": 19,
@@ -381,7 +403,9 @@
     "act": 4,
     "actName": "Acto III",
     "actTitle": "Cuando el guardián duerme",
-    "minutes": 2.5
+    "minutes": 2.5,
+    "layout": "visual",
+    "visualKind": "pedigree"
   },
   {
     "n": 20,
@@ -401,7 +425,9 @@
     "act": 4,
     "actName": "Acto III",
     "actTitle": "Cuando el guardián duerme",
-    "minutes": 2.5
+    "minutes": 2.5,
+    "layout": "visual",
+    "visualKind": "signatures"
   },
   {
     "n": 21,
@@ -421,7 +447,10 @@
     "act": 4,
     "actName": "Acto III",
     "actTitle": "Cuando el guardián duerme",
-    "minutes": 2.5
+    "minutes": 2.5,
+    "layout": "visual",
+    "visualKind": "hpv",
+    "steps": 3
   },
   {
     "n": 22,
@@ -441,7 +470,9 @@
     "act": 4,
     "actName": "Acto III",
     "actTitle": "Cuando el guardián duerme",
-    "minutes": 2.5
+    "minutes": 2.5,
+    "layout": "visual",
+    "visualKind": "mutant"
   },
   {
     "n": 23,
@@ -489,7 +520,9 @@
     "act": 5,
     "actName": "Acto IV",
     "actTitle": "La paradoja de Peto",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "elephant"
   },
   {
     "n": 25,
@@ -508,7 +541,9 @@
     "act": 5,
     "actName": "Acto IV",
     "actTitle": "La paradoja de Peto",
-    "minutes": 2.3
+    "minutes": 2.3,
+    "layout": "visual",
+    "visualKind": "species"
   },
   {
     "n": 26,
@@ -528,7 +563,9 @@
     "act": 6,
     "actName": "Acto V",
     "actTitle": "La frontera médica",
-    "minutes": 2.2
+    "minutes": 2.2,
+    "layout": "visual",
+    "visualKind": "pharma"
   },
   {
     "n": 27,
@@ -547,7 +584,9 @@
     "act": 6,
     "actName": "Acto V",
     "actTitle": "La frontera médica",
-    "minutes": 2.2
+    "minutes": 2.2,
+    "layout": "visual",
+    "visualKind": "therapies"
   },
   {
     "n": 28,
@@ -569,7 +608,9 @@
     "act": 6,
     "actName": "Acto V",
     "actTitle": "La frontera médica",
-    "minutes": 2.2
+    "minutes": 2.2,
+    "layout": "visual",
+    "visualKind": "lessons"
   },
   {
     "n": 29,
@@ -588,6 +629,8 @@
     "act": 6,
     "actName": "Acto V",
     "actTitle": "La frontera médica",
-    "minutes": 2.2
+    "minutes": 2.2,
+    "layout": "visual",
+    "visualKind": "finale"
   }
 ]
