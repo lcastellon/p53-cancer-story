@@ -14,9 +14,9 @@ const scenes = [
     cancer: "p53 responde a señales de daño o estrés celular.",
   },
   {
-    name: "Alto: nadie se divide por ahora",
+    name: "p53 detiene el ciclo celular",
     healthy: "La división sigue bajo control.",
-    cancer: "p53 activa p21 y detiene temporalmente el ciclo.",
+    cancer: "p53 detiene temporalmente el ciclo celular.",
   },
   {
     name: "¿Reparación o retirada definitiva?",
@@ -106,6 +106,27 @@ export function PoliceNeighborhoodSlide({ s, step }: { s: Slide; step: number })
           <h3 className="slide-body-lg font-display">Tejido alterado</h3>
           <svg key={stage} viewBox="0 0 760 620" className="house-scene h-[450px] w-full" role="img" aria-label="Casa con demasiados habitantes y policía p53 que detiene células dañadas">
             <House x={255} y={320} size={0.82} children={15} age="teen" />
+            {stage === 2 && (
+              <g aria-label="La casa se transforma en una cárcel que representa el arresto del ciclo celular">
+                {/* Fachada con barrotes y travesaños metálicos: arresto de la división. */}
+                <rect x="128" y="204" width="254" height="265" rx="5" fill="var(--slide-bg)" fillOpacity=".13" stroke="var(--slide-muted)" strokeWidth="8" />
+                {Array.from({ length: 8 }, (_, i) => (
+                  <line key={i} x1={145 + i * 31} y1="206" x2={145 + i * 31} y2="465" stroke="var(--slide-muted)" strokeWidth="9" strokeLinecap="round" />
+                ))}
+                <path d="M130 265 H381 M130 341 H381 M130 465 H381" fill="none" stroke="var(--slide-muted)" strokeWidth="9" strokeLinecap="round" />
+                {/* Puerta de celda con cerradura central, delante de las personas. */}
+                <rect x="224" y="337" width="78" height="130" rx="4" fill="var(--slide-bg)" fillOpacity=".13" stroke="var(--slide-fg)" strokeWidth="8" />
+                {[239, 260, 281].map((x) => (
+                  <line key={x} x1={x} y1="344" x2={x} y2="462" stroke="var(--slide-fg)" strokeWidth="7" />
+                ))}
+                <rect x="270" y="396" width="24" height="29" rx="5" fill="var(--slide-warm)" />
+                <path d="M275 396 V388 A7 7 0 0 1 289 388 V396" fill="none" stroke="var(--slide-warm)" strokeWidth="5" />
+                <circle cx="282" cy="409" r="3" fill="var(--slide-bg)" />
+                {/* Rótulo penitenciario sobre el tejado. */}
+                <rect x="163" y="115" width="184" height="43" rx="9" fill="var(--slide-bg)" stroke="var(--slide-muted)" strokeWidth="4" />
+                <text x="255" y="144" fontSize="23" fontWeight="800" textAnchor="middle" fill="var(--slide-fg)">CICLO EN PAUSA</text>
+              </g>
+            )}
             {stage === 0 && (
               <g>
                 <Person x={491} y={474} size={0.65} child />
