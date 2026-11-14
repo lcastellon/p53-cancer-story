@@ -129,10 +129,6 @@ export function PartOneVisual({kind,step}:Props){
         <text x="805" y="184" textAnchor="middle" fontSize="31" fontWeight="700" fill="var(--slide-fg)">NOXA</text>
         <text x="805" y="231" textAnchor="middle" fontSize="24" fill="var(--slide-muted)">Señales de muerte</text>
       </svg>
-      <div className="flex w-full items-center justify-center gap-5 rounded-[20px] border border-[var(--slide-line)] bg-[var(--slide-bg)] px-7 py-5 text-center">
-        <ShieldCheck size={53} className="shrink-0 text-[var(--slide-accent)]"/>
-        <p className="font-display text-[31px] leading-snug">La célula dañada deja de representar un riesgo para el tejido.</p>
-      </div>
     </div>;
     case "senescence": return <div className={frame+" flex flex-col items-center justify-around"}>
       <p className="font-display text-[43px]">Célula viva · División detenida</p>
