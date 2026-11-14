@@ -234,29 +234,6 @@
   },
   {
     "n": 12,
-    "label": "Lección epistemológica (Para el público general)",
-    "title": "¿Por qué tardamos 10 años en darnos cuenta?",
-    "subtitle": "",
-    "points": [
-      "Se esperaba encontrar un oncogén.",
-      "Los clones mutantes reforzaban esa hipótesis.",
-      "Comparar con **p53 normal** reveló el error.",
-      "Lección: **cuestionar, verificar y replicar**."
-    ],
-    "visual": "Diagrama de flujo simplificado mostrando el camino del sesgo contra el camino de la verificación independiente.",
-    "notes": [
-      "Sue Armstrong resalta en su libro que no debemos juzgar a los pioneros de 1979 con la soberbia del presente. En ese momento, la biología molecular apenas gateaba; secuenciar un gen tomaba meses. Pero también es un recordatorio de cómo el sesgo de confirmación puede cegar a mentes brillantes. Todos esperaban encontrar un oncogén, y vieron lo que esperaban ver hasta que alguien tuvo el valor de dudar del punto de partida."
-    ],
-    "act": 2,
-    "actName": "Acto I",
-    "actTitle": "De villano a salvador",
-    "minutes": 2.4,
-    "layout": "visual",
-    "visualKind": "bias",
-    "pointsSize": "xl"
-  },
-  {
-    "n": 13,
     "label": "La vida normal de p53 (El centinela dormido)",
     "title": "En condiciones normales: Producir y destruir al instante",
     "subtitle": "",
@@ -280,7 +257,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 14,
+    "n": 13,
     "label": "¡Alarma en el núcleo! La activación",
     "title": "Cuando suena la sirena: Daño en el ADN",
     "subtitle": "",
@@ -303,7 +280,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 15,
+    "n": 14,
     "label": "Las tres decisiones del Guardián",
     "title": "El dilema de p53: Las 3 opciones ante el daño",
     "subtitle": "",
@@ -328,7 +305,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 16,
+    "n": 15,
     "label": "La decisión 1 y 2: Pausa y reparación",
     "title": "El freno p21 y los mecánicos moleculares",
     "subtitle": "",
@@ -351,7 +328,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 17,
+    "n": 16,
     "label": "La decisión 3: Apoptosis (El sacrificio honorable)",
     "title": "Apoptosis: Morir por el bien de la comunidad",
     "subtitle": "",
@@ -374,7 +351,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 18,
+    "n": 17,
     "label": "La cuarta vía: Senescencia (La jubilación obligatoria)",
     "title": "Senescencia: La célula que nunca volverá a dividirse",
     "subtitle": "",
@@ -396,7 +373,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 19,
+    "n": 18,
     "label": "La policía del barrio celular",
     "title": "p53: La policía del barrio celular",
     "subtitle": "Volvemos al tejido de las dos casas",
@@ -421,7 +398,7 @@
     "layout": "police"
   },
   {
-    "n": 20,
+    "n": 19,
     "label": "El Síndrome de Li-Fraumeni",
     "title": "La pesadilla genética de Li y Fraumeni",
     "subtitle": "",
@@ -444,7 +421,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 21,
+    "n": 20,
     "label": "La firma forense: p53 recuerda lo que hiciste",
     "title": "El detective forense: p53 delata al asesino",
     "subtitle": "",
@@ -467,7 +444,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 22,
+    "n": 21,
     "label": "La estrategia del Caballo de Troya (El Virus del Papiloma)",
     "title": "¿Y si el gen no está mutado? Cómo hackear al guardián",
     "subtitle": "",
@@ -490,7 +467,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 23,
+    "n": 22,
     "label": "Ganancia de función maligna (El policía que se vuelve mafioso)",
     "title": "El p53 mutante: Peor que no tener nada",
     "subtitle": "",
@@ -513,7 +490,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 24,
+    "n": 23,
     "label": "El dilema del tamaño y el tiempo",
     "title": "La paradoja de Peto",
     "subtitle": "",
@@ -540,7 +517,7 @@
     "layout": "peto"
   },
   {
-    "n": 25,
+    "n": 24,
     "label": "El ejército de p53 del elefante",
     "title": "La solución del elefante: 40 copias de seguridad",
     "subtitle": "",
@@ -563,7 +540,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 26,
+    "n": 25,
     "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
     "title": "El gran reto farmacológico: Arreglar vs. Romper",
     "subtitle": "",
@@ -586,7 +563,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 27,
+    "n": 26,
     "label": "Las estrategias revolucionarias en marcha",
     "title": "La nueva artillería: Reactivar al Guardián",
     "subtitle": "",
@@ -609,7 +586,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 28,
+    "n": 27,
     "label": "Resumen en 3 lecciones del libro",
     "title": "Lo que Sue Armstrong nos enseñó",
     "subtitle": "",
@@ -634,7 +611,7 @@
     "pointsSize": "xl"
   },
   {
-    "n": 29,
+    "n": 28,
     "label": "Cierre y Preguntas",
     "title": "Gracias por su atención",
     "subtitle": "",
