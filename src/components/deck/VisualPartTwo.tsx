@@ -121,7 +121,7 @@ function MutantPolice(){
 function Elephants(){
   return <div className={frame+" grid grid-cols-[1fr_1.5fr] gap-7"}>
     <div className={panel+" flex flex-col items-center justify-around"}><span className="text-[115px]" role="img" aria-label="Ser humano">🧍</span><p className="font-display text-[36px]">Humano</p><div className="flex gap-4"><Shield size={64} className="text-[var(--slide-accent)]"/><Shield size={64} className="text-[var(--slide-accent)]"/></div><p className="text-[28px]">2 alelos TP53</p></div>
-    <div className={panel+" flex flex-col items-center justify-between border-[var(--slide-accent)]"}><span className="text-[115px]" role="img" aria-label="Elefante africano">🐘</span><p className="font-display text-[36px]">Elefante africano</p><div className="grid grid-cols-10 gap-2">{Array.from({length:40},(_,i)=><Shield key={i} size={31} strokeWidth={1.7} className={i%4===0?"text-[var(--slide-warm)]":"text-[var(--slide-accent)]"}/>)}</div><p className="text-[28px]">≈40 alelos relacionados con TP53</p><p className="text-[18px] text-[var(--slide-muted)]">Incluye copias retrotranspuestas; los escudos son una analogía.</p></div>
+    <div className={panel+" flex flex-col items-center justify-between border-[var(--slide-accent)]"}><span className="text-[115px]" role="img" aria-label="Elefante africano">🐘</span><p className="font-display text-[36px]">Elefante africano</p><div className="grid grid-cols-10 gap-2">{Array.from({length:40},(_,i)=><Shield key={i} size={31} strokeWidth={1.7} className={i%4===0?"text-[var(--slide-warm)]":"text-[var(--slide-accent)]"}/>)}</div><p className="text-[28px]">≈40 alelos relacionados con TP53</p></div>
   </div>;
 }
 function OtherSpecies(){
