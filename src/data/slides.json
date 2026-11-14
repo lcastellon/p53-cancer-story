@@ -521,18 +521,23 @@
   },
   {
     "n": 24,
-    "label": "La paradoja terapéutica: ¿Por qué no tenemos una pastilla de p53?",
-    "title": "El gran reto farmacológico: Arreglar vs. Romper",
+    "label": "Cuatro estrategias terapéuticas relacionadas con p53",
+    "title": "Cuatro estrategias contra el cáncer basadas en p53",
     "subtitle": "",
     "points": [
-      "**Inhibir** una proteína hiperactiva suele ser viable.",
-      "**Reactivar p53** mutante es mucho más difícil.",
-      "Bloquear un motor no es reconstruir un freno.",
-      "Ése es el desafío de la terapia dirigida."
+      "**Nutlin:** permite que p53 actúe al bloquear MDM2.",
+      "**Gendicine:** lleva al tumor una copia funcional de TP53.",
+      "**ONYX-015:** virus diseñado para destruir células tumorales.",
+      "**PRIMA-1:** busca recuperar la actividad del p53 mutante."
     ],
-    "visual": "Ilustración comparativa: A la izquierda, una llave molecular bloqueando una cerradura (fácil). A la derecha, intentar recomponer con pinzas una escultura de cristal rota en mil pedazos dentro de una célula viva (el reto de p53).",
+    "visual": "Cuatro tarjetas con ilustraciones y una explicación simple de cada estrategia: Nutlin, Gendicine, ONYX-015 y PRIMA-1. Se diferencia explícitamente el uso autorizado en China de las estrategias experimentales.",
     "notes": [
-      "Llegados a este punto, la pregunta natural es: 'Si sabemos esto desde 1989, ¿por qué no hay una pastilla en la farmacia llamada p53?'. La respuesta reside en la química molecular. Casi todos los fármacos modernos funcionan como un chicle en una cerradura: bloquean una proteína hiperactiva. Eso sirve contra los oncogenes. Pero con p53 el problema es el opuesto: el freno está roto, deformado o ausente. Crear un químico que entre al núcleo, encuentre a la proteína deforme y la obligue a recuperar su forma original tridimensional perfecta es uno de los desafíos más descomunales de la química moderna."
+      "TRANSICIÓN: Después de entender qué hace p53 y cómo falla en el cáncer, repasamos cuatro estrategias que intentan aprovechar este conocimiento. Son abordajes diferentes, no cuatro pastillas equivalentes. Sue Armstrong dedica el capítulo 20 de su libro a la revolución terapéutica; esta síntesis se complementa con revisiones científicas posteriores.",
+      "NUTLIN (por ejemplo, nutlin-3): cuando TP53 conserva su función, la proteína MDM2 puede mantener a p53 inactiva o facilitar su degradación. Nutlin interrumpe la unión de MDM2 con p53 y permite que p53 se acumule y actúe. Es un compuesto de investigación; nutlin-3 no es un tratamiento clínico aprobado. Fuente: https://www.nature.com/articles/s41392-025-02549-5",
+      "GENDICINE (rAd-p53): utiliza un adenovirus modificado como vehículo para introducir el gen TP53 funcional en células tumorales, buscando que produzcan p53 y activen respuestas antitumorales. No sustituye de manera permanente el gen del paciente ni equivale a edición génica. Fue aprobado en China en 2003 para cáncer escamoso de cabeza y cuello, en combinación con radioterapia. Fuente: https://pubmed.ncbi.nlm.nih.gov/32951572/",
+      "ONYX-015 (dl1520): adenovirus oncolítico diseñado para multiplicarse preferentemente en ciertas células tumorales, provocando su destrucción. Inicialmente se planteó que atacaría específicamente células sin p53 funcional, pero se descubrió que su selectividad es más compleja y no depende exclusivamente de TP53. No debe presentarse como tratamiento autorizado de rutina. Fuentes: https://pmc.ncbi.nlm.nih.gov/articles/PMC2746528/ y https://pubmed.ncbi.nlm.nih.gov/12438574/",
+      "PRIMA-1: compuesto experimental descrito para intentar restaurar la actividad transcripcional de ciertas variantes mutantes de p53. Su derivado PRIMA-1MET/APR-246 (eprenetapopt) se ha evaluado en ensayos clínicos, con efectos adicionales sobre el equilibrio redox; no se ha demostrado que la reactivación de p53 sea universal ni representa una cura aprobada. Fuente: https://pmc.ncbi.nlm.nih.gov/articles/PMC10936007/",
+      "CIERRE: Son formas distintas de enfrentar el mismo problema: liberar la proteína p53 funcional, aportar una copia del gen, atacar células tumorales mediante un virus o intentar recuperar parte de la actividad de p53 mutante. Evitar prometer curación; explicar los estados de desarrollo y aprobación."
     ],
     "act": 6,
     "actName": "Acto V",
