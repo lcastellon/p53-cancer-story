@@ -12,9 +12,9 @@ export const Route = createFileRoute("/")({
   }),
   head: () => ({
     meta: [
-      { title: "p53: El Guardián del Genoma — Presentación" },
+      { title: "Presentación basada en Sue Armstrong" },
       { name: "description", content: "Presentación interactiva de divulgación sobre p53, basada en el libro de Sue Armstrong." },
-      { property: "og:title", content: "p53: El Guardián del Genoma — Presentación" },
+      { property: "og:title", content: "Presentación basada en Sue Armstrong" },
       { property: "og:description", content: `${TOTAL} diapositivas sobre p53, con analogías interactivas del cáncer y la paradoja de Peto.` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
