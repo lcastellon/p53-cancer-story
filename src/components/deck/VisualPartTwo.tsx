@@ -94,13 +94,13 @@ function MutantPolice(){
       <p className="font-display text-[42px]">Cuando el guardián cambia de bando</p>
       <p className="mt-2 text-[24px] text-[var(--slide-muted)]">Un p53 mutante puede favorecer el crecimiento tumoral</p>
     </div>
-    <svg viewBox="0 0 1000 450" className="w-full h-[445px]" role="img" aria-label="La casa que representa un tejido canceroso está repleta de células que se multiplican; el policía p53 mutante, convertido en corrupto, les da pase libre en lugar de detenerlas">
+    <svg viewBox="0 0 1000 450" className="w-full h-[400px]" role="img" aria-label="La casa que representa un tejido canceroso está repleta de células que se multiplican; el policía p53 mutante, convertido en corrupto, les da pase libre en lugar de detenerlas">
       <rect x="20" y="25" width="500" height="385" rx="27" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="3"/>
       <rect x="543" y="25" width="432" height="385" rx="27" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3"/>
       <text x="271" y="68" textAnchor="middle" fontSize="27" fontWeight="700" fill="var(--slide-warm)">TEJIDO ALTERADO</text>
       <text x="759" y="68" textAnchor="middle" fontSize="27" fontWeight="700" fill="var(--slide-warm)">POLICÍA CORRUPTO</text>
       <g color="var(--slide-warm)">
-        <House x={270} y={253} size={0.78} children={15} age="teen" />
+        <House x={270} y={270} size={0.70} children={15} age="teen" />
       </g>
       {/* Las células salen de la casa sin que el policía las detenga. */}
       <path d="M406 319 Q486 333 575 325 M406 348 Q485 370 573 377" fill="none" stroke="var(--slide-warm)" strokeWidth="5" strokeDasharray="13 9" opacity=".85"/>
