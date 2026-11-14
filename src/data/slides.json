@@ -358,10 +358,10 @@
     "points": [
       "Una célula alterada pone en riesgo al tejido.",
       "Las señales de daño activan la respuesta de p53.",
-      "p53 puede detener la división mediante p21.",
+      "p53 detiene temporalmente el ciclo celular.",
       "Según el daño, la célula repara, entra en senescencia o inicia apoptosis."
     ],
-    "visual": "Animación original de las mismas casas y personajes de la diapositiva 2, en cuatro pasos: barrio alterado, llegada de la policía p53, arresto del ciclo y tres desenlaces celulares.",
+    "visual": "El barrio de la diapositiva 2. En el tercer paso la casa alterada se convierte en una cárcel con barrotes y cerradura cuando p53 detiene el ciclo celular.",
     "notes": [
       "PASO 1. Retomamos la misma analogía visual de la diapositiva 2: cada casa representa un tejido y cada habitante representa una célula. Una familia equilibrada ilustra la regulación normal; la casa abarrotada representa proliferación desregulada. En la vida real el cáncer no es una infección y las células tumorales no son personas 'infectadas'.",
       "PASO 2. En la analogía aparece la policía p53 tras una señal de alarma. En realidad, p53 es una proteína que actúa DENTRO de las células, principalmente como factor de transcripción ante estrés genotóxico y otras señales, no como un policía que recorre físicamente el tejido. Las vías de detección del daño activan p53.",
