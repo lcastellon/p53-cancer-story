@@ -30,10 +30,12 @@ function Chrome({ s }: { s: Slide }) {
   return (
     <>
       <div className="absolute left-[120px] right-[120px] top-[64px] flex items-center justify-between">
-        <span className="slide-kicker text-[var(--slide-accent)]">
-          {s.actName} · {s.actTitle}
-        </span>
-        <span className="slide-page text-[var(--slide-muted)]">
+        {s.actName !== "Apertura" && (
+          <span className="slide-kicker text-[var(--slide-accent)]">
+            {s.actName} · {s.actTitle}
+          </span>
+        )}
+        <span className="slide-page ml-auto text-[var(--slide-muted)]">
           {String(s.n).padStart(2, "0")} / {TOTAL}
         </span>
       </div>
