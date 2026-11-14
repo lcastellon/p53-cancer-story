@@ -15,7 +15,7 @@ function MiniCar({ warning = false, brake = false }: { warning?: boolean; brake?
 function DnaDamage({ broken = false }: { broken?: boolean }){
   return <svg viewBox="0 0 400 235" className="h-[240px] w-full" role="img" aria-label="Doble hélice de ADN con una lesión en el centro">
     {Array.from({length:12},(_,i)=>{const y=15+i*19;const x=190+84*Math.sin(i*.57);const opposite=380-x;const damage=broken&&i>=5&&i<=7;
-      return <g key={i} opacity={damage?.23:1}>
+      return <g key={i} opacity={damage ? 0.23 : 1}>
         <line x1={x} x2={opposite} y1={y} y2={y} stroke={damage?"#d97737":"var(--slide-line)"} strokeWidth="6"/>
         <circle cx={x} cy={y} r="9" fill="var(--slide-accent)"/><circle cx={opposite} cy={y} r="9" fill="var(--slide-warm)"/>
       </g>;
