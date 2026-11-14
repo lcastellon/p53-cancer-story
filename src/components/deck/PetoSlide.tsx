@@ -78,9 +78,6 @@ export function PetoSlide({ s, step }: { s: Slide; step: number }) {
       </div>
       <div className="absolute left-[120px] top-[140px] w-[1680px]">
         <h2 className="slide-title font-display">{s.title}</h2>
-        <p className="slide-body mt-6 max-w-[1500px] text-[var(--slide-muted)]">
-          Cada división celular puede generar mutaciones. ¿Por qué los animales con muchas más células no necesariamente desarrollan más cáncer?
-        </p>
         <p className="slide-subtitle mt-6 font-display text-[var(--slide-accent)]">
           {reveal ? "Realidad: la tasa está invertida. ¿Por qué?" : "¿Cuál creen que sea menos susceptible al cáncer?"}
         </p>
