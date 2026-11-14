@@ -19,9 +19,9 @@ const scenes = [
     cancer: "p53 detiene temporalmente el ciclo celular.",
   },
   {
-    name: "¿Reparación o retirada definitiva?",
+    name: "Último paso: apoptosis o senescencia",
     healthy: "Las células sanas continúan su actividad.",
-    cancer: "Si no hay reparación, senescencia o apoptosis.",
+    cancer: "Si el daño es grave o persistente, p53 puede inducir apoptosis o senescencia.",
   },
 ] as const;
 
@@ -57,20 +57,18 @@ function CellAlert({ stage }: { stage: number }) {
       )}
       {stage === 3 && (
         <g>
-          <path d="M476 435 L530 435" stroke="var(--slide-accent)" strokeWidth="6" strokeLinecap="round" />
-          <path d="M513 421 L531 435 L513 450" fill="none" stroke="var(--slide-accent)" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-          <g transform="translate(470 310)">
-            <rect width="242" height="52" rx="14" fill="var(--slide-bg)" stroke="var(--slide-accent)" strokeWidth="3" />
-            <text x="121" y="35" textAnchor="middle" fontSize="25" fill="var(--slide-fg)">REPARACIÓN ✓</text>
+          {/* Dos posibles desenlaces, sin la opción de reparación. */}
+          <g transform="translate(460 260)">
+            <rect width="252" height="55" rx="14" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3" />
+            <text x="126" y="37" textAnchor="middle" fontSize="25" fontWeight="700" fill="var(--slide-fg)">SENESCENCIA</text>
           </g>
-          <g transform="translate(470 376)">
-            <rect width="242" height="52" rx="14" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3" />
-            <text x="121" y="35" textAnchor="middle" fontSize="24" fill="var(--slide-fg)">SENESCENCIA</text>
+          <g transform="translate(460 333)">
+            <rect width="252" height="55" rx="14" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3" />
+            <text x="126" y="37" textAnchor="middle" fontSize="27" fontWeight="700" fill="var(--slide-fg)">APOPTOSIS</text>
           </g>
-          <g transform="translate(470 442)">
-            <rect width="242" height="52" rx="14" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="3" />
-            <text x="121" y="35" textAnchor="middle" fontSize="25" fill="var(--slide-fg)">APOPTOSIS</text>
-          </g>
+          {/* Cruz sobre la célula alterada: el desenlace evita que siga proliferando. */}
+          <circle cx="512" cy="451" r="43" fill="var(--slide-bg)" fillOpacity=".28" stroke="var(--slide-warm)" strokeWidth="7" strokeDasharray="12 8" />
+          <path d="M493 432 L531 470 M531 432 L493 470" stroke="var(--slide-warm)" strokeWidth="10" strokeLinecap="round" />
         </g>
       )}
     </g>
@@ -140,11 +138,6 @@ export function PoliceNeighborhoodSlide({ s, step }: { s: Slide; step: number })
           <p className="text-[36px] leading-[1.2]">{current.cancer}</p>
         </section>
       </div>
-      {stage === 3 && (
-        <div className="absolute bottom-[90px] left-[120px] w-[1680px] rounded-[17px] border border-[var(--slide-line)] bg-[var(--slide-bg)] px-6 py-3 text-center font-display text-[29px] text-[var(--slide-accent)]">
-          ¿Qué sucede cuando el guardián también falla?
-        </div>
-      )}
     </div>
   );
 }
