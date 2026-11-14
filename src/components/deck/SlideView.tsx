@@ -39,7 +39,7 @@ function Chrome({ s }: { s: Slide }) {
       </div>
       {s.n !== 3 && s.layout !== "scribe" && s.layout !== "types" && (
         <div className="slide-footer absolute bottom-[56px] left-[120px] text-[var(--slide-muted)]">
-          p53 · El guardián del genoma — basado en Sue Armstrong
+          Basado en Sue Armstrong
         </div>
       )}
     </>
