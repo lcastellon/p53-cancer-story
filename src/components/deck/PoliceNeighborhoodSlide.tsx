@@ -123,8 +123,8 @@ export function PoliceNeighborhoodSlide({ s, step }: { s: Slide; step: number })
                 <path d="M275 396 V388 A7 7 0 0 1 289 388 V396" fill="none" stroke="var(--slide-warm)" strokeWidth="5" />
                 <circle cx="282" cy="409" r="3" fill="var(--slide-bg)" />
                 {/* Rótulo penitenciario sobre el tejado. */}
-                <rect x="163" y="115" width="184" height="43" rx="9" fill="var(--slide-bg)" stroke="var(--slide-muted)" strokeWidth="4" />
-                <text x="255" y="144" fontSize="23" fontWeight="800" textAnchor="middle" fill="var(--slide-fg)">CICLO EN PAUSA</text>
+                <rect x="138" y="115" width="234" height="43" rx="9" fill="var(--slide-bg)" stroke="var(--slide-muted)" strokeWidth="4" />
+                <text x="255" y="144" fontSize="21" fontWeight="800" textAnchor="middle" fill="var(--slide-fg)">CICLO EN PAUSA</text>
               </g>
             )}
             {stage === 0 && (
