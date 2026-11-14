@@ -99,9 +99,40 @@ export function PartOneVisual({kind,step}:Props){
       <svg viewBox="0 0 890 245" className="w-full h-[235px]" role="img" aria-label="Engranajes de ciclinas y CDK bloqueados por una cuña marcada p21"><g transform="translate(245 124)"><circle r="94" fill="none" stroke="var(--slide-line)" strokeWidth="40" strokeDasharray="32 17"/><circle r="52" fill="var(--slide-bg)"/><text textAnchor="middle" y="10" fontSize="30" fill="var(--slide-fg)">CDK</text></g><g transform="translate(495 124)"><circle r="89" fill="none" stroke="var(--slide-line)" strokeWidth="37" strokeDasharray="30 20"/><circle r="47" fill="var(--slide-bg)"/><text textAnchor="middle" y="10" fontSize="26" fill="var(--slide-fg)">Ciclina</text></g><path d="M366 10L443 10 408 206 395 206Z" fill="var(--slide-warm)"/><text x="399" y="92" textAnchor="middle" fontSize="29" fontWeight="bold" fill="var(--slide-bg)">p21</text><text x="715" y="131" fontSize="41" fill="var(--slide-accent)">PAUSA</text></svg>
       <div className="flex justify-center gap-6 text-[27px]"><Wrench className="text-[var(--slide-accent)]" size={39}/><p>Tiempo para reparar el ADN antes de dividirse</p></div>
     </div>;
-    case "apoptosis": return <div className={frame+" grid grid-cols-2 gap-6"}>
-      <div className={panel+" flex flex-col items-center justify-around border-[var(--slide-accent)]"}><p className="font-display text-[36px]">Apoptosis</p><div className="relative h-[255px] w-full"><div className="absolute left-[22%] top-[36px] h-[165px] w-[165px] rounded-full border-[8px] border-[var(--slide-accent)]"><span className="absolute left-11 top-11 h-[67px] w-[67px] rounded-full bg-[#5268df]"/></div>{[0,1,2,3,4].map((i)=><span key={i} className="absolute h-[46px] w-[46px] rounded-full border-[5px] border-[var(--slide-accent)]" style={{left:(56+(i%3)*17)+"%",top:(10+Math.floor(i/3)*39)+"%"}}/>)}</div><p className="text-[25px] text-center">Fragmentación en cuerpos apoptóticos</p><div className="flex items-center gap-3 text-[23px] text-[var(--slide-accent)]"><Check size={34}/>Fagocitosis ordenada</div></div>
-      <div className={panel+" flex flex-col items-center justify-around border-[var(--slide-warm)]"}><p className="font-display text-[36px]">Necrosis</p><div className="relative flex h-[255px] w-full items-center justify-center"><div className="relative h-[180px] w-[180px] rounded-[48%] border-[9px] border-dashed border-[var(--slide-warm)] bg-[var(--slide-warm)]/10"><div className="absolute left-9 top-10 h-[83px] w-[83px] rounded-full bg-[#5268df] opacity-40"/></div>{[0,1,2,3].map(i=><Zap key={i} size={35} className="absolute text-[var(--slide-warm)]" style={{left:(12+i*21)+"%",top:(8+(i%2)*63)+"%"}}/>)}</div><p className="text-[25px] text-center">Ruptura celular descontrolada</p><div className="flex items-center gap-3 text-[23px] text-[var(--slide-warm)]"><CircleAlert size={34}/>Contenido liberado</div></div>
+    case "apoptosis": return <div className={frame+" flex flex-col items-center justify-around"}>
+      <div className="text-center">
+        <p className="font-display text-[42px] leading-tight">Cuando el daño es demasiado grave</p>
+        <p className="mt-3 text-[26px] text-[var(--slide-muted)]">p53 puede activar una respuesta de muerte celular</p>
+      </div>
+      <svg viewBox="0 0 925 365" className="h-[350px] w-full" role="img" aria-label="Una célula con ADN gravemente dañado activa p53 y genes como BAX, PUMA y NOXA; se inicia una respuesta de muerte celular">
+        <defs>
+          <radialGradient id="apoptosis-cell-fill">
+            <stop offset="0%" stopColor="var(--slide-accent)" stopOpacity=".17" />
+            <stop offset="100%" stopColor="var(--slide-accent)" stopOpacity=".03" />
+          </radialGradient>
+        </defs>
+        <circle cx="214" cy="180" r="140" fill="url(#apoptosis-cell-fill)" stroke="var(--slide-accent)" strokeWidth="7" />
+        <circle cx="214" cy="180" r="78" fill="var(--slide-bg)" stroke="var(--slide-line)" strokeWidth="5"/>
+        <path d="M163 179 Q186 123 213 175 Q239 222 268 163" fill="none" stroke="var(--slide-accent)" strokeWidth="9" strokeLinecap="round"/>
+        <path d="M174 163 L191 186 M231 167 L248 145" stroke="var(--slide-warm)" strokeWidth="9" strokeLinecap="round"/>
+        <path d="M275 108 l-12 20 15 4 -8 18" fill="none" stroke="var(--slide-warm)" strokeWidth="7" strokeLinejoin="round"/>
+        <text x="214" y="344" textAnchor="middle" fontSize="29" fill="var(--slide-fg)">ADN con daño grave</text>
+        <path d="M364 179 H445" fill="none" stroke="var(--slide-accent)" strokeWidth="8" strokeLinecap="round"/>
+        <path d="M432 165 L452 179 L432 193" fill="none" stroke="var(--slide-accent)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="457" y="102" width="144" height="155" rx="36" fill="var(--slide-bg)" stroke="var(--slide-accent)" strokeWidth="6"/>
+        <path d="M485 144 L505 118 L531 139 L552 121 L574 144 L564 174 L538 193 L510 174Z" fill="var(--slide-accent)" fillOpacity=".20" stroke="var(--slide-accent)" strokeWidth="5"/>
+        <text x="529" y="229" textAnchor="middle" fontSize="42" fontWeight="700" fill="var(--slide-fg)">p53</text>
+        <path d="M610 179 H680" fill="none" stroke="var(--slide-warm)" strokeWidth="8" strokeLinecap="round"/>
+        <path d="M667 165 L687 179 L667 193" fill="none" stroke="var(--slide-warm)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="698" y="93" width="214" height="174" rx="32" fill="var(--slide-bg)" stroke="var(--slide-warm)" strokeWidth="6"/>
+        <text x="805" y="143" textAnchor="middle" fontSize="31" fontWeight="700" fill="var(--slide-fg)">BAX · PUMA</text>
+        <text x="805" y="184" textAnchor="middle" fontSize="31" fontWeight="700" fill="var(--slide-fg)">NOXA</text>
+        <text x="805" y="231" textAnchor="middle" fontSize="24" fill="var(--slide-muted)">Señales de muerte</text>
+      </svg>
+      <div className="flex w-full items-center justify-center gap-5 rounded-[20px] border border-[var(--slide-line)] bg-[var(--slide-bg)] px-7 py-5 text-center">
+        <ShieldCheck size={53} className="shrink-0 text-[var(--slide-accent)]"/>
+        <p className="font-display text-[31px] leading-snug">La célula dañada deja de representar un riesgo para el tejido.</p>
+      </div>
     </div>;
     case "senescence": return <div className={frame+" flex flex-col items-center justify-around"}>
       <p className="font-display text-[43px]">Célula viva · División detenida</p>
